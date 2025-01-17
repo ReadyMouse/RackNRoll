@@ -1,75 +1,41 @@
 use dotenv::dotenv;
 use std::env;
-use serde::Deserialize; 
-use reqwest;
 use tokio;
 
-// Struct definitions
-#[derive(Debug, Deserialize)]
-struct Location {
-    latitude: f64,
-    longitude: f64,
-}
+mod google_places_search;
+use google_places_search::search_places; //just import function call
 
-#[derive(Debug, Deserialize)]
-struct DisplayName {
-    text: String,
-    language_code: String,
-}
-
-#[derive(Debug, Deserialize)]
-struct Place {
-    location: Location,
-    display_name: DisplayName,
-}
-
-#[derive(Debug, Deserialize)]
-struct PlacesResponse {
-    places: Vec<Place>
-}
-
-async fn search_places(lat: f64, lon: f64, radius: f64, place_type: &str) -> Result<(), Box<dyn std::error::Error>> {
-    dotenv().ok();
-    let api_key = env::var("GOOGLE_PLACES_API_KEY")?;
-    
-    let url = format!(
-        "https://places.googleapis.com/v1/places:searchNearby",
-        // lat, lon, radius will go in the request body
-    );
-
-    let client = reqwest::Client::new();
-    let response = client
-        .post(&url)
-        .header("X-Goog-Api-Key", api_key)
-        .header("X-Goog-FieldMask", "places.displayName,places.location")
-        .json(&serde_json::json!({
-            "locationRestriction": {
-                "circle": {
-                    "center": {
-                        "latitude": lat,
-                        "longitude": lon
-                    },
-                    "radius": radius
-                }
-            },
-            "includedTypes": [place_type]
-        }))
-        .send()
-        .await?;
-
-    let result = response.text().await?;
-    println!("{}", result);
-
-    Ok(())
-}
+mod google_places_photos_reviews;
+use google_places_photos_reviews::GooglePlacesClient;
 
 #[tokio::main]
-async fn main() {
+async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let latitude = 40.7128;
     let longitude = -74.0060;
     let radius_meters = 10000.0; // 10km in meters
 
-    if let Err(e) = search_places(latitude, longitude, radius_meters, "restaurant").await {
-        eprintln!("Error: {}", e);
+    dotenv().ok();
+    let api_key = env::var("GOOGLE_PLACES_API_KEY").expect("GOOGLE_PLACES_API_KEY must be set");
+    let cred_path = env::var("GOOGLE_PLACES_CRED_PATH").expect("GOOGLE_PLACES_CRED_PATH must be set");
+
+    // println!("API Key: {:?}", env::var("GOOGLE_PLACES_API_KEY"));
+    // First get the places
+    let places = search_places(&api_key, latitude, longitude, radius_meters, "restaurant").await?;
+
+    // Create the photos client
+    let photos_client = GooglePlacesClient::new(
+        &cred_path,  
+        &api_key,
+        "google_photos",
+    );
+
+    // For each place, get its photos
+    for place in places.places {
+        match photos_client.get_place_photos(&place.id).await {
+            Ok(photos) => println!("Found {} photos for place {}", photos.len(), place.display_name.text),
+            Err(e) => eprintln!("Error getting photos for {}: {}", place.display_name.text, e)
+        }
     }
+
+    Ok(())
 }
