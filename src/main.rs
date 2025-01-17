@@ -3,7 +3,7 @@ use std::env;
 use tokio;
 
 mod google_places_search;
-use google_places_search::search_places; //just import function call
+use google_places_search::{search_places, PlacesResponse};  //just import function call
 
 mod google_places_photos_reviews;
 use google_places_photos_reviews::GooglePlacesClient;
@@ -20,7 +20,17 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     // println!("API Key: {:?}", env::var("GOOGLE_PLACES_API_KEY"));
     // First get the places
-    let places = search_places(&api_key, latitude, longitude, radius_meters, "restaurant").await?;
+    let place_types = ["bar", "hotel", "restaurant"];
+
+    // let places = search_places(&api_key, latitude, longitude, radius_meters, "restaurant").await?;
+    
+    let mut all_places = PlacesResponse { places: Vec::new() };
+    for place_type in place_types {
+        match search_places(&api_key, latitude, longitude, radius_meters, place_type).await {
+            Ok(places) => all_places.places.extend(places.places),
+            Err(e) => eprintln!("Error searching for {}: {}", place_type, e)
+        }
+    }
 
     // Create the photos client
     let photos_client = GooglePlacesClient::new(
@@ -30,7 +40,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     );
 
     // For each place, get its photos
-    for place in places.places {
+    for place in all_places.places {
         match photos_client.get_place_photos(&place.id).await {
             Ok(photos) => println!("Found {} photos for place {}", photos.len(), place.display_name.text),
             Err(e) => eprintln!("Error getting photos for {}: {}", place.display_name.text, e)

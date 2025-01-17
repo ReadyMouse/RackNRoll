@@ -3,3 +3,4 @@
 .env
 *.pem
 pocketfinder-a0ced62ce802.json
+/google_photos/*

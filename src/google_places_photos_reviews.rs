@@ -35,6 +35,13 @@ pub struct PhotoDetails {
 pub struct PlaceDetails {
     #[serde(default)]
     pub photos: Vec<PhotoDetails>,
+    #[serde(rename = "displayName")]
+    pub display_name: DisplayName,
+}
+
+#[derive(Debug, Deserialize)]
+pub struct DisplayName {
+    pub text: String,
 }
 
 impl GooglePlacesClient {
@@ -57,7 +64,8 @@ impl GooglePlacesClient {
 
     async fn get_access_token(&self) -> Result<String, Box<dyn std::error::Error>> {
         // Read and parse service account JSON
-        println!("Attempting to read file from: {}", &self.cred_json_path);
+        // TODO: Remove this section \/
+        // println!("Attempting to read file from: {}", &self.cred_json_path);
     
         let creds_content = match std::fs::read_to_string(&self.cred_json_path) {
             Ok(content) => content,
@@ -67,7 +75,8 @@ impl GooglePlacesClient {
             }
         };
         
-        println!("Successfully read credentials file");
+        // println!("Successfully read credentials file");
+        // TODO: Remove this section /\
 
         let creds_content = std::fs::read_to_string(&self.cred_json_path)?;
         let creds: ServiceAccountCredentials = serde_json::from_str(&creds_content)?;
@@ -114,7 +123,7 @@ impl GooglePlacesClient {
         let response = client
             .get(&place_url)
             .header("Authorization", format!("Bearer {}", access_token))
-            .header("X-Goog-FieldMask", "photos")
+            .header("X-Goog-FieldMask", "photos,displayName")
             .send()
             .await?
             .json()
@@ -138,6 +147,7 @@ impl GooglePlacesClient {
             .await?;
 
         let file_path = format!("{}/{}", self.output_dir, save_name);
+        println!("Attempting to save photo to: {}", file_path);
         let bytes = response.bytes().await?;
         fs::write(&file_path, &bytes)?;
 
@@ -148,8 +158,21 @@ impl GooglePlacesClient {
         let place_data = self.get_place_details(place_id).await?;
         let mut photo_results = Vec::new();
 
+        // Create a directory for this place
+        let place_dir = format!("{}/{}", self.output_dir, place_data.display_name.text);
+        std::fs::create_dir_all(&place_dir)?;  // Create the directory if it doesn't exist
+
+
         for (i, photo) in place_data.photos.iter().enumerate() {
-            let save_name = format!("photo_{}_{}.jpg", place_id, i);
+            let save_name = format!("{}/photo_{}.jpg", place_data.display_name.text, i);
+            let full_path = format!("{}/{}", self.output_dir, save_name);
+            
+            // Check if file already exists
+            if std::path::Path::new(&full_path).exists() {
+                println!("Photo {} already exists, skipping download", save_name);
+                photo_results.push(full_path);
+                continue;
+            }
 
             if let Ok(downloaded_path) = self.download_photo(&photo.name, &save_name).await {
                 photo_results.push(downloaded_path);
