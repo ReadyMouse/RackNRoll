@@ -8,6 +8,9 @@ use google_places_search::{search_places, PlacesResponse};  //just import functi
 mod google_places_photos_reviews;
 use google_places_photos_reviews::GooglePlacesClient;
 
+// mod yolo_pytorch;
+// use yolo_pytorch::YOLOModel;
+
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let latitude = 40.7128;
@@ -17,6 +20,8 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     dotenv().ok();
     let api_key = env::var("GOOGLE_PLACES_API_KEY").expect("GOOGLE_PLACES_API_KEY must be set");
     let cred_path = env::var("GOOGLE_PLACES_CRED_PATH").expect("GOOGLE_PLACES_CRED_PATH must be set");
+    let output_dir = env::var("OUTPUT_DIRECTORY").expect("OUTPUT_DIRECTORY must be set");
+
 
     // println!("API Key: {:?}", env::var("GOOGLE_PLACES_API_KEY"));
     // First get the places
@@ -36,7 +41,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let photos_client = GooglePlacesClient::new(
         &cred_path,  
         &api_key,
-        "google_photos",
+        &output_dir,
     );
 
     // For each place, get its photos
@@ -46,6 +51,24 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
             Err(e) => eprintln!("Error getting photos for {}: {}", place.display_name.text, e)
         }
     }
+
+    // Check the photos for pool tables (boolean)
+    let model_path = env::var("YOLO_WEIGHTS_PATH").expect("YOLO_WEIGHTS_PATH must be set");
+    let conf_threshold = env::var("YOLO_CONFIDENCE_THRES").expect("YOLO_CONFIDENCE_THRES must be set");
+    let conf_threshold: f32 = conf_threshold
+        .parse()
+        .expect("YOLO_CONFIDENCE_THRES must be a valid floating-point number");
+
+    // TODO: Create the yolo client
+    // Initialize the model with your weights
+    // use std::path::PathBuf;
+    // let path = PathBuf::from(&model_path);
+    // let model = YOLOModel::new(&path)?;
+
+    // Example prediction
+    // let is_positive = model.predict(std::path::Path::new(r"/Users/mouse/src/RackNRoll/Pier\ 17/photo_1.jpg"))?;
+    // println!("Prediction: {}", if is_positive { "Positive" } else { "Negative" });
+        
 
     Ok(())
 }

@@ -2,6 +2,7 @@
 name = "RackNRoll"
 version = "0.1.0"
 edition = "2021"
+build = "build.rs"
 
 [dependencies]
 reqwest = { version = "0.11", features = ["json"] }
@@ -10,3 +11,18 @@ serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 dotenv = "0.15"
 jsonwebtoken = "8.1"
+pyo3 = { version = "0.19", features = ["auto-initialize"] }
+ndarray = "0.15"
+image = "0.24"
+
+
+[build-dependencies]
+pyo3-build-config = "0.19"
+
+[target.aarch64-apple-darwin]
+rustflags = [
+    "-C", "link-arg=-undefined",
+    "-C", "link-arg=dynamic_lookup",
+    "-C", "link-arg=-rpath",
+    "-C", "link-arg=/opt/homebrew/Caskroom/miniconda/base/lib"
+]

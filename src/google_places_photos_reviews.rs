@@ -67,7 +67,7 @@ impl GooglePlacesClient {
         // TODO: Remove this section \/
         // println!("Attempting to read file from: {}", &self.cred_json_path);
     
-        let creds_content = match std::fs::read_to_string(&self.cred_json_path) {
+        let _creds_content = match std::fs::read_to_string(&self.cred_json_path) {
             Ok(content) => content,
             Err(e) => {
                 println!("Error reading credentials file: {}", e);
