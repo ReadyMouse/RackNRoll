@@ -14,6 +14,7 @@ jsonwebtoken = "8.1"
 pyo3 = { version = "0.19", features = ["auto-initialize"] }
 ndarray = "0.15"
 image = "0.24"
+chrono = { version = "0.4", features = ["serde"] }
 
 
 [build-dependencies]

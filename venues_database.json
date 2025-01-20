@@ -1,0 +1,65 @@
+{
+  "venues": [
+    {
+      "name": "The Bancroft",
+      "place_id": "ChIJ4Un7506e44kR7D8qSzKDqoQ",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-01-20T01:24:00.814300Z"
+    },
+    {
+      "name": "Redstone American Grill",
+      "place_id": "ChIJr8zB6E6e44kRBozsc-246GQ",
+      "pool_table_probability": 0.8206303,
+      "processed_date": "2025-01-20T01:24:03.074482Z"
+    },
+    {
+      "name": "Tony C's Sports Bar & Grill",
+      "place_id": "ChIJNzb9506e44kRbFBy4TISQAA",
+      "pool_table_probability": 0.55341816,
+      "processed_date": "2025-01-20T01:24:05.680503Z"
+    },
+    {
+      "name": "Osteria Nino",
+      "place_id": "ChIJuSrh506e44kRluuqjS22g8c",
+      "pool_table_probability": 0.5270783,
+      "processed_date": "2025-01-20T01:24:08.535952Z"
+    },
+    {
+      "name": "Archer Hotel Burlington",
+      "place_id": "ChIJ219n706e44kRnQU0tC1nqo0",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-01-20T01:24:17.969119Z"
+    },
+    {
+      "name": "The Bancroft",
+      "place_id": "ChIJ4Un7506e44kR7D8qSzKDqoQ",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-01-20T01:24:20.888023Z"
+    },
+    {
+      "name": "Redstone American Grill",
+      "place_id": "ChIJr8zB6E6e44kRBozsc-246GQ",
+      "pool_table_probability": 0.8206303,
+      "processed_date": "2025-01-20T01:24:23.431467Z"
+    },
+    {
+      "name": "Tony C's Sports Bar & Grill",
+      "place_id": "ChIJNzb9506e44kRbFBy4TISQAA",
+      "pool_table_probability": 0.55341816,
+      "processed_date": "2025-01-20T01:24:26.071443Z"
+    },
+    {
+      "name": "Osteria Nino",
+      "place_id": "ChIJuSrh506e44kRluuqjS22g8c",
+      "pool_table_probability": 0.5270783,
+      "processed_date": "2025-01-20T01:24:28.542538Z"
+    },
+    {
+      "name": "AKB, a hotel bar",
+      "place_id": "ChIJEykVWKef44kRRowD-p3r8JE",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-01-20T01:24:31.277383Z"
+    }
+  ],
+  "last_updated": "2025-01-20T01:24:31.277385Z"
+}
