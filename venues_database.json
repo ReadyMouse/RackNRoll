@@ -4,38 +4,38 @@
       "name": "The Bancroft",
       "place_id": "ChIJ4Un7506e44kR7D8qSzKDqoQ",
       "pool_table_probability": 0.0,
-      "processed_date": "2025-01-20T02:11:09.514066Z"
+      "processed_date": "2025-01-20T02:19:38.289585Z"
     },
     {
       "name": "Redstone American Grill",
       "place_id": "ChIJr8zB6E6e44kRBozsc-246GQ",
-      "pool_table_probability": 0.8206303,
-      "processed_date": "2025-01-20T02:11:12.190976Z"
+      "pool_table_probability": 0.80635005,
+      "processed_date": "2025-01-20T02:19:47.001032Z"
     },
     {
       "name": "Tony C's Sports Bar & Grill",
       "place_id": "ChIJNzb9506e44kRbFBy4TISQAA",
-      "pool_table_probability": 0.55341816,
-      "processed_date": "2025-01-20T02:11:15.228808Z"
+      "pool_table_probability": 0.5410555,
+      "processed_date": "2025-01-20T02:19:56.957272Z"
     },
     {
       "name": "Osteria Nino",
       "place_id": "ChIJuSrh506e44kRluuqjS22g8c",
-      "pool_table_probability": 0.5270783,
-      "processed_date": "2025-01-20T02:11:18.099691Z"
+      "pool_table_probability": 0.50681186,
+      "processed_date": "2025-01-20T02:20:05.810764Z"
     },
     {
       "name": "Archer Hotel Burlington",
       "place_id": "ChIJ219n706e44kRnQU0tC1nqo0",
       "pool_table_probability": 0.0,
-      "processed_date": "2025-01-20T02:11:20.568500Z"
+      "processed_date": "2025-01-20T02:20:15.509261Z"
     },
     {
       "name": "AKB, a hotel bar",
       "place_id": "ChIJEykVWKef44kRRowD-p3r8JE",
       "pool_table_probability": 0.0,
-      "processed_date": "2025-01-20T02:11:23.270339Z"
+      "processed_date": "2025-01-20T02:20:35.099303Z"
     }
   ],
-  "last_updated": "2025-01-20T02:11:23.270341Z"
+  "last_updated": "2025-01-20T02:20:35.099305Z"
 }

@@ -149,7 +149,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         &api_key,
         &output_dir,
     );
-    
+
     // Get the variables for the YOLO models
     let model_path = env::var("YOLO_WEIGHTS_PATH").expect("YOLO_WEIGHTS_PATH must be set");
     let conf_threshold = env::var("YOLO_CONFIDENCE_THRES").expect("YOLO_CONFIDENCE_THRES must be set");
@@ -159,7 +159,8 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     // For each place, check if in database, get its photos and run inference
     for place in all_places.places {
-        // TODO: Add a check if it's already in the pool tablebase, with a flag it should re-process.
+        // TODO: Add aa flag if should re-process anyway.
+        // TODO: JSON code injection vunerablility by allowing public access to the venues database.
         let (should_process, prob) = collection.should_process_venue(&place.id, months_threshold);
         if !should_process {
             println!("From Database:: Probabiliy of pool table: {:.2}% at {}",

@@ -14,6 +14,10 @@ class PoolTableInference():
         self.conf_threshold = conf_threshold
         self.output_dir = output_dir or "outputs"
 
+    def is_empty_dir(path):
+        with os.scandir(path) as scan:
+            return not any(scan)
+
     def run_inference(self, image_path, save_negative=False):
         """
         Run classification inference on a single image or directory of images from same venue
@@ -69,10 +73,15 @@ class PoolTableInference():
             #print(f"\nProcessed {img_path}")
             #print(f"Prediction: {result['class_name']} ({result['confidence']:.2f} confidence)")
         
+        # No photos of pool tables, remove the directory
+        if not save_negative and self.is_empty_dir(self.output_dir): 
+            os.remove(os.path.join(self.output_dir))
+
         # Save results to JSON
-        results_file = os.path.join(self.output_dir, 'results.json')
-        with open(results_file, 'w') as f:
-            json.dump(all_results, f, indent=4)
+        if results.save:
+            results_file = os.path.join(self.output_dir, 'results.json')
+            with open(results_file, 'w') as f:
+                json.dump(all_results, f, indent=4)
         
         #print(f"\nResults saved to: {self.output_dir}")
         #print(f"- JSON results: {results_file}")
