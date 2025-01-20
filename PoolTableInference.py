@@ -14,7 +14,7 @@ class PoolTableInference():
         self.conf_threshold = conf_threshold
         self.output_dir = output_dir or "outputs"
 
-    def run_inference(self, image_path, save_negative=True):
+    def run_inference(self, image_path, save_negative=False):
         """
         Run classification inference on a single image or directory of images from same venue
         """

@@ -63,12 +63,12 @@ pub async fn search_places(api_key: &String, lat: f64, lon: f64, radius: f64, pl
 
     let places_response: PlacesResponse = serde_json::from_str(&result)?;
     
-    for place in &places_response.places {
-        println!("ID: {}", place.id); // Print the place ID
-        println!("Name: {}", place.display_name.text); // Print the display name text
-        println!("Location: {}, {}", place.location.latitude, place.location.longitude); // Print the location
-        println!("----------------");
-    }
+    //for place in &places_response.places {
+    //    println!("ID: {}", place.id); // Print the place ID
+    //    println!("Name: {}", place.display_name.text); // Print the display name text
+    //    println!("Location: {}, {}", place.location.latitude, place.location.longitude); // Print the location
+    //    println!("----------------");
+    //}
 
     Ok(places_response)
 }

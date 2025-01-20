@@ -4,7 +4,7 @@ use tokio;
 use std::process::Command;
 use std::path::PathBuf;
 use std::path::Path;
-use chrono::{DateTime, Utc};
+use chrono::{DateTime, Utc, Duration};
 use serde::{Serialize, Deserialize};
 
 mod google_places_search;
@@ -21,11 +21,11 @@ struct Venue {
     pool_table_probability: f32,
     processed_date: DateTime<Utc>,}
 
-    #[derive(Serialize, Deserialize, Debug)]
-    struct VenueCollection {
-        venues: Vec<Venue>,
-        last_updated: DateTime<Utc>,
-    }
+#[derive(Serialize, Deserialize, Debug)]
+struct VenueCollection {
+    venues: Vec<Venue>,
+    last_updated: DateTime<Utc>,
+}
 
 impl Venue {
     fn new(name: String, place_id: String, probability: f32) -> Self {
@@ -37,6 +37,7 @@ impl Venue {
         }
     }
 }
+
 impl VenueCollection {
     fn new() -> Self {
         VenueCollection {
@@ -54,6 +55,26 @@ impl VenueCollection {
         let json = serde_json::to_string_pretty(self)?;
         std::fs::write(file_path, json)?;
         Ok(())
+    }
+
+    fn load_from_json(file_path: &std::path::Path) -> Result<Self, Box<dyn std::error::Error>> {
+        let json_str = std::fs::read_to_string(file_path)?;
+        let collection = serde_json::from_str(&json_str)?;
+        Ok(collection)
+    }
+
+    fn should_process_venue(&self, place_id: &str, months_threshold: i64) -> (bool, f32) {
+        if let Some(existing_venue) = self.venues.iter().find(|v| v.place_id == place_id) {
+            let now = Utc::now();
+            let duration_since_update = now - existing_venue.processed_date;
+            let months = Duration::days(months_threshold * 30); // approximate months to days
+
+            // Hand out the probability
+            let prob = existing_venue.pool_table_probability;
+            (duration_since_update > months, prob)
+        } else {
+            (true, 0.0) // Venue doesn't exist, should process
+        }
     }
 }
 
@@ -92,21 +113,28 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let latitude = 42.4883417;
     let longitude = -71.2235583;
     let radius_meters = 100.0; // 10km in meters
+    let months_threshold = 6;
 
     dotenv().ok();
     let api_key = env::var("GOOGLE_PLACES_API_KEY").expect("GOOGLE_PLACES_API_KEY must be set");
     let cred_path = env::var("GOOGLE_PLACES_CRED_PATH").expect("GOOGLE_PLACES_CRED_PATH must be set");
     let output_dir = env::var("OUTPUT_DIRECTORY").expect("OUTPUT_DIRECTORY must be set");
 
-
-    println!("API Key: {:?}", env::var("GOOGLE_PLACES_API_KEY"));
-    // First get the places
+    // First get the types of places to look at
     let place_types = ["bar", "hotel", "restaurant"];
 
-    // let places = search_places(&api_key, latitude, longitude, radius_meters, "restaurant").await?;
-    
     let mut all_places = PlacesResponse { places: Vec::new() };
-    let mut collection = VenueCollection::new();
+
+    // Load an existing collection of venues, or make a new one.
+    // TODO: Make the database file dynamic, and user input. Hate me later. EPK.
+    let mut collection = match VenueCollection::load_from_json(Path::new("venues_database.json")) {
+        Ok(loaded_collection) => loaded_collection,
+        Err(e) => {
+            println!("You have no crabs in your crate.");
+            println!("Could not load from JSON, creating new collection: {}", e);
+            VenueCollection::new()
+        }
+    };
 
     for place_type in place_types {
         match search_places(&api_key, latitude, longitude, radius_meters, place_type).await {
@@ -121,6 +149,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         &api_key,
         &output_dir,
     );
+    
     // Get the variables for the YOLO models
     let model_path = env::var("YOLO_WEIGHTS_PATH").expect("YOLO_WEIGHTS_PATH must be set");
     let conf_threshold = env::var("YOLO_CONFIDENCE_THRES").expect("YOLO_CONFIDENCE_THRES must be set");
@@ -128,16 +157,24 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         .parse()
         .expect("YOLO_CONFIDENCE_THRES must be a valid floating-point number");
 
-    // For each place, get its photos
+    // For each place, check if in database, get its photos and run inference
     for place in all_places.places {
-        match photos_client.get_place_photos(&place.id).await {
-            Ok(photos) => println!("Found {} photos for place {}", &photos.len(), &place.display_name.text),
-            Err(e) => eprintln!("Error getting photos for {}: {}", &place.display_name.text, e)
+        // TODO: Add a check if it's already in the pool tablebase, with a flag it should re-process.
+        let (should_process, prob) = collection.should_process_venue(&place.id, months_threshold);
+        if !should_process {
+            println!("From Database:: Probabiliy of pool table: {:.2}% at {}",
+            prob * 100.0,
+            &place.display_name.text); 
+            continue;
         }
 
-        // TODO: Remove later for debugging.
-        println!("Image Directory: {}", &output_dir);
-        println!("Model Path: {}", &model_path);
+        // Get the Photos
+        match photos_client.get_place_photos(&place.id).await {
+            Ok(photos) => println!("Found {} photos for place {}", &photos.len(), &place.display_name.text),
+            Err(e) => {
+                println!("The crab pot gets stuck on a anchor on the ocean floor.");
+                println!("Error getting photos for {}: {}", &place.display_name.text, e)}
+        }
 
         // Check for Pool table via YOLO inference
         let folder_path = std::path::Path::new(&output_dir).join(&place.display_name.text);
@@ -164,3 +201,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     }
     Ok(())
 }
+
+// Coding Crab Rangoon //
+// If the crabs got your pants, perhaps wear shorts. 
+// ******************* //
