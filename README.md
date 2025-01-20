@@ -37,13 +37,13 @@ pip install -r requirements.txt
 
 # Using RackNRoll
 ## Modify the Lat/Lon/Radius 
-Change the lat/lon variables to your geographic region and dd a radius in meters. 
+Change the lat/lon variables to your geographic region and add a radius in meters. 
 
 ``` rust
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let latitude = 42.4883417;
     let longitude = -71.2235583;
-    let radius_meters = 100.0; // 10km in meters
+    let radius_meters = 100.0; // meters
     let months_threshold = 6;
 
     // The rest of the code...
