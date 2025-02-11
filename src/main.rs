@@ -4,8 +4,12 @@ use tokio;
 use std::process::Command;
 use std::path::PathBuf;
 use std::path::Path;
+use std::fs;
 use chrono::{DateTime, Utc, Duration};
 use serde::{Serialize, Deserialize};
+use std::fs::File;
+use serde_yaml;
+use clap::Parser;
 
 mod google_places_search;
 use google_places_search::{search_places, PlacesResponse};  //just import function call
@@ -18,8 +22,10 @@ use google_places_photos_reviews::GooglePlacesClient;
 struct Venue {    
     name: String,
     place_id: String,
+    address: String,
     pool_table_probability: f32,
-    processed_date: DateTime<Utc>,}
+    processed_date: DateTime<Utc>,
+}
 
 #[derive(Serialize, Deserialize, Debug)]
 struct VenueCollection {
@@ -28,10 +34,11 @@ struct VenueCollection {
 }
 
 impl Venue {
-    fn new(name: String, place_id: String, probability: f32) -> Self {
+    fn new(name: String, place_id: String, address: String, probability: f32) -> Self {
         Venue {
             name,
             place_id,
+            address,
             pool_table_probability: probability,
             processed_date: Utc::now(),
         }
@@ -78,14 +85,22 @@ impl VenueCollection {
     }
 }
 
-
-fn run_python_script(file_path: &PathBuf, model_path: &str, output_dir: &PathBuf) -> Result<f32, Box<dyn std::error::Error>> {
+fn run_python_script(
+    file_path: &PathBuf, 
+    model_path: &str, 
+    output_dir: &PathBuf,
+    save_negative: bool,
+) -> Result<f32, Box<dyn std::error::Error>> {
     let output = Command::new("python3")
         .arg("PoolTableInference.py")
+        .arg("-i")
         .arg(file_path)
+        .arg("-m")
         .arg(model_path)
         .arg("-o")
         .arg(output_dir)
+        .arg("--save-negative")
+        .arg(save_negative.to_string())
         .output()?;
 
     if !output.status.success() {
@@ -108,21 +123,50 @@ fn run_python_script(file_path: &PathBuf, model_path: &str, output_dir: &PathBuf
     Ok(0.0)
 }
 
+#[derive(Serialize, Deserialize, Debug)]
+struct Config {
+    location: Location,
+    processing: Processing,
+    place_types: Vec<String>,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
+struct Location {
+    latitude: f64,
+    longitude: f64,
+    radius_meters: f64,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
+struct Processing {
+    months_threshold: i64,
+    reprocess_all: bool,
+    save_negative_images: bool,
+}
+
+#[derive(Parser)]
+struct Cli {
+    #[arg(short, long, default_value = "config.yaml")]
+    config: String,
+}
+
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    let latitude = 42.4883417;
-    let longitude = -71.2235583;
-    let radius_meters = 100.0; // 10km in meters
-    let months_threshold = 6;
+    // Parse command line arguments
+    let cli = Cli::parse();
+
+    // Replace the hardcoded parameters with config file reading
+    let config: Config = {
+        let file = File::open(&cli.config)?;
+        serde_yaml::from_reader(file)?
+    };
 
     dotenv().ok();
     let api_key = env::var("GOOGLE_PLACES_API_KEY").expect("GOOGLE_PLACES_API_KEY must be set");
     let cred_path = env::var("GOOGLE_PLACES_CRED_PATH").expect("GOOGLE_PLACES_CRED_PATH must be set");
     let output_dir = env::var("OUTPUT_DIRECTORY").expect("OUTPUT_DIRECTORY must be set");
 
-    // First get the types of places to look at
-    let place_types = ["bar", "hotel", "restaurant"];
-
+    // Use the config values instead of hardcoded ones
     let mut all_places = PlacesResponse { places: Vec::new() };
 
     // Load an existing collection of venues, or make a new one.
@@ -136,8 +180,15 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         }
     };
 
-    for place_type in place_types {
-        match search_places(&api_key, latitude, longitude, radius_meters, place_type).await {
+    // Replace the hardcoded place_types array with config.place_types
+    for place_type in &config.place_types {
+        match search_places(
+            &api_key,
+            config.location.latitude,
+            config.location.longitude,
+            config.location.radius_meters,
+            place_type
+        ).await {
             Ok(places) => all_places.places.extend(places.places),
             Err(e) => eprintln!("Error searching for {}: {}", place_type, e)
         }
@@ -159,13 +210,15 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     // For each place, check if in database, get its photos and run inference
     for place in all_places.places {
-        // TODO: Add aa flag if should re-process anyway.
-        // TODO: JSON code injection vunerablility by allowing public access to the venues database.
-        let (should_process, prob) = collection.should_process_venue(&place.id, months_threshold);
-        if !should_process {
+        let (should_process, prob) = collection.should_process_venue(
+            &place.id,
+            config.processing.months_threshold
+        );
+        if !should_process && !config.processing.reprocess_all {
             println!("From Database:: Probabiliy of pool table: {:.2}% at {}",
-            prob * 100.0,
-            &place.display_name.text); 
+                prob * 100.0,
+                &place.display_name.text
+            ); 
             continue;
         }
 
@@ -179,18 +232,23 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
         // Check for Pool table via YOLO inference
         let folder_path = std::path::Path::new(&output_dir).join(&place.display_name.text);
-        println!("Image Directory: {}", &folder_path.display());
-        match run_python_script(&folder_path, &model_path, &folder_path) {
+        // println!("Image Directory: {}", &folder_path.display());
+        match run_python_script(
+            &folder_path, 
+            &model_path, 
+            &folder_path,
+            config.processing.save_negative_images
+        ) {
             Ok(probability) => {
                 println!("{} probability of pool table: {:.2}%",&place.display_name.text, probability * 100.0);
-                // TODO: Add Location information to Venue
                 let venue = Venue::new(
                     place.display_name.text,
                     place.id,  // Google Place ID
+                    place.formatted_address.clone(),  // Use the actual street address
                     probability
                 );
 
-                collection.add_venue(venue); // Add the venue to the growing catelogue.
+                collection.add_venue(venue);
             },
             Err(e) => {
                 eprintln!("Error: {}", e);
@@ -199,6 +257,24 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
         // Save to JSON file
         collection.save_to_json(Path::new("venues_database.json"))?;
+
+        // Check if the photos directory is empty 
+        // Read directory entries
+        // First, let's explicitly list all entries to see what's in there
+        let entries: Vec<_> = fs::read_dir(&folder_path)?
+            .filter_map(Result::ok)
+            .filter(|entry| entry.file_name() != ".DS_Store")
+            .collect();
+
+        let is_empty = entries.is_empty();
+        
+        if is_empty {
+            fs::remove_dir_all(&folder_path)?;
+            // println!("{} deleted successfully", &folder_path.display());
+        } else {
+            // println!("{} is not empty", &folder_path.display());
+        }
+        
     }
     Ok(())
 }

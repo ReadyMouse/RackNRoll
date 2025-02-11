@@ -1,41 +1,75 @@
 {
   "venues": [
     {
+      "name": "Yard House",
+      "place_id": "ChIJf1HCOAuf44kRI62fhZfwEHk",
+      "address": "108 Middlesex Turnpike, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.6967233,
+      "processed_date": "2025-02-11T05:00:04.290090Z"
+    },
+    {
+      "name": "Seasons 52",
+      "place_id": "ChIJPZi5n4B144kR6zWTMGPUnVA",
+      "address": "6 Wayside Rd U, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-11T05:00:16.553214Z"
+    },
+    {
+      "name": "The Friendly Toast",
+      "place_id": "ChIJHeEaMjie44kRwli1VLUhmcU",
+      "address": "75 Middlesex Turnpike #1015B, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.9999999,
+      "processed_date": "2025-02-11T05:00:26.396563Z"
+    },
+    {
       "name": "The Bancroft",
       "place_id": "ChIJ4Un7506e44kR7D8qSzKDqoQ",
+      "address": "15 3rd Ave, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.9601463,
+      "processed_date": "2025-02-11T05:00:30.446604Z"
+    },
+    {
+      "name": "The Capital Grille",
+      "place_id": "ChIJWR0rooB144kRpuoEqLdjegg",
+      "address": "10 Wayside Rd, Burlington, MA 01803, USA",
       "pool_table_probability": 0.0,
-      "processed_date": "2025-01-20T02:19:38.289585Z"
+      "processed_date": "2025-02-11T05:00:43.349507Z"
+    },
+    {
+      "name": "Buffalo Wild Wings",
+      "place_id": "ChIJbwCKPEee44kRqVU9-CapAFg",
+      "address": "15 South Ave, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-11T05:00:57.192088Z"
+    },
+    {
+      "name": "Cafe Escadrille",
+      "place_id": "ChIJASRLo4Z144kRBl_5q1HJvxw",
+      "address": "26 Cambridge St, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.7588753,
+      "processed_date": "2025-02-11T05:06:04.069468Z"
+    },
+    {
+      "name": "Gyu-Kaku Japanese BBQ",
+      "place_id": "ChIJPQ4bc3mf44kRSful8e0IlVk",
+      "address": "85 Middlesex Turnpike, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.9719662,
+      "processed_date": "2025-02-11T05:11:04.209776Z"
+    },
+    {
+      "name": "Burtons Grill & Bar",
+      "place_id": "ChIJi1-tWRae44kR_74QrossTvU",
+      "address": "43 Middlesex Turnpike, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-11T05:11:38.072178Z"
     },
     {
       "name": "Redstone American Grill",
       "place_id": "ChIJr8zB6E6e44kRBozsc-246GQ",
-      "pool_table_probability": 0.80635005,
-      "processed_date": "2025-01-20T02:19:47.001032Z"
-    },
-    {
-      "name": "Tony C's Sports Bar & Grill",
-      "place_id": "ChIJNzb9506e44kRbFBy4TISQAA",
-      "pool_table_probability": 0.5410555,
-      "processed_date": "2025-01-20T02:19:56.957272Z"
-    },
-    {
-      "name": "Osteria Nino",
-      "place_id": "ChIJuSrh506e44kRluuqjS22g8c",
-      "pool_table_probability": 0.50681186,
-      "processed_date": "2025-01-20T02:20:05.810764Z"
-    },
-    {
-      "name": "Archer Hotel Burlington",
-      "place_id": "ChIJ219n706e44kRnQU0tC1nqo0",
+      "address": "20 3rd Ave, Burlington, MA 01803, USA",
       "pool_table_probability": 0.0,
-      "processed_date": "2025-01-20T02:20:15.509261Z"
-    },
-    {
-      "name": "AKB, a hotel bar",
-      "place_id": "ChIJEykVWKef44kRRowD-p3r8JE",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-01-20T02:20:35.099303Z"
+      "processed_date": "2025-02-11T05:12:01.706108Z"
     }
   ],
-  "last_updated": "2025-01-20T02:20:35.099305Z"
+  "last_updated": "2025-02-11T05:12:01.706111Z"
 }

@@ -10,6 +10,22 @@ pub struct Location {
     longitude: f64,
 }
 
+impl Location {
+    pub fn get_latitude(&self) -> f64 {
+        self.latitude
+    }
+
+    pub fn get_longitude(&self) -> f64 {
+        self.longitude
+    }
+}
+
+impl std::fmt::Display for Location {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "{}, {}", self.latitude, self.longitude)
+    }
+}
+
 #[derive(Debug, Deserialize)]
 pub struct DisplayName {
     pub text: String
@@ -21,6 +37,8 @@ pub struct Place {
     #[serde(rename = "displayName")] // Map JSON field "displayName" to Rust field "display_name"
     pub display_name: DisplayName, // Nested display name object
     pub location: Location, // Nested location object
+    #[serde(rename = "formattedAddress")]
+    pub formatted_address: String,
 }
 
 #[derive(Debug, Deserialize)]
@@ -42,7 +60,7 @@ pub async fn search_places(api_key: &String, lat: f64, lon: f64, radius: f64, pl
     let response = client
         .post(&url)
         .header("X-Goog-Api-Key", api_key)
-        .header("X-Goog-FieldMask", "places.id,places.displayName,places.location") // Include places.id and places.displayName
+        .header("X-Goog-FieldMask", "places.id,places.displayName,places.location,places.formattedAddress")
         .json(&serde_json::json!({
             "locationRestriction": {
                 "circle": {
