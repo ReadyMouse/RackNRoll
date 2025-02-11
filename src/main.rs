@@ -17,7 +17,6 @@ use google_places_search::{search_places, PlacesResponse};  //just import functi
 mod google_places_photos_reviews;
 use google_places_photos_reviews::GooglePlacesClient;
 
-// TODO: Add Location information to Venue
 #[derive(Serialize, Deserialize, Debug, Clone)]
 struct Venue {    
     name: String,
@@ -82,21 +81,6 @@ impl VenueCollection {
         } else {
             (true, 0.0) // Venue doesn't exist, should process
         }
-    }
-
-    fn save_filtered_venues(&self, file_path: &std::path::Path, threshold: f32) -> Result<(), Box<dyn std::error::Error>> {
-        let filtered = VenueCollection {
-            venues: self.venues
-                .iter()
-                .filter(|v| v.pool_table_probability >= threshold)
-                .cloned()
-                .collect(),
-            last_updated: Utc::now(),
-        };
-        
-        let json = serde_json::to_string_pretty(&filtered)?;
-        std::fs::write(file_path, json)?;
-        Ok(())
     }
 
     fn save_filtered_venues_csv(&self, file_path: &std::path::Path, threshold: f32) -> Result<(), Box<dyn std::error::Error>> {
@@ -213,7 +197,6 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let mut all_places = PlacesResponse { places: Vec::new() };
 
     // Load an existing collection of venues, or make a new one.
-    // TODO: Make the database file dynamic, and user input. Hate me later. EPK.
     let mut collection = match VenueCollection::load_from_json(Path::new("venues_database.json")) {
         Ok(loaded_collection) => loaded_collection,
         Err(e) => {
@@ -246,10 +229,11 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     // Get the variables for the YOLO models
     let model_path = env::var("YOLO_WEIGHTS_PATH").expect("YOLO_WEIGHTS_PATH must be set");
-    let conf_threshold = env::var("YOLO_CONFIDENCE_THRES").expect("YOLO_CONFIDENCE_THRES must be set");
-    let conf_threshold: f32 = conf_threshold
-        .parse()
-        .expect("YOLO_CONFIDENCE_THRES must be a valid floating-point number");
+    // Remove or comment out the unused conf_threshold variables since they're not being used
+    // let conf_threshold = env::var("YOLO_CONFIDENCE_THRES").expect("YOLO_CONFIDENCE_THRES must be set");
+    // let conf_threshold: f32 = conf_threshold
+    //     .parse()
+    //     .expect("YOLO_CONFIDENCE_THRES must be a valid floating-point number");
 
     // For each place, check if in database, get its photos and run inference
     for place in all_places.places {

@@ -18,14 +18,5 @@ chrono = { version = "0.4", features = ["serde"] }
 serde_yaml = "0.9"
 clap = { version = "4.0", features = ["derive"] }
 
-
 [build-dependencies]
 pyo3-build-config = "0.19"
-
-[target.aarch64-apple-darwin]
-rustflags = [
-    "-C", "link-arg=-undefined",
-    "-C", "link-arg=dynamic_lookup",
-    "-C", "link-arg=-rpath",
-    "-C", "link-arg=/opt/homebrew/Caskroom/miniconda/base/lib"
-]

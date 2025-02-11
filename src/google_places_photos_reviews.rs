@@ -64,20 +64,6 @@ impl GooglePlacesClient {
 
     async fn get_access_token(&self) -> Result<String, Box<dyn std::error::Error>> {
         // Read and parse service account JSON
-        // TODO: Remove this section \/
-        // println!("Attempting to read file from: {}", &self.cred_json_path);
-    
-        let _creds_content = match std::fs::read_to_string(&self.cred_json_path) {
-            Ok(content) => content,
-            Err(e) => {
-                println!("Error reading credentials file: {}", e);
-                return Err(Box::new(e));
-            }
-        };
-        
-        // println!("Successfully read credentials file");
-        // TODO: Remove this section /\
-
         let creds_content = std::fs::read_to_string(&self.cred_json_path)?;
         let creds: ServiceAccountCredentials = serde_json::from_str(&creds_content)?;
 

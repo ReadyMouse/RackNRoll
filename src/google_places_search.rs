@@ -11,13 +11,14 @@ pub struct Location {
 }
 
 impl Location {
-    pub fn get_latitude(&self) -> f64 {
-        self.latitude
-    }
-
-    pub fn get_longitude(&self) -> f64 {
-        self.longitude
-    }
+    // Remove the unused getter methods since they're not being used
+    // pub fn get_latitude(&self) -> f64 {
+    //     self.latitude
+    // }
+    //
+    // pub fn get_longitude(&self) -> f64 {
+    //     self.longitude
+    // }
 }
 
 impl std::fmt::Display for Location {
@@ -36,6 +37,7 @@ pub struct Place {
     pub id: String, // Place ID
     #[serde(rename = "displayName")] // Map JSON field "displayName" to Rust field "display_name"
     pub display_name: DisplayName, // Nested display name object
+    #[allow(dead_code)]  // Add this attribute to suppress the warning
     pub location: Location, // Nested location object
     #[serde(rename = "formattedAddress")]
     pub formatted_address: String,
