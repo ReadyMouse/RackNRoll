@@ -15,13 +15,6 @@
       "processed_date": "2025-02-11T05:00:16.553214Z"
     },
     {
-      "name": "The Friendly Toast",
-      "place_id": "ChIJHeEaMjie44kRwli1VLUhmcU",
-      "address": "75 Middlesex Turnpike #1015B, Burlington, MA 01803, USA",
-      "pool_table_probability": 0.9999999,
-      "processed_date": "2025-02-11T05:00:26.396563Z"
-    },
-    {
       "name": "The Capital Grille",
       "place_id": "ChIJWR0rooB144kRpuoEqLdjegg",
       "address": "10 Wayside Rd, Burlington, MA 01803, USA",
@@ -41,13 +34,6 @@
       "address": "26 Cambridge St, Burlington, MA 01803, USA",
       "pool_table_probability": 0.7588753,
       "processed_date": "2025-02-11T05:06:04.069468Z"
-    },
-    {
-      "name": "Gyu-Kaku Japanese BBQ",
-      "place_id": "ChIJPQ4bc3mf44kRSful8e0IlVk",
-      "address": "85 Middlesex Turnpike, Burlington, MA 01803, USA",
-      "pool_table_probability": 0.9719662,
-      "processed_date": "2025-02-11T05:11:04.209776Z"
     },
     {
       "name": "Burtons Grill & Bar",
@@ -181,7 +167,28 @@
       "address": "18 3rd Ave, Burlington, MA 01803, USA",
       "pool_table_probability": 0.9818594,
       "processed_date": "2025-02-11T05:25:20.696984Z"
+    },
+    {
+      "name": "The Friendly Toast",
+      "place_id": "ChIJHeEaMjie44kRwli1VLUhmcU",
+      "address": "75 Middlesex Turnpike #1015B, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.999851,
+      "processed_date": "2025-02-11T05:39:19.578016Z"
+    },
+    {
+      "name": "Gyu-Kaku Japanese BBQ",
+      "place_id": "ChIJPQ4bc3mf44kRSful8e0IlVk",
+      "address": "85 Middlesex Turnpike, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-11T05:39:28.799258Z"
+    },
+    {
+      "name": "Eddie V's Prime Seafood",
+      "place_id": "ChIJ5_uTmV2f44kREjsyTVl_WAg",
+      "address": "50 South Ave, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-11T05:39:31.977090Z"
     }
   ],
-  "last_updated": "2025-02-11T05:25:20.696986Z"
+  "last_updated": "2025-02-11T05:39:31.977092Z"
 }

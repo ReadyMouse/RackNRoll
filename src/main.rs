@@ -18,7 +18,7 @@ mod google_places_photos_reviews;
 use google_places_photos_reviews::GooglePlacesClient;
 
 // TODO: Add Location information to Venue
-#[derive(Serialize, Deserialize, Debug)]
+#[derive(Serialize, Deserialize, Debug, Clone)]
 struct Venue {    
     name: String,
     place_id: String,
@@ -27,7 +27,7 @@ struct Venue {
     processed_date: DateTime<Utc>,
 }
 
-#[derive(Serialize, Deserialize, Debug)]
+#[derive(Serialize, Deserialize, Debug, Clone)]
 struct VenueCollection {
     venues: Vec<Venue>,
     last_updated: DateTime<Utc>,
@@ -82,6 +82,49 @@ impl VenueCollection {
         } else {
             (true, 0.0) // Venue doesn't exist, should process
         }
+    }
+
+    fn save_filtered_venues(&self, file_path: &std::path::Path, threshold: f32) -> Result<(), Box<dyn std::error::Error>> {
+        let filtered = VenueCollection {
+            venues: self.venues
+                .iter()
+                .filter(|v| v.pool_table_probability >= threshold)
+                .cloned()
+                .collect(),
+            last_updated: Utc::now(),
+        };
+        
+        let json = serde_json::to_string_pretty(&filtered)?;
+        std::fs::write(file_path, json)?;
+        Ok(())
+    }
+
+    fn save_filtered_venues_csv(&self, file_path: &std::path::Path, threshold: f32) -> Result<(), Box<dyn std::error::Error>> {
+        use std::io::Write;
+        
+        let filtered_venues: Vec<_> = self.venues
+            .iter()
+            .filter(|v| v.pool_table_probability >= threshold)
+            .collect();
+            
+        let mut writer = std::fs::File::create(file_path)?;
+        
+        // Write CSV header
+        writeln!(writer, "Name,Address,Pool Table Probability,Place ID")?;
+        
+        // Write each venue
+        for venue in filtered_venues {
+            writeln!(
+                writer,
+                "{},{},{:.2}%,{}",
+                venue.name.replace(",", ""),  // Remove commas from names to avoid CSV issues
+                venue.address.replace(",", ""),  // Remove commas from addresses
+                venue.pool_table_probability * 100.0,
+                venue.place_id
+            )?;
+        }
+        
+        Ok(())
     }
 }
 
@@ -276,6 +319,16 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         }
         
     }
+
+    // Replace the JSON export with CSV export
+    let config_name = Path::new(&cli.config)
+        .file_stem()
+        .and_then(|s| s.to_str())
+        .unwrap_or("config");
+    
+    let filtered_filename = format!("{}_results_pool_tables.csv", config_name);
+    collection.save_filtered_venues_csv(Path::new(&filtered_filename), 0.80)?;
+
     Ok(())
 }
 
