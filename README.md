@@ -24,10 +24,16 @@ https://overpass-turbo.eu/#
 # Note
 The YOLO model was developed, and fine-tuned using the [PocketFinder](https://github.com/ReadyMouse/PocketFinder) repo. 
 
-## Setting up the Python Portion Environment
-Set up a working environmnet based off the requirements.txt. Using conda or miniconda. 
+## Prerequisites
+- Rust (latest stable version)
+- Python 3.10
+- Conda or Miniconda
+- Google Places API key
+- Google Cloud Service Account credentials
 
-Recommended order: 
+## Environment Setup
+
+### 1. Python Environment
 ```bash
 conda create --name pool python=3.10
 conda activate pool
@@ -35,21 +41,59 @@ conda install pytorch pandas
 pip install -r requirements.txt
 ```
 
-# Using RackNRoll
-## Modify the Lat/Lon/Radius 
-Change the lat/lon variables to your geographic region and add a radius in meters. 
-
-``` rust
-async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    let latitude = 42.4883417;
-    let longitude = -71.2235583;
-    let radius_meters = 100.0; // meters
-    let months_threshold = 6;
-
-    // The rest of the code...
+### 2. Environment Variables
+Create a `.env` file in the root directory with:
+```env
+GOOGLE_PLACES_API_KEY=your_api_key_here
+GOOGLE_PLACES_CRED_PATH=./path/to/your/service-account.json
+YOLO_WEIGHTS_PATH=./yolo_weights.pt
+YOLO_CONFIDENCE_THRES=0.5
+OUTPUT_DIRECTORY=./google_photos
 ```
 
-## Running
+### 3. Required Files
+- Place your YOLO model weights at `./yolo_weights.pt`
+- Place your Google Cloud service account JSON at the path specified in `.env`
+
+## Configuration
+Modify `config.yaml` to set your search parameters:
+```yaml
+location:
+  latitude: your_latitude
+  longitude: your_longitude
+  radius_meters: search_radius
+
+processing:
+  months_threshold: 6
+  reprocess_all: false
+  save_negative_images: false
+
+place_types:
+  - bar
+  - hotel
+  - restaurant
+```
+
+## Running the Application
 ```bash
-cargo run
+cargo run --config your_config.yaml
 ```
+
+## Output
+The program generates two main outputs:
+1. `venues_database.json` - Contains all processed venues
+2. `config_results_pool_tables.csv` - Filtered results of venues with pool tables (>80% confidence)
+
+## Project Structure
+- `src/` - Rust source code
+- `PoolTableInference.py` - YOLO inference script
+- `google_photos/` - Downloaded venue photos (gitignored)
+
+## Contributing
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
