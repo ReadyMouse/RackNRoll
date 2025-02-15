@@ -1,887 +1,355 @@
 {
   "venues": [
     {
-      "name": "Yard House",
-      "place_id": "ChIJf1HCOAuf44kRI62fhZfwEHk",
-      "address": "108 Middlesex Turnpike, Burlington, MA 01803, USA",
+      "name": "TV Eye",
+      "place_id": "ChIJWaAmONldwokRTxpcndCc48Y",
+      "address": "1647 Weirfield St, Ridgewood, NY 11385, USA",
       "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:00:04.290090Z"
+      "processed_date": "2025-02-15T01:59:06.027939Z",
+      "human_approved": 0,
+      "latitude": 40.6978544,
+      "longitude": -73.9052185
     },
     {
-      "name": "Seasons 52",
-      "place_id": "ChIJPZi5n4B144kR6zWTMGPUnVA",
-      "address": "6 Wayside Rd U, Burlington, MA 01803, USA",
+      "name": "Trans-Pecos",
+      "place_id": "ChIJNdM9hyRcwokRxZn8q3VeNNI",
+      "address": "9-15 Wyckoff Ave, Ridgewood, NY 11385, USA",
       "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:00:16.553214Z"
+      "processed_date": "2025-02-15T01:59:03.728044Z",
+      "human_approved": 0,
+      "latitude": 40.697066,
+      "longitude": -73.9061795
     },
     {
-      "name": "The Capital Grille",
-      "place_id": "ChIJWR0rooB144kRpuoEqLdjegg",
-      "address": "10 Wayside Rd, Burlington, MA 01803, USA",
+      "name": "Freda",
+      "place_id": "ChIJyTY7ffpdwokRbboVZEwJGug",
+      "address": "801 Seneca Ave, Queens, NY 11385, USA",
       "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:00:43.349507Z"
+      "processed_date": "2025-02-15T01:46:54.569602Z",
+      "human_approved": 0,
+      "latitude": 40.701603899999995,
+      "longitude": -73.9052255
     },
     {
-      "name": "Buffalo Wild Wings",
-      "place_id": "ChIJbwCKPEee44kRqVU9-CapAFg",
-      "address": "15 South Ave, Burlington, MA 01803, USA",
+      "name": "K&K Buffet & Cajun Seafood",
+      "place_id": "ChIJs8E2cSFcwokRwt6W_ly2b7E",
+      "address": "341 St Nicholas Ave, Ridgewood, NY 11385, USA",
       "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:00:57.192088Z"
+      "processed_date": "2025-02-15T01:47:13.945962Z",
+      "human_approved": 0,
+      "latitude": 40.700967,
+      "longitude": -73.9092471
     },
     {
-      "name": "Cafe Escadrille",
-      "place_id": "ChIJASRLo4Z144kRBl_5q1HJvxw",
-      "address": "26 Cambridge St, Burlington, MA 01803, USA",
+      "name": "Old Stanley's Bar",
+      "place_id": "ChIJ7dI5NR9cwokR_hkoGToHkeo",
+      "address": "226 Wyckoff Ave, Brooklyn, NY 11237, USA",
       "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:06:04.069468Z"
+      "processed_date": "2025-02-15T01:47:33.700828Z",
+      "human_approved": 0,
+      "latitude": 40.7010028,
+      "longitude": -73.9140111
     },
     {
-      "name": "Burtons Grill & Bar",
-      "place_id": "ChIJi1-tWRae44kR_74QrossTvU",
-      "address": "43 Middlesex Turnpike, Burlington, MA 01803, USA",
+      "name": "Miyama Sushi & Steakhouse",
+      "place_id": "ChIJVTt_AV5dwokRp20H8tjdav4",
+      "address": "349 St Nicholas Ave, Ridgewood, NY 11385, USA",
       "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:11:38.072178Z"
+      "processed_date": "2025-02-15T01:47:55.452399Z",
+      "human_approved": 0,
+      "latitude": 40.7004666,
+      "longitude": -73.9093212
     },
     {
-      "name": "Redstone American Grill",
-      "place_id": "ChIJr8zB6E6e44kRBozsc-246GQ",
-      "address": "20 3rd Ave, Burlington, MA 01803, USA",
+      "name": "Aftermath NYC",
+      "place_id": "ChIJWUxCcGFdwokRB1mscVCGvyo",
+      "address": "16-80 Madison St, Ridgewood, NY 11385, USA",
       "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:12:01.706108Z"
+      "processed_date": "2025-02-15T01:48:17.381300Z",
+      "human_approved": 0,
+      "latitude": 40.7005851,
+      "longitude": -73.907457
     },
     {
-      "name": "Yard House",
-      "place_id": "ChIJf1HCOAuf44kRI62fhZfwEHk",
-      "address": "108 Middlesex Turnpike, Burlington, MA 01803, USA",
+      "name": "Myrtle Pub",
+      "place_id": "ChIJhSfAWSpdwokRv4QNd7NbJPA",
+      "address": "56-53 Myrtle Ave, Ridgewood, NY 11385, USA",
       "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:18:21.537866Z"
+      "processed_date": "2025-02-15T01:48:37.519386Z",
+      "human_approved": 0,
+      "latitude": 40.700549599999995,
+      "longitude": -73.9040958
     },
     {
-      "name": "Seasons 52",
-      "place_id": "ChIJPZi5n4B144kR6zWTMGPUnVA",
-      "address": "6 Wayside Rd U, Burlington, MA 01803, USA",
+      "name": "The Bad Old Days",
+      "place_id": "ChIJCdCsbiFcwokR5RsdxpF54EE",
+      "address": "1684 Woodbine St, Ridgewood, NY 11385, USA",
       "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:18:57.996722Z"
+      "processed_date": "2025-02-15T01:48:56.963307Z",
+      "human_approved": 0,
+      "latitude": 40.7010381,
+      "longitude": -73.9081206
     },
     {
-      "name": "Redstone American Grill",
-      "place_id": "ChIJr8zB6E6e44kRBozsc-246GQ",
-      "address": "20 3rd Ave, Burlington, MA 01803, USA",
+      "name": "Ocelot",
+      "place_id": "ChIJmdHPEqxdwokRjGi16tbWhPM",
+      "address": "259 St Nicholas Ave, Brooklyn, NY 11237, USA",
       "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:20:05.308935Z"
+      "processed_date": "2025-02-15T01:49:18.712147Z",
+      "human_approved": 0,
+      "latitude": 40.702556099999995,
+      "longitude": -73.9128518
     },
     {
-      "name": "Tony C's Sports Bar & Grill",
-      "place_id": "ChIJNzb9506e44kRbFBy4TISQAA",
-      "address": "17 3rd Ave, Burlington, MA 01803, USA",
+      "name": "Cantina 33",
+      "place_id": "ChIJW5Iir9BdwokRcg_in_biG_s",
+      "address": "55-33 Myrtle Ave, Ridgewood, NY 11385, USA",
       "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:20:17.917419Z"
+      "processed_date": "2025-02-15T01:49:36.995035Z",
+      "human_approved": 0,
+      "latitude": 40.7001594,
+      "longitude": -73.9074048
     },
     {
-      "name": "Osteria Nino",
-      "place_id": "ChIJuSrh506e44kRluuqjS22g8c",
-      "address": "19 3rd Ave, Burlington, MA 01803, USA",
+      "name": "Tequila Time Bar Cafe",
+      "place_id": "ChIJ-2yZ6SBcwokRB0NkPZ9G7vg",
+      "address": "675 Seneca Ave, Ridgewood, NY 11385, USA",
       "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:20:29.203375Z"
+      "processed_date": "2025-02-15T01:49:59.259244Z",
+      "human_approved": 0,
+      "latitude": 40.703256499999995,
+      "longitude": -73.9082351
     },
     {
-      "name": "Archer Hotel Burlington",
-      "place_id": "ChIJ219n706e44kRnQU0tC1nqo0",
-      "address": "18 3rd Ave, Burlington, MA 01803, USA",
+      "name": "El Mekkah Bar & Grill",
+      "place_id": "ChIJeYvUTR9cwokRhPYLrPDCJAw",
+      "address": "277 Wyckoff Ave, Brooklyn, NY 11237, USA",
       "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:20:42.750273Z"
+      "processed_date": "2025-02-15T01:50:19.638146Z",
+      "human_approved": 0,
+      "latitude": 40.7010127,
+      "longitude": -73.9133683
     },
     {
-      "name": "Sonesta Simply Suites Boston Burlington",
-      "place_id": "ChIJNxnZxEie44kRXt3m8uPrhxI",
-      "address": "130 Middlesex Turnpike, Burlington, MA 01803, USA",
+      "name": "Coyote Bohemio",
+      "place_id": "ChIJxbauLipcwokRuseV-RWw2oA",
+      "address": "55-19 Myrtle Ave, Ridgewood, NY 11385, USA",
       "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:20:51.555437Z"
+      "processed_date": "2025-02-15T01:50:39.719773Z",
+      "human_approved": 0,
+      "latitude": 40.7000646,
+      "longitude": -73.9078035
     },
     {
-      "name": "Kings Dining & Entertainment",
-      "place_id": "ChIJv3hUFk-e44kR2LGf93VnojI",
-      "address": "52 Second Ave, Burlington, MA 01803, USA",
-      "pool_table_probability": 0.9932327,
-      "processed_date": "2025-02-11T05:20:59.478574Z"
-    },
-    {
-      "name": "The Bancroft",
-      "place_id": "ChIJ4Un7506e44kR7D8qSzKDqoQ",
-      "address": "15 3rd Ave, Burlington, MA 01803, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:21:08.976242Z"
-    },
-    {
-      "name": "Sichuan Gourmet Burlington",
-      "place_id": "ChIJGxMukEie44kRIZ4jLvWjWJc",
-      "address": "91 Middlesex Turnpike, Burlington, MA 01803, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:21:21.723724Z"
-    },
-    {
-      "name": "Border Cafe",
-      "place_id": "ChIJXyykmEie44kREb8FC_ZH20g",
-      "address": "128 Middlesex Turnpike, Burlington, MA 01803, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:21:57.363220Z"
-    },
-    {
-      "name": "Redstone American Grill",
-      "place_id": "ChIJr8zB6E6e44kRBozsc-246GQ",
-      "address": "20 3rd Ave, Burlington, MA 01803, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:22:22.347003Z"
-    },
-    {
-      "name": "Twist Bakery & Cafe",
-      "place_id": "ChIJg5FTAS2f44kRkOePIMVUViI",
-      "address": "62 Second Ave, Burlington, MA 01803, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:23:01.060136Z"
-    },
-    {
-      "name": "Tony C's Sports Bar & Grill",
-      "place_id": "ChIJNzb9506e44kRbFBy4TISQAA",
-      "address": "17 3rd Ave, Burlington, MA 01803, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:23:42.070894Z"
-    },
-    {
-      "name": "Osteria Nino",
-      "place_id": "ChIJuSrh506e44kRluuqjS22g8c",
-      "address": "19 3rd Ave, Burlington, MA 01803, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:24:04.527331Z"
-    },
-    {
-      "name": "The Okipoke Burlington",
-      "place_id": "ChIJh2k-pC6f44kRBbgJZlMwLqM",
-      "address": "19 3rd Ave, Burlington, MA 01803, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:24:44.842739Z"
-    },
-    {
-      "name": "AKB, a hotel bar",
-      "place_id": "ChIJEykVWKef44kRRowD-p3r8JE",
-      "address": "18 3rd Ave, Burlington, MA 01803, USA",
-      "pool_table_probability": 0.9818594,
-      "processed_date": "2025-02-11T05:25:20.696984Z"
-    },
-    {
-      "name": "The Friendly Toast",
-      "place_id": "ChIJHeEaMjie44kRwli1VLUhmcU",
-      "address": "75 Middlesex Turnpike #1015B, Burlington, MA 01803, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:39:19.578016Z"
-    },
-    {
-      "name": "Gyu-Kaku Japanese BBQ",
-      "place_id": "ChIJPQ4bc3mf44kRSful8e0IlVk",
-      "address": "85 Middlesex Turnpike, Burlington, MA 01803, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:39:28.799258Z"
-    },
-    {
-      "name": "Eddie V's Prime Seafood",
-      "place_id": "ChIJ5_uTmV2f44kREjsyTVl_WAg",
-      "address": "50 South Ave, Burlington, MA 01803, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:39:31.977090Z"
-    },
-    {
-      "name": "Red Heat Tavern",
-      "place_id": "ChIJVd_Om8We44kRH-QQ2MrLCnk",
-      "address": "152 Great Rd, Bedford, MA 01730, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:39:43.488110Z"
-    },
-    {
-      "name": "Royal India Bistro",
-      "place_id": "ChIJl6U3F9Cd44kR99c_TFSzYBE",
-      "address": "7 Meriam St, Lexington, MA 02420, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:39:57.146968Z"
-    },
-    {
-      "name": "99 Restaurants",
-      "place_id": "ChIJ_wI10ux144kRmomEj1PaKoM",
-      "address": "194 Cambridge Rd, Woburn, MA 01801, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:40:07.823825Z"
-    },
-    {
-      "name": "QDOBA Mexican Eats",
-      "place_id": "ChIJJZIpRtGd44kR63WlKhiLOzY",
-      "address": "46 Bedford St, Lexington, MA 02420, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:40:18.442062Z"
-    },
-    {
-      "name": "Goodnight Johnny's American Music Bar",
-      "place_id": "ChIJee-piV6f44kR1UDS62KYfRk",
-      "address": "154 Cambridge St, Burlington, MA 01803, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:40:30.333970Z"
-    },
-    {
-      "name": "Jack's Coal Fired Pizza",
-      "place_id": "ChIJtfzO54N144kRx7kC0Won4oU",
-      "address": "2 Wall St, Burlington, MA 01803, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:40:42.167857Z"
-    },
-    {
-      "name": "il Casale Lexington",
-      "place_id": "ChIJD5ieSsWd44kRoOId1XHeEYU",
-      "address": "1727 Massachusetts Ave, Lexington, MA 02420, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:40:54.083789Z"
-    },
-    {
-      "name": "Boston Marriott Burlington",
-      "place_id": "ChIJgQivKtWf44kRud7CX3NSgXU",
-      "address": "One Burlington Mall Road, Burlington, MA 01803, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:41:02.453454Z"
-    },
-    {
-      "name": "Hyatt House Boston/Burlington",
-      "place_id": "ChIJH0LaDyme44kR7L2XOasxEkg",
-      "address": "2 Van de Graaff Drive, Burlington, MA 01803, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:41:13.564675Z"
-    },
-    {
-      "name": "Hilton Garden Inn Boston-Burlington",
-      "place_id": "ChIJqbtP8z6e44kRHzDJtLw5Jng",
-      "address": "5 Wheeler Rd, Burlington, MA 01803, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:41:22.757400Z"
-    },
-    {
-      "name": "Hampton Inn Boston Bedford Burlington",
-      "place_id": "ChIJNSCmzqaf44kRzOpxuAs6Y1U",
-      "address": "25 Middlesex Turnpike, Billerica, MA 01821, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:41:37.248574Z"
-    },
-    {
-      "name": "Residence Inn Boston Burlington",
-      "place_id": "ChIJp9MzQTee44kRWJqiR424uoI",
-      "address": "400 District Ave, Burlington, MA 01803, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:41:45.376044Z"
-    },
-    {
-      "name": "Homewood Suites by Hilton Boston-Billerica/Bedford/Burlington",
-      "place_id": "ChIJn7fj1KOf44kRXRXN9irs8nI",
-      "address": "35 Middlesex Turnpike, Billerica, MA 01821, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:41:53.942466Z"
-    },
-    {
-      "name": "Staybridge Suites Boston - Burlington, an IHG Hotel",
-      "place_id": "ChIJfeXVhj6e44kRfszy7bGnRDc",
-      "address": "11 Old Concord Rd, Burlington, MA 01803, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:42:03.015067Z"
-    },
-    {
-      "name": "Extended Stay America - Boston - Burlington",
-      "place_id": "ChIJDfqu50ae44kRJOHsoyxlIUY",
-      "address": "40 South Ave, Burlington, MA 01803, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:42:13.105980Z"
-    },
-    {
-      "name": "The Inn at Hastings Park",
-      "place_id": "ChIJ7yOWfNKd44kRL8fjuNGxV6I",
-      "address": "2027 Massachusetts Ave, Lexington, MA 02421, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:42:26.189096Z"
-    },
-    {
-      "name": "Bedford Plaza Hotel - Boston",
-      "place_id": "ChIJ0wGyM-qe44kRm6IG_SuIX9Y",
-      "address": "340 Great Rd, Bedford, MA 01730, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:42:38.990415Z"
-    },
-    {
-      "name": "Jamsan Management",
-      "place_id": "ChIJ65opiI6e44kRTfUoevLehwI",
-      "address": "110 Hartwell Ave Suite 300, Lexington, MA 02421, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:42:47.513560Z"
-    },
-    {
-      "name": "Sonesta Boston",
-      "place_id": "ChIJt59BdQCf44kRp76eGtrkyYg",
-      "address": "11 Old Concord Rd, Burlington, MA 01803, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:42:49.336541Z"
-    },
-    {
-      "name": "Compass Corporate Housing",
-      "place_id": "ChIJrVYHPH9144kR-ZnHF9CHp6c",
-      "address": "3 Littles Brook Ct, Burlington, MA 01803, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:42:52.180370Z"
-    },
-    {
-      "name": "Anchors Away Travel",
-      "place_id": "ChIJM56oNtmf44kRuRZoxfW3XUQ",
-      "address": "173 Cambridge St, Burlington, MA 01803, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:42:53.995975Z"
-    },
-    {
-      "name": "Pressed Cafe Burlington",
-      "place_id": "ChIJzw93ITee44kR2wmIrrjlRW8",
-      "address": "200 District Ave, Burlington, MA 01803, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:43:06.061238Z"
-    },
-    {
-      "name": "The Cheesecake Factory",
-      "place_id": "ChIJr8sxeEee44kR4FSmLtRN0wQ",
-      "address": "75 Middlesex Turnpike #1067 A, Burlington, MA 01803, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:43:17.419763Z"
-    },
-    {
-      "name": "Fogo de Chão Brazilian Steakhouse",
-      "place_id": "ChIJU78XMTie44kRDP-SPoxFg6g",
-      "address": "Burlington Mall, 75 Middlesex Turnpike Space 1630, Burlington, MA 01803, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:43:30.523274Z"
-    },
-    {
-      "name": "Tavern in the Square",
-      "place_id": "ChIJFUszHDee44kR_fO1eK3W6zA",
-      "address": "100 District Ave, Burlington, MA 01803, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:43:42.969058Z"
-    },
-    {
-      "name": "Craft Food Halls - Revolution Hall",
-      "place_id": "ChIJfbksWMaf44kRd6AtNgqO5-M",
-      "address": "3 Maguire Rd, Lexington, MA 02421, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:43:56.509437Z"
-    },
-    {
-      "name": "Karma Burlington",
-      "place_id": "ChIJhTq5EUSf44kRRF5pqdD2SNg",
-      "address": "75 Middlesex Turnpike, Burlington, MA 01803, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:44:08.672222Z"
-    },
-    {
-      "name": "Feng Shui",
-      "place_id": "ChIJRTELMCOf44kRHNeza8xfxL0",
-      "address": "2200 District Ave, Burlington, MA 01803, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:44:21.706175Z"
-    },
-    {
-      "name": "Chick-fil-A",
-      "place_id": "ChIJr8sxeEee44kRVTpECrrvDis",
-      "address": "75 Middlesex Turnpike Store, #2110, Burlington, MA 01803, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:44:32.219230Z"
-    },
-    {
-      "name": "Row 34",
-      "place_id": "ChIJJWCoFDqe44kRlM8eELBguXw",
-      "address": "300 District Ave, Burlington, MA 01803, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:44:46.513618Z"
-    },
-    {
-      "name": "Tashan",
-      "place_id": "ChIJo4aAzK-f44kR0BdM2HdSofk",
-      "address": "213 Burlington Rd, Bedford, MA 01730, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:45:01.880027Z"
-    },
-    {
-      "name": "Common Craft",
-      "place_id": "ChIJi6x72tyf44kRbICy4BvsS4c",
-      "address": "75 Middlesex Turnpike, Burlington, MA 01803, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:45:14.601986Z"
-    },
-    {
-      "name": "The Baldwin Bar",
-      "place_id": "ChIJH75dWD1144kRwMB2_7fCPk0",
-      "address": "2 Alfred St, Woburn, MA 01801, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:51:00.592643Z"
-    },
-    {
-      "name": "Scoreboard Sports Bar and Grill",
-      "place_id": "ChIJNc3wzBB144kRnP4ocDH6I4o",
-      "address": "15 Middlesex Canal Park Dr, Woburn, MA 01801, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:51:13.850687Z"
-    },
-    {
-      "name": "The Brickyard",
-      "place_id": "ChIJrbvWdal144kRNTvkcn4UIBQ",
-      "address": "371 Main St, Woburn, MA 01801, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:51:27.611440Z"
-    },
-    {
-      "name": "Crowne Plaza Boston - Woburn, an IHG Hotel",
-      "place_id": "ChIJBS9BphB144kRjlClMXEf1b8",
-      "address": "15 Middlesex Canal Park Dr, Woburn, MA 01801, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:51:38.671632Z"
-    },
-    {
-      "name": "Aloft Lexington",
-      "place_id": "ChIJyUOwxz-c44kRnmb6RIw1_J4",
-      "address": "727 Marrett Rd A, Lexington, MA 02421, USA",
-      "pool_table_probability": 0.8650269,
-      "processed_date": "2025-02-11T05:51:46.255853Z"
-    },
-    {
-      "name": "Element Lexington",
-      "place_id": "ChIJyUOwxz-c44kR-debVypscKw",
-      "address": "727 Marrett Rd B, Lexington, MA 02421, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:51:54.635592Z"
-    },
-    {
-      "name": "Bedford Motel",
-      "place_id": "ChIJ-8BMZM2e44kRroYjcWYe8tE",
-      "address": "30 North Rd, Bedford, MA 01730, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:52:07.478023Z"
-    },
-    {
-      "name": "Extended Stay America - Boston - Woburn",
-      "place_id": "ChIJd3brSGJ044kRL-LbWQLC3NE",
-      "address": "831 Main St, Woburn, MA 01801, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:52:16.819868Z"
-    },
-    {
-      "name": "Launch Family Entertainment Park Woburn",
-      "place_id": "ChIJZeXi2mp144kRtKvUyjGv_OY",
-      "address": "366 Cambridge Rd, Woburn, MA 01801, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T05:52:28.728445Z"
-    },
-    {
-      "name": "Dave & Buster's Woburn",
-      "place_id": "ChIJc_p_Ztt044kRhaXYtz2485w",
-      "address": "271 Mishawum Rd, Woburn, MA 01801, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:01:48.535339Z"
-    },
-    {
-      "name": "Sam Walker's American Tavern",
-      "place_id": "ChIJq6rqcYt044kRl7RZ7CJ609o",
-      "address": "1 Rainin Rd, Woburn, MA 01801, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:02:16.215632Z"
-    },
-    {
-      "name": "Sally's Apizza",
-      "place_id": "ChIJA2rFxcR144kRriEwtkEuAGY",
-      "address": "298-300 Mishawum Rd Ste. 600, Woburn, MA 01801, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:02:36.841955Z"
-    },
-    {
-      "name": "Red Heat Tavern",
-      "place_id": "ChIJLxMtGB8L44kR-A1fL55bt_c",
-      "address": "300 Lowell St, Wilmington, MA 01887, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:02:56.970480Z"
-    },
-    {
-      "name": "TURNPIKE MARKET",
-      "place_id": "ChIJmZqoZl6f44kRax4pHWuhHZE",
-      "address": "509 Middlesex Turnpike, Billerica, MA 01821, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:03:19.472699Z"
-    },
-    {
-      "name": "Hilton Boston/Woburn",
-      "place_id": "ChIJUVYrAcB044kR_xIy7RN_0dw",
-      "address": "2 Forbes Rd, Woburn, MA 01801, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:03:37.857480Z"
-    },
-    {
-      "name": "Courtyard Boston Billerica/Bedford",
-      "place_id": "ChIJPWL78FOf44kRjHILl_dbd3o",
-      "address": "270 Concord Rd, Billerica, MA 01821, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:03:57.098931Z"
-    },
-    {
-      "name": "Red Roof PLUS+ Boston - Woburn/ Burlington",
-      "place_id": "ChIJ5YQobcV044kRYj6MmJQYFfY",
-      "address": "19 Commerce Way, Woburn, MA 01801, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:04:19.443006Z"
-    },
-    {
-      "name": "Courtyard Boston Woburn/Boston North",
-      "place_id": "ChIJ9-Q4N5J044kR_k-Q6YoL2-A",
-      "address": "700 Unicorn Park Dr, Woburn, MA 01801, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:04:38.839605Z"
-    },
-    {
-      "name": "Residence Inn Boston Woburn",
-      "place_id": "ChIJmZV2RiwL44kRuBGR99vgBFo",
-      "address": "300 Presidential Way, Woburn, MA 01801, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:05:05.945852Z"
-    },
-    {
-      "name": "Hampton Inn Boston Woburn",
-      "place_id": "ChIJl0iq4iR144kRBk2XJ5FB14w",
-      "address": "371 Washington St, Woburn, MA 01801, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:05:50.564659Z"
-    },
-    {
-      "name": "Fairfield Inn Boston Woburn/Burlington",
-      "place_id": "ChIJMcjTQtt044kRkmiapaVV9Bc",
-      "address": "285 Mishawum Rd, Woburn, MA 01801, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:06:16.700615Z"
-    },
-    {
-      "name": "Best Western Plus New Englander",
-      "place_id": "ChIJJdiHxox044kRHD5ft4PEaGQ",
-      "address": "1 Rainin Rd, Woburn, MA 01801, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:06:37.477390Z"
-    },
-    {
-      "name": "Homewood Suites by Hilton Boston Woburn",
-      "place_id": "ChIJuVN5HqR144kRtDfciUDuKjU",
-      "address": "371 Washington St, Woburn, MA 01801, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:06:58.530145Z"
-    },
-    {
-      "name": "Chick-fil-A",
-      "place_id": "ChIJF5RoWDt144kR08YEMOvBZS0",
-      "address": "375 Washington St, Woburn, MA 01801, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:07:20.595944Z"
-    },
-    {
-      "name": "Godavari",
-      "place_id": "ChIJi26HOo5144kRcD68Kp0xngM",
-      "address": "9 Cummings Park Dr, Woburn, MA 01801, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:07:43.035237Z"
-    },
-    {
-      "name": "Lord Hobo Brewing Company",
-      "place_id": "ChIJk7Wq5lh044kRpwT8FSGR6Yc",
-      "address": "5 Draper St, Woburn, MA 01801, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:08:09.381203Z"
-    },
-    {
-      "name": "McDonald's",
-      "place_id": "ChIJLQsXu4t044kRhJg-tqYVkVU",
-      "address": "333 Montvale Ave, Woburn, MA 01801, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:08:25.706002Z"
-    },
-    {
-      "name": "CAVA",
-      "place_id": "ChIJbSSrt5l144kRVfSTbiL_z4I",
-      "address": "300 Mishawum Rd #730, Woburn, MA 01801, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:08:42.351505Z"
-    },
-    {
-      "name": "Tatte Bakery & Cafe | Arlington",
-      "place_id": "ChIJ-86MCXZ344kRtSGabagfZRY",
-      "address": "645 Massachusetts Ave, Arlington, MA 02476, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:09:09.047807Z"
-    },
-    {
-      "name": "The Burren",
-      "place_id": "ChIJoRQvvRh344kRUlNbgjUR6iE",
-      "address": "247 Elm St, Somerville, MA 02144, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:15:58.077402Z"
-    },
-    {
-      "name": "The Great American Beer Hall",
-      "place_id": "ChIJB-hLQNN344kRH9p4Ox-z3io",
-      "address": "142 Mystic Ave, Medford, MA 02155, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:16:10.140538Z"
-    },
-    {
-      "name": "Gustazo Cuban Kitchen & Bar - Cambridge",
-      "place_id": "ChIJy3mRVW5344kRgA6qCPMIfnQ",
-      "address": "2067 Massachusetts Ave, Cambridge, MA 02140, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:16:24.252248Z"
-    },
-    {
-      "name": "Buff's Pub",
-      "place_id": "ChIJVbEzfQt444kRgB5vULwODzY",
-      "address": "317 Washington St, Newton, MA 02458, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:16:38.397506Z"
-    },
-    {
-      "name": "In A Pickle Restaurant",
-      "place_id": "ChIJs6qm99aC44kRytnqtFdAO2Q",
-      "address": "265 Moody St, Waltham, MA 02453, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:16:51.086051Z"
-    },
-    {
-      "name": "Copper House Tavern",
-      "place_id": "ChIJiyQGQsac44kRdzrrOIGJ6V4",
-      "address": "380 Winter St, Waltham, MA 02451, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:17:03.819546Z"
-    },
-    {
-      "name": "Giulia",
-      "place_id": "ChIJTRa97T9344kRt_HspVyvshg",
-      "address": "1682 Massachusetts Ave, Cambridge, MA 02138, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:17:15.410610Z"
-    },
-    {
-      "name": "Highland Kitchen",
-      "place_id": "ChIJk9EGAjJ344kRpUb8Vm6de2M",
-      "address": "150 Highland Ave, Somerville, MA 02143, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:17:28.706709Z"
-    },
-    {
-      "name": "Cambridge Common Restaurant",
-      "place_id": "ChIJ3agKCEJ344kRhKYuQrbbMxw",
-      "address": "1667 Massachusetts Ave, Cambridge, MA 02138, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:17:40.988321Z"
-    },
-    {
-      "name": "Rosebud Indian-American Bar & Kitchen",
-      "place_id": "ChIJXZQQeSJ344kRE3-5GZnsRpU",
-      "address": "381 Summer St, Somerville, MA 02144, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:17:57.494362Z"
-    },
-    {
-      "name": "Semolina Kitchen & Bar",
-      "place_id": "ChIJbxWWT9l244kRHR9aBGENL-0",
-      "address": "572 Boston Ave, Medford, MA 02155, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:18:11.842680Z"
-    },
-    {
-      "name": "Four Points by Sheraton Boston Newton",
-      "place_id": "ChIJv7Lec1B544kRv7-M7ZpwK90",
-      "address": "320 Washington St, Newton, MA 02458, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-15T00:12:51.491321Z"
-    },
-    {
-      "name": "The Westin Waltham Boston",
-      "place_id": "ChIJKVpslMic44kRG9hwitGBHks",
-      "address": "Westin Hotel, 70 3rd Ave, Waltham, MA 02451, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:18:29.409770Z"
-    },
-    {
-      "name": "Embassy Suites by Hilton Boston Waltham",
-      "place_id": "ChIJF7XchLec44kRaM6aHfQviM0",
-      "address": "550 Winter St, Waltham, MA 02451, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:18:40.740419Z"
-    },
-    {
-      "name": "Hyatt Place Boston/Medford",
-      "place_id": "ChIJLXbOwsl244kRhhLxzO5Pci4",
-      "address": "116 Riverside Ave, Medford, MA 02155, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:18:49.778023Z"
-    },
-    {
-      "name": "AC Hotel Boston Cambridge",
-      "place_id": "ChIJKTzYTqh344kREmeAlwGB7_I",
-      "address": "10 Acorn Park Dr, Cambridge, MA 02140, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:18:58.451101Z"
-    },
-    {
-      "name": "Hyatt House Boston/Waltham",
-      "place_id": "ChIJSaw5_sic44kRFZlZzct9T0k",
-      "address": "54 4th Ave, Waltham, MA 02451, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:19:10.395517Z"
-    },
-    {
-      "name": "Sheraton Commander Hotel",
-      "place_id": "ChIJbUk7j2l344kR7ur-ySjZcWw",
-      "address": "16 Garden St, Cambridge, MA 02138, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:19:18.826151Z"
-    },
-    {
-      "name": "Hilton Garden Inn Boston/Waltham",
-      "place_id": "ChIJXz8NusWc44kR5GtMYCaztGU",
-      "address": "450 Totten Pond Rd, Waltham, MA 02451, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:19:30.469744Z"
-    },
-    {
-      "name": "Freepoint Hotel Cambridge, Tapestry Collection by Hilton",
-      "place_id": "ChIJczCsUQp344kRkH_OL8z4BKg",
-      "address": "220 Alewife Brook Pkwy, Cambridge, MA 02138, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:19:38.862008Z"
-    },
-    {
-      "name": "Hampton Inn & Suites Watertown Boston",
-      "place_id": "ChIJieyN9yR444kRsSQ3_ScbR8k",
-      "address": "25 Bond St, Watertown, MA 02472, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:19:46.636635Z"
-    },
-    {
-      "name": "Homewood Suites by Hilton Boston/Cambridge-Arlington, MA",
-      "place_id": "ChIJXTy8qwN344kRBauUjXck0MA",
-      "address": "1 Massachusetts Ave, Arlington, MA 02474, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:19:59.077997Z"
-    },
-    {
-      "name": "Hampton Inn and Suites Boston/Waltham",
-      "place_id": "ChIJq6qq2bWc44kRRqzLaMfkgr8",
-      "address": "135 2nd Ave, Waltham, MA 02451, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:20:09.795891Z"
-    },
-    {
-      "name": "Concord's Colonial Inn",
-      "place_id": "ChIJ625sqTma44kRzlBradoLrgI",
-      "address": "48 Monument Square, Concord, MA 01742, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:20:23.621365Z"
-    },
-    {
-      "name": "Yume Ga Arukara",
-      "place_id": "ChIJK507yT1344kR-7ZdmNeKhpE",
-      "address": "1815 Massachusetts Ave, Cambridge, MA 02140, USA",
-      "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:20:38.592971Z"
-    },
-    {
-      "name": "K1 Speed - Indoor Go Karts, Corporate Event Venue, Team Building Activities",
-      "place_id": "ChIJJdc05q4L44kReXqoMC5DFGk",
-      "address": "40 Fordham Rd, Wilmington, MA 01887, USA",
-      "pool_table_probability": 0.97126645,
-      "processed_date": "2025-02-11T06:20:52.140245Z"
-    },
-    {
-      "name": "Bagelsaurus",
-      "place_id": "ChIJ0b7Icj5344kRGMkJHkS43vo",
-      "address": "1796 Massachusetts Ave, Cambridge, MA 02140, USA",
+      "name": "Aby’s bar",
+      "place_id": "ChIJXR0Pq9pdwokRMylR4wAEGBU",
+      "address": "1541 Myrtle Ave, Brooklyn, NY 11237, USA",
       "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:21:04.740582Z"
+      "processed_date": "2025-02-15T01:59:01.590292Z",
+      "human_approved": 0,
+      "latitude": 40.6994477,
+      "longitude": -73.9138223
     },
     {
-      "name": "Mighty Squirrel Brewing Co.",
-      "place_id": "ChIJaVqghSCd44kR0PoHpkujOvA",
-      "address": "411 Waverley Oaks Rd, Waltham, MA 02452, USA",
+      "name": "The Venue",
+      "place_id": "ChIJDTNk7CRcwokRLPFjyiob-iQ",
+      "address": "987 Wyckoff Ave, Ridgewood, NY 11385, USA",
       "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:21:17.637013Z"
+      "processed_date": "2025-02-15T01:51:20.351158Z",
+      "human_approved": 0,
+      "latitude": 40.6962086,
+      "longitude": -73.9047574
     },
     {
-      "name": "Sofra Bakery & Cafe",
-      "place_id": "ChIJk2QnhIN344kRjEtEz7EqpiM",
-      "address": "1 Belmont St, Cambridge, MA 02138, USA",
+      "name": "Ridgewood’s Cafe & Lounge",
+      "place_id": "ChIJl7EyF6FdwokRuD5PDfEOs-o",
+      "address": "279 St Nicholas Ave, Ridgewood, NY 11385, USA",
       "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:21:31.543755Z"
+      "processed_date": "2025-02-15T01:51:38.623394Z",
+      "human_approved": 0,
+      "latitude": 40.702146299999995,
+      "longitude": -73.9120954
     },
     {
-      "name": "Pressed Cafe",
-      "place_id": "ChIJF27-9gyj44kRO99-0UOw0G8",
-      "address": "330 Billerica Rd, Chelmsford, MA 01824, USA",
+      "name": "Bar28",
+      "place_id": "ChIJHTucdtddwokRI8jPw6mNkQA",
+      "address": "894 Wyckoff Ave, Brooklyn, NY 11237, USA",
       "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:21:44.112873Z"
+      "processed_date": "2025-02-15T01:51:44.257991Z",
+      "human_approved": 0,
+      "latitude": 40.696888,
+      "longitude": -73.9068498
     },
     {
-      "name": "Barcelona Wine Bar",
-      "place_id": "ChIJ08mlgvh344kRKI69jaqx_G4",
-      "address": "1688 Massachusetts Ave, Cambridge, MA 02138, USA",
+      "name": "Billy's Birreria",
+      "place_id": "ChIJX-ijBNhdwokRoNemBlCTjQQ",
+      "address": "870 Cypress Ave #2, Ridgewood, NY 11385, USA",
       "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:21:56.388286Z"
+      "processed_date": "2025-02-15T01:52:01.984361Z",
+      "human_approved": 0,
+      "latitude": 40.699323,
+      "longitude": -73.905096
     },
     {
-      "name": "Joyful Garden Watertown",
-      "place_id": "ChIJY3Ebb21544kRDfIRmV_Zwbw",
-      "address": "550 Arsenal St, Watertown, MA 02472, USA",
+      "name": "Seneca Bar",
+      "place_id": "ChIJ87cm6CBcwokR6ve9aiGTU94",
+      "address": "681 Seneca Ave, Ridgewood, NY 11385, USA",
       "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:22:09.485844Z"
+      "processed_date": "2025-02-15T01:52:04.330666Z",
+      "human_approved": 0,
+      "latitude": 40.7031492,
+      "longitude": -73.9080757
     },
     {
-      "name": "Sugar & Spice Thai Restaurant",
-      "place_id": "ChIJbX0Obj1344kR6UTzag-5ols",
-      "address": "1933 Massachusetts Ave, Cambridge, MA 02140, USA",
+      "name": "While in Kathmandu",
+      "place_id": "ChIJeSf6KiFcwokRh2AC4D8qBts",
+      "address": "758 Seneca Ave, Ridgewood, NY 11385, USA",
       "pool_table_probability": 0.0,
-      "processed_date": "2025-02-11T06:22:21.483704Z"
+      "processed_date": "2025-02-15T01:52:23.443897Z",
+      "human_approved": 0,
+      "latitude": 40.702120699999995,
+      "longitude": -73.9067489
     },
     {
-      "name": "sweetgreen",
-      "place_id": "ChIJR4SWF1yf44kRuuk7j60Bpw8",
-      "address": "85 Middlesex Turnpike, Burlington, MA 01803, USA",
+      "name": "El Encebollado de Rossy",
+      "place_id": "ChIJd3-IIRddwokRzoNh73qt79Q",
+      "address": "238 Wyckoff Ave, Brooklyn, NY 11237, USA",
       "pool_table_probability": 0.0,
-      "processed_date": "2025-02-14T22:55:56.368019Z"
+      "processed_date": "2025-02-15T01:52:42.142744Z",
+      "human_approved": 0,
+      "latitude": 40.7007097,
+      "longitude": -73.9135972
     },
     {
       "name": "Wendy's",
-      "place_id": "ChIJhdQyaEie44kRhjPKuW9ph14",
-      "address": "112 Burlington Mall Road, Burlington, MA 01803, USA",
+      "place_id": "ChIJixKiUFddwokR_zqJjU0HGLM",
+      "address": "57-18 Myrtle Ave, Ridgewood, NY 11385, USA",
       "pool_table_probability": 0.0,
-      "processed_date": "2025-02-14T22:56:04.670794Z"
+      "processed_date": "2025-02-15T01:52:58.925298Z",
+      "human_approved": 0,
+      "latitude": 40.7003512,
+      "longitude": -73.9030144
     },
     {
-      "name": "Chipotle Mexican Grill",
-      "place_id": "ChIJ05J2TTae44kRIIa2QVZd2Kw",
-      "address": "110 Burlington Mall Road, Burlington, MA 01803, USA",
+      "name": "Mama Yoshi Mini Mart",
+      "place_id": "ChIJF8D0myldwokRYIJRrmBMwuQ",
+      "address": "17-11 Grove St, Ridgewood, NY 11385, USA",
       "pool_table_probability": 0.0,
-      "processed_date": "2025-02-14T22:56:17.887536Z"
+      "processed_date": "2025-02-15T01:53:18.103524Z",
+      "human_approved": 0,
+      "latitude": 40.7031968,
+      "longitude": -73.911119
     },
     {
-      "name": "Shake Shack Burlington Mall",
-      "place_id": "ChIJZR7J-Raf44kRVTAs8-_pp4c",
-      "address": "75 Middlesex Turnpike Suite 1550, Burlington, MA 01803, USA",
+      "name": "Cachapas y Mas",
+      "place_id": "ChIJ5Qpq5iBcwokRXAiqaAUuS_A",
+      "address": "678 Seneca Ave, Ridgewood, NY 11385, USA",
       "pool_table_probability": 0.0,
-      "processed_date": "2025-02-14T22:56:28.963071Z"
+      "processed_date": "2025-02-15T01:53:40.934187Z",
+      "human_approved": 0,
+      "latitude": 40.7030556,
+      "longitude": -73.9083333
     },
     {
-      "name": "Frank Pepe Pizzeria Napoletana",
-      "place_id": "ChIJu-RChwSf44kRV3XSlnpu3e0",
-      "address": "75 Middlesex Turnpike, Burlington, MA 01803, USA",
+      "name": "L'imprimerie",
+      "place_id": "ChIJrzLMnhhcwokR7jqV_veobUI",
+      "address": "1524 Myrtle Ave, Brooklyn, NY 11237, USA",
       "pool_table_probability": 0.0,
-      "processed_date": "2025-02-14T23:00:05.194226Z"
+      "processed_date": "2025-02-15T01:54:07.870379Z",
+      "human_approved": 0,
+      "latitude": 40.6992312,
+      "longitude": -73.9128512
+    },
+    {
+      "name": "McDonald's",
+      "place_id": "ChIJgdjRyxtcwokRks6YG7EJk-Y",
+      "address": "54-04 Myrtle Ave, Ridgewood, NY 11385, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T01:54:42.176241Z",
+      "human_approved": 0,
+      "latitude": 40.6995043,
+      "longitude": -73.91050589999999
+    },
+    {
+      "name": "Starbucks",
+      "place_id": "ChIJ5VV4FyJcwokRL6sBtbyxRco",
+      "address": "329 Wyckoff Ave, Ridgewood, NY 11385, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T01:58:56.242984Z",
+      "human_approved": 0,
+      "latitude": 40.699768,
+      "longitude": -73.91124
+    },
+    {
+      "name": "The Bushwick Diner",
+      "place_id": "ChIJHbKkqhhcwokR97swWmu6Gq4",
+      "address": "299 Wyckoff Ave, Brooklyn, NY 11237, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T01:55:29.905891Z",
+      "human_approved": 0,
+      "latitude": 40.70049950000001,
+      "longitude": -73.9126052
+    },
+    {
+      "name": "Nhà Mình",
+      "place_id": "ChIJyX92Bk1ZwokRwPSDXroWAdI",
+      "address": "915 Wyckoff Ave, Ridgewood, NY 11385, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T01:55:54.232965Z",
+      "human_approved": 0,
+      "latitude": 40.6969785,
+      "longitude": -73.9062611
+    },
+    {
+      "name": "White Castle",
+      "place_id": "ChIJG712oRhcwokRCT4HkOQbEmo",
+      "address": "1545 Myrtle Ave, Brooklyn, NY 11237, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T01:56:18.146988Z",
+      "human_approved": 0,
+      "latitude": 40.6995443,
+      "longitude": -73.91287059999999
+    },
+    {
+      "name": "El Manaba",
+      "place_id": "ChIJIfpxeCFcwokRzVi5MecmyoU",
+      "address": "341 St Nicholas Ave, Ridgewood, NY 11385, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T01:56:41.456751Z",
+      "human_approved": 0,
+      "latitude": 40.7006561,
+      "longitude": -73.9096659
+    },
+    {
+      "name": "Rico Pollo 1",
+      "place_id": "ChIJi4pNVyFcwokR0l1t1Ms0f5E",
+      "address": "55-37 Myrtle Ave, Ridgewood, NY 11385, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T01:57:05.720461Z",
+      "human_approved": 0,
+      "latitude": 40.700122,
+      "longitude": -73.907259
+    },
+    {
+      "name": "Rudy's Pastry Shop",
+      "place_id": "ChIJUb8S9SZcwokRPNHJbS7rWqU",
+      "address": "905 Seneca Ave, Ridgewood, NY 11385, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T01:57:29.388449Z",
+      "human_approved": 0,
+      "latitude": 40.7007014,
+      "longitude": -73.9037297
+    },
+    {
+      "name": "Rico Chimi",
+      "place_id": "ChIJ--kG7RhcwokRtY0G4s0XM-k",
+      "address": "1492 Myrtle Ave, Brooklyn, NY 11237, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T01:57:57.951462Z",
+      "human_approved": 0,
+      "latitude": 40.6991453,
+      "longitude": -73.9142989
     }
   ],
-  "last_updated": "2025-02-14T23:00:05.194230Z"
+  "last_updated": "2025-02-15T01:57:57.951464Z"
 }

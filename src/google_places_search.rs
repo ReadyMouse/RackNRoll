@@ -6,8 +6,8 @@ use reqwest;
 
 #[derive(Debug, Deserialize)]
 pub struct Location {
-    latitude: f64,
-    longitude: f64,
+    pub latitude: f64,
+    pub longitude: f64,
 }
 
 impl Location {

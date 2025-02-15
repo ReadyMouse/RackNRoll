@@ -10,16 +10,23 @@ pub struct Venue {
     pub address: String,
     pub pool_table_probability: f32,
     pub processed_date: DateTime<Utc>,
+    #[serde(default)] 
+    pub human_approved: i32,
+    pub latitude: f64,
+    pub longitude: f64,
 }
 
 impl Venue {
-    pub fn new(name: String, place_id: String, address: String, probability: f32) -> Self {
+    pub fn new(name: String, place_id: String, address: String, probability: f32, lat: f64, lon: f64) -> Self {
         Venue {
             name,
             place_id,
             address,
             pool_table_probability: probability,
             processed_date: Utc::now(),
+            human_approved: 0,
+            latitude: lat,
+            longitude: lon,
         }
     }
 }
@@ -50,9 +57,19 @@ impl VenueCollection {
     }
 
     pub fn load_from_json(file_path: &Path) -> Result<Self, Box<dyn std::error::Error>> {
+        println!("Attempting to load database from: {}", file_path.display());
         let json_str = std::fs::read_to_string(file_path)?;
-        let collection = serde_json::from_str(&json_str)?;
-        Ok(collection)
+        println!("Read {} bytes from database file", json_str.len());
+        match serde_json::from_str::<VenueCollection>(&json_str) {
+            Ok(collection) => {
+                println!("Successfully parsed database with {} venues", collection.venues.len());
+                Ok(collection)
+            },
+            Err(e) => {
+                eprintln!("Error parsing database JSON: {}", e);
+                Err(e.into())
+            }
+        }
     }
 
     pub fn should_process_venue(&self, place_id: &str, months_threshold: i64) -> (bool, f32) {

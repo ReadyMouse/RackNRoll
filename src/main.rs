@@ -59,25 +59,25 @@ fn run_python_script(
     Ok(0.0)
 }
 
-#[derive(Serialize, Deserialize, Debug)]
-struct Config {
-    location: Location,
-    processing: Processing,
-    place_types: Vec<String>,
+#[derive(Serialize, Deserialize, Debug, Clone)]
+pub struct Config {
+    pub location: Location,
+    pub processing: Processing,
+    pub place_types: Vec<String>,
 }
 
-#[derive(Serialize, Deserialize, Debug)]
-struct Location {
-    latitude: f64,
-    longitude: f64,
-    radius_meters: f64,
+#[derive(Serialize, Deserialize, Debug, Clone)]
+pub struct Location {
+    pub latitude: f64,
+    pub longitude: f64,
+    pub radius_meters: f64,
 }
 
-#[derive(Serialize, Deserialize, Debug)]
-struct Processing {
-    months_threshold: i64,
-    reprocess_all: bool,
-    save_negative_images: bool,
+#[derive(Serialize, Deserialize, Debug, Clone)]
+pub struct Processing {
+    pub months_threshold: i64,
+    pub reprocess_all: bool,
+    pub save_negative_images: bool,
 }
 
 #[derive(Parser)]
@@ -87,6 +87,37 @@ struct Cli {
     
     #[arg(long)]
     web: bool,
+}
+
+fn cleanup_empty_directories(output_dir: &str) -> Result<(), Box<dyn std::error::Error>> {
+    let path = std::path::Path::new(output_dir);
+    if !path.exists() {
+        return Ok(());
+    }
+
+    for entry in std::fs::read_dir(path)? {
+        if let Ok(entry) = entry {
+            if entry.path().is_dir() {
+                let dir_path = entry.path();
+                let jpg_count = std::fs::read_dir(&dir_path)?
+                    .filter_map(Result::ok)
+                    .filter(|e| {
+                        e.path()
+                            .extension()
+                            .and_then(|ext| ext.to_str())
+                            .map(|ext| ext.to_lowercase() == "jpg")
+                            .unwrap_or(false)
+                    })
+                    .count();
+
+                if jpg_count == 0 {
+                    println!("Removing empty directory: {}", dir_path.display());
+                    std::fs::remove_dir_all(&dir_path)?;
+                }
+            }
+        }
+    }
+    Ok(())
 }
 
 pub async fn search_pool_tables(
@@ -137,6 +168,7 @@ pub async fn search_pool_tables(
     }
 
     // Process each place
+    let mut venues_processed = 0;
     for place in all_places.places {
         if let Some(callback) = &status_callback {
             callback(&format!("Processing {}", place.display_name.text)).await;
@@ -161,9 +193,9 @@ pub async fn search_pool_tables(
         match photos_client.get_place_photos(&place.id).await {
             Ok(_) => {
                 let folder_path = Path::new(output_dir).join(&place.display_name.text);
-                if let Some(callback) = &status_callback {
-                    callback(&format!("Downloaded photos to {}", folder_path.display())).await;
-                }
+                // if let Some(callback) = &status_callback {
+                //     callback(&format!("Downloaded photos to {}", folder_path.display())).await;
+                // }
                 
                 match run_python_script(
                     &folder_path,
@@ -172,28 +204,34 @@ pub async fn search_pool_tables(
                     config.processing.save_negative_images,
                 ) {
                     Ok(probability) => {
-                        let status = format!("New inference for {}: {:.2}%", 
+                        let status = format!("Probability of pool table at {}: {:.2}%", 
                             place.display_name.text, probability * 100.0);
-                        println!("Status update: {}", status); // Debug print
+                        println!("Status update: {}", status);
                         if let Some(callback) = &status_callback {
                             callback(&status).await;
                         }
                         
-                        // Add debug print for remaining photos
-                        if probability > 0.0 {
-                            if let Ok(entries) = std::fs::read_dir(&folder_path) {
-                                let photo_count = entries.filter(|e| e.is_ok()).count();
-                                println!("Found {} photos in {} after inference", photo_count, folder_path.display());
-                            }
-                        }
-                        
+                        let venue_name = place.display_name.text.clone();
                         let venue = Venue::new(
-                            place.display_name.text,
+                            venue_name.clone(),
                             place.id,
                             place.formatted_address,
-                            probability
+                            probability,
+                            place.location.latitude,
+                            place.location.longitude
                         );
                         collection.add_venue(venue);
+                        
+                        // Increment processed count and save periodically
+                        venues_processed += 1;
+                        if venues_processed % 5 == 0 {
+                            if let Some(callback) = &status_callback {
+                                callback("Saving database checkpoint...").await;
+                            }
+                            if let Err(e) = collection.save_to_json(Path::new("venues_database.json")) {
+                                eprintln!("Error saving venue database checkpoint: {}", e);
+                            }
+                        }
                     },
                     Err(e) => eprintln!("Error: {}", e)
                 }
@@ -202,7 +240,12 @@ pub async fn search_pool_tables(
         }
     }
 
-    // Save to JSON file
+    // After processing all places, cleanup any empty directories
+    if let Err(e) = cleanup_empty_directories(output_dir) {
+        eprintln!("Error cleaning up empty directories: {}", e);
+    }
+
+    // Final save to ensure we don't miss any venues
     collection.save_to_json(Path::new("venues_database.json"))?;
     
     Ok(collection.venues)

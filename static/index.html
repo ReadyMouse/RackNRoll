@@ -296,6 +296,16 @@
                         btn.disabled = true;
                         btn.style.opacity = '0.5';
                     });
+
+                    // Show thank you message if provided
+                    if (result.message) {
+                        const messageDiv = document.createElement('div');
+                        messageDiv.textContent = result.message;
+                        messageDiv.style.color = '#28a745';  // Green color
+                        messageDiv.style.marginTop = '10px';
+                        messageDiv.style.fontWeight = 'bold';
+                        photoContainer.appendChild(messageDiv);
+                    }
                 } else {
                     throw new Error(result.error || 'Unknown error occurred');
                 }

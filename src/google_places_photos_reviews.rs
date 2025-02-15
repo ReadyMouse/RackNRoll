@@ -118,7 +118,36 @@ impl GooglePlacesClient {
         Ok(response)
     }
 
-    pub async fn download_photo(&self, photo_name: &str, save_name: &str) -> Result<String, Box<dyn std::error::Error>> {
+    fn cleanup_empty_directory(&self, dir_path: &str) -> Result<(), Box<dyn std::error::Error>> {
+        let path = std::path::Path::new(dir_path);
+        
+        // Check if directory exists
+        if !path.exists() {
+            return Ok(());
+        }
+
+        // Count jpg files in directory
+        let jpg_count = std::fs::read_dir(path)?
+            .filter_map(Result::ok)
+            .filter(|entry| {
+                entry.path()
+                    .extension()
+                    .and_then(|ext| ext.to_str())
+                    .map(|ext| ext.to_lowercase() == "jpg")
+                    .unwrap_or(false)
+            })
+            .count();
+
+        // If no jpg files found, remove the directory
+        if jpg_count == 0 {
+            println!("No photos found in {}, removing directory", dir_path);
+            std::fs::remove_dir_all(path)?;
+        }
+
+        Ok(())
+    }
+
+    pub async fn download_photo(&self, photo_name: &str, place_id: &str, index: usize, venue_name: &str) -> Result<String, Box<dyn std::error::Error>> {
         let access_token = self.get_access_token().await?;
         let photo_url = format!(
             "{}{}/media?key={}&maxHeightPx=4032&maxWidthPx=4032",
@@ -132,10 +161,21 @@ impl GooglePlacesClient {
             .send()
             .await?;
 
-        let file_path = format!("{}/{}", self.output_dir, save_name);
+        // Create a directory for the venue using the venue name
+        let place_dir = format!("{}/{}", self.output_dir, venue_name);
+        std::fs::create_dir_all(&place_dir)?;  // Create the directory if it doesn't exist
+
+        let save_name = format!("{}_{}.jpg", place_id, index);
+        let file_path = format!("{}/{}", place_dir, save_name);  // Use the venue directory for saving
         println!("Attempting to save photo to: {}", file_path);
         let bytes = response.bytes().await?;
         fs::write(&file_path, &bytes)?;
+
+        // After saving the photo, check if download was successful
+        if !std::path::Path::new(&file_path).exists() {
+            // If download failed, cleanup the directory
+            self.cleanup_empty_directory(&place_dir)?;
+        }
 
         Ok(file_path)
     }
@@ -144,25 +184,20 @@ impl GooglePlacesClient {
         let place_data = self.get_place_details(place_id).await?;
         let mut photo_results = Vec::new();
 
-        // Create a directory for this place
-        let place_dir = format!("{}/{}", self.output_dir, place_data.display_name.text);
+        // Use the display name for the directory
+        let venue_name = &place_data.display_name.text;
+        let place_dir = format!("{}/{}", self.output_dir, venue_name);
         std::fs::create_dir_all(&place_dir)?;  // Create the directory if it doesn't exist
 
-
         for (i, photo) in place_data.photos.iter().enumerate() {
-            let save_name = format!("{}/photo_{}.jpg", place_data.display_name.text, i);
-            let full_path = format!("{}/{}", self.output_dir, save_name);
-            
-            // Check if file already exists
-            if std::path::Path::new(&full_path).exists() {
-                println!("Photo {} already exists, skipping download", save_name);
-                photo_results.push(full_path);
-                continue;
-            }
-
-            if let Ok(downloaded_path) = self.download_photo(&photo.name, &save_name).await {
+            if let Ok(downloaded_path) = self.download_photo(&photo.name, place_id, i, venue_name).await {
                 photo_results.push(downloaded_path);
             }
+        }
+
+        // After downloading all photos, check if any were successful
+        if photo_results.is_empty() {
+            self.cleanup_empty_directory(&place_dir)?;
         }
 
         println!("Download complete! Successfully downloaded {} place photos", photo_results.len());

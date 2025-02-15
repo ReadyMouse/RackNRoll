@@ -16,6 +16,7 @@ use std::time::{SystemTime, UNIX_EPOCH};
 use serde_json::json;
 use chrono::Utc;
 use crate::models::VenueCollection;
+// use crate::models::Venue;
 
 // Create two static senders - one for status updates and one for completion notification
 lazy_static! {
@@ -112,7 +113,13 @@ pub async fn search_venues(
     params: web::Json<SearchParams>,
     data: web::Data<AppState>,
 ) -> Result<HttpResponse> {
-    println!("Starting search_venues with params: {:?}", params);
+    // println!("Search parameters:");
+    // println!("  Latitude: {}", params.latitude);
+    // println!("  Longitude: {}", params.longitude);
+    // println!("  Radius: {} meters", params.radius);
+    // println!("  Months threshold: {}", params.months_threshold);
+    // println!("  Save negative: {}", params.save_negative);
+    // println!("  Reprocess all: {}", params.reprocess_all);
 
     let config = Config {
         location: Location {
@@ -132,7 +139,7 @@ pub async fn search_venues(
     let connections = ACTIVE_CONNECTIONS.lock().unwrap().clone();
 
     let result = search_pool_tables(
-        config,
+        config.clone(), // Clone config since we'll need it later
         &data.api_key,
         &data.cred_path,
         &data.output_dir,
@@ -154,10 +161,23 @@ pub async fn search_venues(
 
     match result {
         Ok(venues) => {
-            println!("Search complete, found {} venues", venues.len());
+            println!("Search complete, found {} total venues", venues.len());
             let venues_response: Vec<VenueResponse> = venues
                 .into_iter()
-                .filter(|v| v.pool_table_probability > 0.0)
+                .filter(|v| {
+                    let has_pool = v.pool_table_probability > 0.0;
+                    let in_radius = calculate_distance(
+                        params.latitude,
+                        params.longitude,
+                        v.latitude,
+                        v.longitude
+                    ) <= params.radius;
+                    
+                    println!("Venue '{}' coordinates: ({}, {})", 
+                        v.name, v.latitude, v.longitude);
+                    
+                    has_pool && in_radius
+                })
                 .map(|v| {
                     let name = v.name.clone();
                     let photos = get_venue_photos(&data.output_dir, &name);
@@ -171,7 +191,7 @@ pub async fn search_venues(
                 })
                 .collect();
 
-            println!("Returning {} venues with pool tables", venues_response.len());
+            println!("Returning {} venues with pool tables in radius", venues_response.len());
             Ok(HttpResponse::Ok()
                 .content_type("application/json")
                 .json(venues_response))
@@ -180,6 +200,29 @@ pub async fn search_venues(
             .content_type("application/json")
             .body(format!("{{\"error\": \"{}\"}}", e)))
     }
+}
+
+// Add this helper function to calculate distance between two points
+fn calculate_distance(lat1: f64, lon1: f64, lat2: f64, lon2: f64) -> f64 {
+    const EARTH_RADIUS: f64 = 6371000.0; // Earth's radius in meters
+    
+    let lat1_rad = lat1.to_radians();
+    let lat2_rad = lat2.to_radians();
+    let delta_lat = (lat2 - lat1).to_radians();
+    let delta_lon = (lon2 - lon1).to_radians();
+
+    let a = (delta_lat / 2.0).sin() * (delta_lat / 2.0).sin() +
+            lat1_rad.cos() * lat2_rad.cos() *
+            (delta_lon / 2.0).sin() * (delta_lon / 2.0).sin();
+    
+    let c = 2.0 * a.sqrt().atan2((1.0 - a).sqrt());
+    
+    let distance = EARTH_RADIUS * c; // Returns distance in meters
+    
+    println!("Distance calculation: ({}, {}) to ({}, {}) = {} meters", 
+        lat1, lon1, lat2, lon2, distance);
+    
+    distance
 }
 
 // Helper function to get photos for a venue
@@ -251,62 +294,120 @@ pub async fn handle_feedback(
     
     println!("Source path: {}", source_path.display());
 
-    if !feedback.is_positive {
-        // Create no_pool_table_training directory if it doesn't exist
-        let negative_dir = Path::new(&data.output_dir).join("no_pool_table_training");
-        println!("Creating negative directory at: {}", negative_dir.display());
-        
-        if let Err(e) = fs::create_dir_all(&negative_dir) {
-            eprintln!("Error creating negative directory: {}", e);
-            return Ok(HttpResponse::InternalServerError().json(json!({
-                "success": false,
-                "error": format!("Failed to create negative directory: {}", e)
-            })));
+    let db_path = Path::new("venues_database.json");
+    println!("Attempting to load venue database from: {}", db_path.display());
+    
+    let mut collection = match VenueCollection::load_from_json(db_path) {
+        Ok(collection) => {
+            println!("Successfully loaded database with {} venues", collection.venues.len());
+            collection
+        },
+        Err(e) => {
+            eprintln!("Error loading database from {}: {}", db_path.display(), e);
+            println!("Creating new database");
+            VenueCollection::new()
         }
+    };
+
+    if let Some(venue) = collection.venues.iter_mut()
+        .find(|v| v.name == decoded_venue) {
         
-        // Verify source file exists
-        if !source_path.exists() {
-            eprintln!("Source file does not exist: {}", source_path.display());
-            return Ok(HttpResponse::NotFound().json(json!({
-                "success": false,
-                "error": format!("Source file not found: {}", source_path.display())
-            })));
-        }
-        
-        // Move the photo to the negative directory
-        if let Some(filename) = source_path.file_name() {
-            let dest_path = negative_dir.join(filename);
-            println!("Copying file from {} to {}", source_path.display(), dest_path.display());
+        if feedback.is_positive {
+            // Create confirmed_pool_tables directory if it doesn't exist
+            let confirmed_dir = Path::new(&data.output_dir).join("confirmed_pool_tables");
+            println!("Creating confirmed directory at: {}", confirmed_dir.display());
             
-            if let Err(e) = fs::copy(&source_path, &dest_path) {
-                eprintln!("Error copying file to negative directory: {}", e);
+            if let Err(e) = fs::create_dir_all(&confirmed_dir) {
+                eprintln!("Error creating confirmed directory: {}", e);
                 return Ok(HttpResponse::InternalServerError().json(json!({
                     "success": false,
-                    "error": format!("Failed to copy file: {}", e)
+                    "error": format!("Failed to create confirmed directory: {}", e)
                 })));
             }
-        } else {
-            eprintln!("Could not extract filename from source path");
-            return Ok(HttpResponse::InternalServerError().json(json!({
-                "success": false,
-                "error": "Invalid source path"
-            })));
-        }
-
-        // Update venue probability in database
-        let db_path = Path::new("venues_database.json");
-        println!("Updating venue database at: {}", db_path.display());
-        
-        let mut collection = match VenueCollection::load_from_json(db_path) {
-            Ok(collection) => collection,
-            Err(e) => {
-                println!("Could not load database, creating new one: {}", e);
-                VenueCollection::new()
+            
+            // Verify source file exists
+            if !source_path.exists() {
+                eprintln!("Source file does not exist: {}", source_path.display());
+                return Ok(HttpResponse::NotFound().json(json!({
+                    "success": false,
+                    "error": format!("Source file not found: {}", source_path.display())
+                })));
             }
-        };
+            
+            // Copy the photo to the confirmed directory
+            if let Some(filename) = source_path.file_name() {
+                let dest_path = confirmed_dir.join(filename);
+                println!("Copying file from {} to {}", source_path.display(), dest_path.display());
+                
+                if let Err(e) = fs::copy(&source_path, &dest_path) {
+                    eprintln!("Error copying file to confirmed directory: {}", e);
+                    return Ok(HttpResponse::InternalServerError().json(json!({
+                        "success": false,
+                        "error": format!("Failed to copy file: {}", e)
+                    })));
+                }
+            }
 
-        if let Some(venue) = collection.venues.iter_mut()
-            .find(|v| v.name == decoded_venue) {
+            // Update venue in database
+            venue.human_approved += 1;
+            let approval_count = venue.human_approved;
+            
+            // Save updated database
+            if let Err(e) = collection.save_to_json(db_path) {
+                eprintln!("Error saving venue database: {}", e);
+                return Ok(HttpResponse::InternalServerError().json(json!({
+                    "success": false,
+                    "error": format!("Failed to update venue database: {}", e)
+                })));
+            }
+            
+            return Ok(HttpResponse::Ok().json(json!({
+                "success": true,
+                "message": format!("Thank you! This venue has been approved {} times.", approval_count)
+            })));
+        } else {
+            // Create no_pool_table_training directory if it doesn't exist
+            let negative_dir = Path::new(&data.output_dir).join("no_pool_table_training");
+            println!("Creating negative directory at: {}", negative_dir.display());
+            
+            if let Err(e) = fs::create_dir_all(&negative_dir) {
+                eprintln!("Error creating negative directory: {}", e);
+                return Ok(HttpResponse::InternalServerError().json(json!({
+                    "success": false,
+                    "error": format!("Failed to create negative directory: {}", e)
+                })));
+            }
+            
+            // Verify source file exists
+            if !source_path.exists() {
+                eprintln!("Source file does not exist: {}", source_path.display());
+                return Ok(HttpResponse::NotFound().json(json!({
+                    "success": false,
+                    "error": format!("Source file not found: {}", source_path.display())
+                })));
+            }
+            
+            // Move the photo to the negative directory
+            if let Some(filename) = source_path.file_name() {
+                let dest_path = negative_dir.join(filename);
+                println!("Copying file from {} to {}", source_path.display(), dest_path.display());
+                
+                if let Err(e) = fs::copy(&source_path, &dest_path) {
+                    eprintln!("Error copying file to negative directory: {}", e);
+                    return Ok(HttpResponse::InternalServerError().json(json!({
+                        "success": false,
+                        "error": format!("Failed to copy file: {}", e)
+                    })));
+                }
+            } else {
+                eprintln!("Could not extract filename from source path");
+                return Ok(HttpResponse::InternalServerError().json(json!({
+                    "success": false,
+                    "error": "Invalid source path"
+                })));
+            }
+
+            // Update venue probability in database
             venue.pool_table_probability = 0.0;
             venue.processed_date = Utc::now();
             
@@ -319,17 +420,20 @@ pub async fn handle_feedback(
                 })));
             }
             println!("Successfully updated venue probability in database");
-        } else {
-            eprintln!("Venue not found in database: {}", decoded_venue);
-            return Ok(HttpResponse::NotFound().json(json!({
-                "success": false,
-                "error": "Venue not found in database"
+
+            // After processing the negative feedback, return a success message
+            return Ok(HttpResponse::Ok().json(json!({
+                "success": true,
+                "message": "Thanks for your feedback to help our training."
             })));
         }
+    } else {
+        eprintln!("Venue not found in database: {}", decoded_venue);
+        return Ok(HttpResponse::NotFound().json(json!({
+            "success": false,
+            "error": "Venue not found in database"
+        })));
     }
-
-    println!("Feedback processed successfully");
-    Ok(HttpResponse::Ok().json(json!({ "success": true })))
 }
 
 pub async fn start_server(state: AppState) -> std::io::Result<()> {
@@ -379,8 +483,8 @@ pub async fn start_server(state: AppState) -> std::io::Result<()> {
             )
     })
     .bind("127.0.0.1:3000")?
-    .keep_alive(std::time::Duration::from_secs(300))
-    .client_request_timeout(std::time::Duration::from_secs(300))
+    .keep_alive(std::time::Duration::from_secs(900))
+    .client_request_timeout(std::time::Duration::from_secs(900))
     .run()
     .await
 } 
