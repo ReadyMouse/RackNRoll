@@ -229,26 +229,32 @@ fn calculate_distance(lat1: f64, lon1: f64, lat2: f64, lon2: f64) -> f64 {
 
 // Helper function to get photos for a venue
 fn get_venue_photos(output_dir: &str, venue_name: &str) -> Vec<String> {
-    let folder_path = std::path::Path::new(output_dir).join(venue_name);
+    let sanitized_name = sanitize_filename(venue_name);
+    let folder_path = std::path::Path::new(output_dir).join(&sanitized_name);
     println!("Looking for photos in: {}", folder_path.display());
     
-    std::fs::read_dir(&folder_path)
-        .unwrap_or_else(|_| std::fs::read_dir(std::path::PathBuf::new()).unwrap())
-        .filter_map(|entry| {
-            entry.ok().and_then(|e| {
-                let path = e.path();
-                if path.extension()?.to_str()? == "jpg" {
-                    let encoded_venue = urlencoding::encode(venue_name);
-                    let encoded_filename = urlencoding::encode(path.file_name()?.to_str()?);
-                    Some(format!("/photos/{}/{}", 
-                        encoded_venue,
-                        encoded_filename))
-                } else {
-                    None
-                }
+    // Return empty vec if directory doesn't exist instead of panicking
+    match std::fs::read_dir(&folder_path) {
+        Ok(entries) => entries
+            .filter_map(|entry| {
+                entry.ok().and_then(|e| {
+                    let path = e.path();
+                    if path.extension()?.to_str()? == "jpg" {
+                        let encoded_filename = urlencoding::encode(path.file_name()?.to_str()?);
+                        Some(format!("/photos/{}/{}", 
+                            sanitized_name,
+                            encoded_filename))
+                    } else {
+                        None
+                    }
+                })
             })
-        })
-        .collect()
+            .collect(),
+        Err(e) => {
+            println!("Could not read directory for '{}': {}", venue_name, e);
+            Vec::new()
+        }
+    }
 }
 
 // Add this struct for feedback requests
@@ -313,7 +319,9 @@ pub async fn handle_feedback(
             }
 
             // Copy the photo to confirmed directory
-            let source_path = Path::new(&data.output_dir).join(feedback.photo_path.trim_start_matches("/photos/"));
+            let photo_path = feedback.photo_path.trim_start_matches("/photos/");
+            let source_path = Path::new(&data.output_dir)
+                .join(photo_path);
             if !source_path.exists() {
                 eprintln!("Source file does not exist: {}", source_path.display());
                 return Ok(HttpResponse::NotFound().json(json!({
@@ -368,7 +376,9 @@ pub async fn handle_feedback(
             }
             
             // Verify source file exists
-            let source_path = Path::new(&data.output_dir).join(feedback.photo_path.trim_start_matches("/photos/"));
+            let photo_path = feedback.photo_path.trim_start_matches("/photos/");
+            let source_path = Path::new(&data.output_dir)
+                .join(photo_path);
             if !source_path.exists() {
                 eprintln!("Source file does not exist: {}", source_path.display());
                 return Ok(HttpResponse::NotFound().json(json!({
@@ -430,6 +440,20 @@ pub async fn handle_feedback(
     }
 }
 
+// Add this function to sanitize filenames
+fn sanitize_filename(name: &str) -> String {
+    // Replace forward slashes and other problematic characters with underscores
+    name.replace('/', "_")
+        .replace('\\', "_")
+        .replace(':', "_")
+        .replace('*', "_")
+        .replace('?', "_")
+        .replace('"', "_")
+        .replace('<', "_")
+        .replace('>', "_")
+        .replace('|', "_")
+}
+
 pub async fn start_server(state: AppState) -> std::io::Result<()> {
     HttpServer::new(move || {
         App::new()
@@ -438,11 +462,12 @@ pub async fn start_server(state: AppState) -> std::io::Result<()> {
                 .limit(4194304)  // Increase JSON payload limit to 4MB
                 .error_handler(|err, _| {
                     eprintln!("JSON error: {:?}", err);
+                    let err_msg = err.to_string();  // Convert to string before moving
                     actix_web::error::InternalError::from_response(
-                        err,
+                        err_msg.clone(),  // Use cloned string
                         HttpResponse::BadRequest().json(json!({
                             "success": false,
-                            "error": format!("JSON error: {}", err)
+                            "error": format!("JSON error: {}", err_msg)
                         }))
                     ).into()
                 }))
@@ -452,19 +477,6 @@ pub async fn start_server(state: AppState) -> std::io::Result<()> {
                     .allow_any_method()
                     .allow_any_header()
                     .max_age(3600)
-            )
-            .app_data(
-                web::JsonConfig::default()
-                    .limit(4096)
-                    .error_handler(|err, _| {
-                        let err_msg = err.to_string();
-                        actix_web::error::InternalError::from_response(
-                            err,
-                            HttpResponse::BadRequest()
-                                .content_type("application/json")
-                                .body(format!("{{\"error\": \"{}\"}}", err_msg))
-                        ).into()
-                    })
             )
             .service(
                 web::resource("/api/status")

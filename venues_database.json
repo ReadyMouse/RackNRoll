@@ -664,8 +664,8 @@
       "name": "ALPHAVILLE",
       "place_id": "ChIJHVUH5wRcwokRvAPz3aJdcI0",
       "address": "140 Wilson Ave, Brooklyn, NY 11237, USA",
-      "pool_table_probability": 0.843333,
-      "processed_date": "2025-02-15T02:17:17.689509Z",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:25:08.983717Z",
       "human_approved": 0,
       "latitude": 40.7005461,
       "longitude": -73.925784
@@ -739,7 +739,1697 @@
       "human_approved": 0,
       "latitude": 40.7014538,
       "longitude": -73.892989
+    },
+    {
+      "name": "Cherry on Top",
+      "place_id": "ChIJx6xAS4FdwokR0Lxbx7PlBEY",
+      "address": "379 Suydam St, Brooklyn, NY 11237, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:22:27.430050Z",
+      "human_approved": 0,
+      "latitude": 40.7048789,
+      "longitude": -73.9213087
+    },
+    {
+      "name": "Carmelo’s",
+      "place_id": "ChIJfb2NaBxcwokRPwioF7FI_ds",
+      "address": "1544 DeKalb Ave, Brooklyn, NY 11237, USA",
+      "pool_table_probability": 0.9945898,
+      "processed_date": "2025-02-15T02:22:35.937563Z",
+      "human_approved": 0,
+      "latitude": 40.702760399999995,
+      "longitude": -73.9205215
+    },
+    {
+      "name": "Knickerbocker Bagel",
+      "place_id": "ChIJIzLpnxtcwokRalLGy8ERPgo",
+      "address": "367 Knickerbocker Ave, Brooklyn, NY 11237, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:22:46.022699Z",
+      "human_approved": 0,
+      "latitude": 40.700658399999995,
+      "longitude": -73.9212251
+    },
+    {
+      "name": "Elsewhere",
+      "place_id": "ChIJrVAECUhfwokRsoEFM0dN67Q",
+      "address": "599 Johnson Ave, Brooklyn, NY 11237, USA",
+      "pool_table_probability": 0.5639309,
+      "processed_date": "2025-02-15T02:28:08.858284Z",
+      "human_approved": 0,
+      "latitude": 40.709411,
+      "longitude": -73.923169
+    },
+    {
+      "name": "House of Yes",
+      "place_id": "ChIJ72D9N6tewokRyQSjsElG8x8",
+      "address": "2 Wyckoff Ave, Brooklyn, NY 11237, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:28:23.760086Z",
+      "human_approved": 0,
+      "latitude": 40.7068,
+      "longitude": -73.9236
+    },
+    {
+      "name": "SILO",
+      "place_id": "ChIJGcpj-ilfwokRv0kA2NqFIPs",
+      "address": "90 Scott Ave, Brooklyn, NY 11237, USA",
+      "pool_table_probability": 0.6222867,
+      "processed_date": "2025-02-15T02:28:39.826115Z",
+      "human_approved": 0,
+      "latitude": 40.7105086,
+      "longitude": -73.922873
+    },
+    {
+      "name": "Wonderville",
+      "place_id": "ChIJZ14Ker9dwokR5LCKJrNnX6U",
+      "address": "1186 Broadway, Brooklyn, NY 11221, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:29:09.996408Z",
+      "human_approved": 0,
+      "latitude": 40.6923719,
+      "longitude": -73.9274634
+    },
+    {
+      "name": "Bossa Nova Civic Club",
+      "place_id": "ChIJaXNoiAVcwokR83X6EYS3Y0A",
+      "address": "1271 Myrtle Ave, Brooklyn, NY 11221, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:29:24.297863Z",
+      "human_approved": 0,
+      "latitude": 40.6979277,
+      "longitude": -73.9278822
+    },
+    {
+      "name": "Hart Bar",
+      "place_id": "ChIJl66pMw9cwokRVevR2MmIqBg",
+      "address": "538 Hart St #1, Brooklyn, NY 11221, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:29:36.345076Z",
+      "human_approved": 0,
+      "latitude": 40.6963996,
+      "longitude": -73.9299666
+    },
+    {
+      "name": "Mood Ring",
+      "place_id": "ChIJp5MjfgVcwokREwMdmFvtrQ8",
+      "address": "1260 Myrtle Ave, Brooklyn, NY 11221, USA",
+      "pool_table_probability": 0.6762038,
+      "processed_date": "2025-02-15T02:29:49.816119Z",
+      "human_approved": 0,
+      "latitude": 40.6978453,
+      "longitude": -73.927
+    },
+    {
+      "name": "The Red Pavilion",
+      "place_id": "ChIJ0yriMBVfwokRQqyrtiMnVPU",
+      "address": "1241 Flushing Ave, Brooklyn, NY 11237, USA",
+      "pool_table_probability": 0.52053887,
+      "processed_date": "2025-02-15T02:30:02.683829Z",
+      "human_approved": 0,
+      "latitude": 40.708344,
+      "longitude": -73.9233995
+    },
+    {
+      "name": "The Tiny Cupboard Comedy Club",
+      "place_id": "ChIJY19kab1dwokR_taiciqbppA",
+      "address": "10 Cooper St, Brooklyn, NY 11207, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:30:17.590919Z",
+      "human_approved": 0,
+      "latitude": 40.6837247,
+      "longitude": -73.9112172
+    },
+    {
+      "name": "Honey's",
+      "place_id": "ChIJCUYnOaZewokR65XinqjplXE",
+      "address": "93 Scott Ave, Brooklyn, NY 11237, USA",
+      "pool_table_probability": 0.55895615,
+      "processed_date": "2025-02-15T02:30:39.865440Z",
+      "human_approved": 0,
+      "latitude": 40.7104265,
+      "longitude": -73.9231439
+    },
+    {
+      "name": "Cuts & Slices",
+      "place_id": "ChIJi6o-6WxcwokRoGvrSWJc19Q",
+      "address": "93 Howard Ave, Brooklyn, NY 11233, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:31:00.569816Z",
+      "human_approved": 0,
+      "latitude": 40.685384,
+      "longitude": -73.920298
+    },
+    {
+      "name": "Bunna Cafe",
+      "place_id": "ChIJD6qBsQNcwokR8ggthXPGiZg",
+      "address": "1084 Flushing Ave, Brooklyn, NY 11237, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:31:13.594112Z",
+      "human_approved": 0,
+      "latitude": 40.7049167,
+      "longitude": -73.9279056
+    },
+    {
+      "name": "Nenes Deli Taqueria",
+      "place_id": "ChIJz9XGMdZdwokRZVmDysnluK4",
+      "address": "14 Starr St, Brooklyn, NY 11237, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:32:57.801211Z",
+      "human_approved": 0,
+      "latitude": 40.7001628,
+      "longitude": -73.9277844
+    },
+    {
+      "name": "The Broadway",
+      "place_id": "ChIJPyZGhz1dwokRlSIds1zjzGQ",
+      "address": "1272 Broadway, Brooklyn, NY 11221, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:33:11.307827Z",
+      "human_approved": 0,
+      "latitude": 40.6909368,
+      "longitude": -73.9249175
+    },
+    {
+      "name": "Marina Hotel Brooklyn",
+      "place_id": "ChIJrSysFfVdwokRDPJadB2D-04",
+      "address": "1090 Putnam Ave, Brooklyn, NY 11221, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:33:19.501917Z",
+      "human_approved": 0,
+      "latitude": 40.687849,
+      "longitude": -73.9186761
+    },
+    {
+      "name": "Neptune Hotel",
+      "place_id": "ChIJcfJPZxNcwokRUfjx9Qx65Tg",
+      "address": "1461 Broadway, Brooklyn, NY 11221, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:33:36.956781Z",
+      "human_approved": 0,
+      "latitude": 40.6878529,
+      "longitude": -73.9187595
+    },
+    {
+      "name": "Hotel 1080",
+      "place_id": "ChIJuf8U-AVdwokRf-zzeJkzBC8",
+      "address": "1080 Broadway, Brooklyn, NY 11221, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:33:45.983117Z",
+      "human_approved": 0,
+      "latitude": 40.6944133,
+      "longitude": -73.9309938
+    },
+    {
+      "name": "En Donde vivo",
+      "place_id": "ChIJB7KHmA1dwokRVfJLwNAwGMg",
+      "address": "1200 Broadway, Brooklyn, NY 11221, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:33:54.589557Z",
+      "human_approved": 0,
+      "latitude": 40.6921484,
+      "longitude": -73.9270086
+    },
+    {
+      "name": "Avra Hotel Brooklyn",
+      "place_id": "ChIJ96DQz-tdwokRZrdqgPqgq5s",
+      "address": "1461 Broadway, Brooklyn, NY 11221, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:33:57.463201Z",
+      "human_approved": 0,
+      "latitude": 40.6879275,
+      "longitude": -73.9187445
+    },
+    {
+      "name": "Moffat Deli Grocery Corp",
+      "place_id": "ChIJ7djvQj9cwokRc84b9yplOUk",
+      "address": "112 Moffat St, Brooklyn, NY 11207, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:33:59.310839Z",
+      "human_approved": 0,
+      "latitude": 40.685841,
+      "longitude": -73.907928
+    },
+    {
+      "name": "Resorts world NY",
+      "place_id": "ChIJ23EFUQBfwokRq2B_d6DlV5g",
+      "address": "64-49 Central Ave, Glendale, NY 11385, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:34:01.160290Z",
+      "human_approved": 0,
+      "latitude": 40.702472199999995,
+      "longitude": -73.89099999999998
+    },
+    {
+      "name": "Hotel 1200",
+      "place_id": "ChIJQz-Jg9RdwokRVqOwg_YDbkI",
+      "address": "1200 Broadway, Brooklyn, NY 11221, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:34:15.162141Z",
+      "human_approved": 0,
+      "latitude": 40.6921586,
+      "longitude": -73.9270066
+    },
+    {
+      "name": "Daril Bailon Vargas",
+      "place_id": "ChIJQw6XRgBdwokRIMB4Et-uwEo",
+      "address": "117 Grattan St, Brooklyn, NY 11237, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:34:16.858831Z",
+      "human_approved": 0,
+      "latitude": 40.7066363,
+      "longitude": -73.9283585
+    },
+    {
+      "name": "Hotel",
+      "place_id": "ChIJ87qRHwBdwokR3NgbcETNIL8",
+      "address": "120 Ingraham St, Brooklyn, NY 11237, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:34:18.619041Z",
+      "human_approved": 0,
+      "latitude": 40.7073335,
+      "longitude": -73.9291502
+    },
+    {
+      "name": "The Bancroft",
+      "place_id": "ChIJ4Un7506e44kR7D8qSzKDqoQ",
+      "address": "15 3rd Ave, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:36:30.424500Z",
+      "human_approved": 0,
+      "latitude": 42.488044599999995,
+      "longitude": -71.2225619
+    },
+    {
+      "name": "Redstone American Grill",
+      "place_id": "ChIJr8zB6E6e44kRBozsc-246GQ",
+      "address": "20 3rd Ave, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:36:39.045349Z",
+      "human_approved": 0,
+      "latitude": 42.488026999999995,
+      "longitude": -71.2239482
+    },
+    {
+      "name": "Tony C's Sports Bar & Grill",
+      "place_id": "ChIJNzb9506e44kRbFBy4TISQAA",
+      "address": "17 3rd Ave, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:36:47.442657Z",
+      "human_approved": 0,
+      "latitude": 42.4877184,
+      "longitude": -71.2234154
+    },
+    {
+      "name": "Osteria Nino",
+      "place_id": "ChIJuSrh506e44kRluuqjS22g8c",
+      "address": "19 3rd Ave, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:36:55.042651Z",
+      "human_approved": 0,
+      "latitude": 42.4875238,
+      "longitude": -71.2240176
+    },
+    {
+      "name": "Kings Dining & Entertainment",
+      "place_id": "ChIJv3hUFk-e44kR2LGf93VnojI",
+      "address": "52 Second Ave, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.9932327,
+      "processed_date": "2025-02-15T02:37:03.871096Z",
+      "human_approved": 1,
+      "latitude": 42.4864487,
+      "longitude": -71.2236611
+    },
+    {
+      "name": "Sichuan Gourmet Burlington",
+      "place_id": "ChIJGxMukEie44kRIZ4jLvWjWJc",
+      "address": "91 Middlesex Turnpike, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:37:13.405464Z",
+      "human_approved": 0,
+      "latitude": 42.485212399999995,
+      "longitude": -71.2193716
+    },
+    {
+      "name": "Border Cafe",
+      "place_id": "ChIJXyykmEie44kREb8FC_ZH20g",
+      "address": "128 Middlesex Turnpike, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:37:22.317010Z",
+      "human_approved": 0,
+      "latitude": 42.4846621,
+      "longitude": -71.2207662
+    },
+    {
+      "name": "Twist Bakery & Cafe",
+      "place_id": "ChIJg5FTAS2f44kRkOePIMVUViI",
+      "address": "62 Second Ave, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:37:31.979226Z",
+      "human_approved": 0,
+      "latitude": 42.4871482,
+      "longitude": -71.2246443
+    },
+    {
+      "name": "The Okipoke Burlington",
+      "place_id": "ChIJh2k-pC6f44kRBbgJZlMwLqM",
+      "address": "19 3rd Ave, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:37:39.964464Z",
+      "human_approved": 0,
+      "latitude": 42.4872482,
+      "longitude": -71.2244075
+    },
+    {
+      "name": "AKB, a hotel bar",
+      "place_id": "ChIJEykVWKef44kRRowD-p3r8JE",
+      "address": "18 3rd Ave, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.9818594,
+      "processed_date": "2025-02-15T02:37:49.000850Z",
+      "human_approved": 1,
+      "latitude": 42.488314599999995,
+      "longitude": -71.2235218
+    },
+    {
+      "name": "Archer Hotel Burlington",
+      "place_id": "ChIJ219n706e44kRnQU0tC1nqo0",
+      "address": "18 3rd Ave, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:37:57.898259Z",
+      "human_approved": 0,
+      "latitude": 42.4883417,
+      "longitude": -71.2235583
+    },
+    {
+      "name": "Sonesta Simply Suites Boston Burlington",
+      "place_id": "ChIJNxnZxEie44kRXt3m8uPrhxI",
+      "address": "130 Middlesex Turnpike, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:38:05.834084Z",
+      "human_approved": 0,
+      "latitude": 42.485960899999995,
+      "longitude": -71.22173029999999
+    },
+    {
+      "name": "Yard House",
+      "place_id": "ChIJf1HCOAuf44kRI62fhZfwEHk",
+      "address": "108 Middlesex Turnpike, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:43:30.934601Z",
+      "human_approved": 0,
+      "latitude": 42.480237200000005,
+      "longitude": -71.2175644
+    },
+    {
+      "name": "The Friendly Toast",
+      "place_id": "ChIJHeEaMjie44kRwli1VLUhmcU",
+      "address": "75 Middlesex Turnpike #1015B, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:46:16.598428Z",
+      "human_approved": 0,
+      "latitude": 42.483082,
+      "longitude": -71.213106
+    },
+    {
+      "name": "Gyu-Kaku Japanese BBQ",
+      "place_id": "ChIJPQ4bc3mf44kRSful8e0IlVk",
+      "address": "85 Middlesex Turnpike, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:43:56.158004Z",
+      "human_approved": 0,
+      "latitude": 42.4843196,
+      "longitude": -71.2168111
+    },
+    {
+      "name": "Buffalo Wild Wings",
+      "place_id": "ChIJbwCKPEee44kRqVU9-CapAFg",
+      "address": "15 South Ave, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:44:04.804640Z",
+      "human_approved": 0,
+      "latitude": 42.480374,
+      "longitude": -71.21811029999999
+    },
+    {
+      "name": "Eddie V's Prime Seafood",
+      "place_id": "ChIJ5_uTmV2f44kREjsyTVl_WAg",
+      "address": "50 South Ave, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:44:14.256323Z",
+      "human_approved": 0,
+      "latitude": 42.4831207,
+      "longitude": -71.2196732
+    },
+    {
+      "name": "Fogo de Chão Brazilian Steakhouse",
+      "place_id": "ChIJU78XMTie44kRDP-SPoxFg6g",
+      "address": "Burlington Mall, 75 Middlesex Turnpike Space 1630, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:44:25.387199Z",
+      "human_approved": 0,
+      "latitude": 42.484441,
+      "longitude": -71.2142083
+    },
+    {
+      "name": "Tavern in the Square",
+      "place_id": "ChIJFUszHDee44kR_fO1eK3W6zA",
+      "address": "100 District Ave, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:44:38.719987Z",
+      "human_approved": 0,
+      "latitude": 42.4853946,
+      "longitude": -71.2127624
+    },
+    {
+      "name": "Karma Burlington",
+      "place_id": "ChIJhTq5EUSf44kRRF5pqdD2SNg",
+      "address": "75 Middlesex Turnpike, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:44:50.799801Z",
+      "human_approved": 0,
+      "latitude": 42.4829426,
+      "longitude": -71.21484749999999
+    },
+    {
+      "name": "Common Craft",
+      "place_id": "ChIJi6x72tyf44kRbICy4BvsS4c",
+      "address": "75 Middlesex Turnpike, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:44:59.871850Z",
+      "human_approved": 0,
+      "latitude": 42.4838708,
+      "longitude": -71.2136888
+    },
+    {
+      "name": "sweetgreen",
+      "place_id": "ChIJR4SWF1yf44kRuuk7j60Bpw8",
+      "address": "85 Middlesex Turnpike, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:45:10.266127Z",
+      "human_approved": 0,
+      "latitude": 42.4842481,
+      "longitude": -71.21679259999999
+    },
+    {
+      "name": "Legal Sea Foods - Burlington Mall",
+      "place_id": "ChIJr8sxeEee44kRxUGj7njBwEs",
+      "address": "75 Middlesex Turnpike, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:45:21.776668Z",
+      "human_approved": 0,
+      "latitude": 42.48335,
+      "longitude": -71.2133722
+    },
+    {
+      "name": "Chipotle Mexican Grill",
+      "place_id": "ChIJ05J2TTae44kRIIa2QVZd2Kw",
+      "address": "110 Burlington Mall Road, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:45:32.173947Z",
+      "human_approved": 0,
+      "latitude": 42.486152100000005,
+      "longitude": -71.2126971
+    },
+    {
+      "name": "Wendy's",
+      "place_id": "ChIJhdQyaEie44kRhjPKuW9ph14",
+      "address": "112 Burlington Mall Road, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:45:40.288275Z",
+      "human_approved": 0,
+      "latitude": 42.4852342,
+      "longitude": -71.21770529999999
+    },
+    {
+      "name": "Shake Shack Burlington Mall",
+      "place_id": "ChIJZR7J-Raf44kRVTAs8-_pp4c",
+      "address": "75 Middlesex Turnpike Suite 1550, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:45:50.209981Z",
+      "human_approved": 0,
+      "latitude": 42.4837299,
+      "longitude": -71.2152183
+    },
+    {
+      "name": "Extended Stay America - Boston - Burlington",
+      "place_id": "ChIJDfqu50ae44kRJOHsoyxlIUY",
+      "address": "40 South Ave, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:45:59.393634Z",
+      "human_approved": 0,
+      "latitude": 42.4824805,
+      "longitude": -71.2195818
+    },
+    {
+      "name": "Pressed Cafe Burlington",
+      "place_id": "ChIJzw93ITee44kR2wmIrrjlRW8",
+      "address": "200 District Ave, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:46:40.520114Z",
+      "human_approved": 0,
+      "latitude": 42.4848574,
+      "longitude": -71.2115389
+    },
+    {
+      "name": "The Cheesecake Factory",
+      "place_id": "ChIJr8sxeEee44kR4FSmLtRN0wQ",
+      "address": "75 Middlesex Turnpike #1067 A, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:48:15.027372Z",
+      "human_approved": 0,
+      "latitude": 42.480930400000005,
+      "longitude": -71.2137863
+    },
+    {
+      "name": "Feng Shui",
+      "place_id": "ChIJRTELMCOf44kRHNeza8xfxL0",
+      "address": "2200 District Ave, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:47:08.192751Z",
+      "human_approved": 0,
+      "latitude": 42.484752799999995,
+      "longitude": -71.2108057
+    },
+    {
+      "name": "Chick-fil-A",
+      "place_id": "ChIJr8sxeEee44kRVTpECrrvDis",
+      "address": "75 Middlesex Turnpike Store, #2110, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:47:19.228023Z",
+      "human_approved": 0,
+      "latitude": 42.4813385,
+      "longitude": -71.214302
+    },
+    {
+      "name": "Row 34",
+      "place_id": "ChIJJWCoFDqe44kRlM8eELBguXw",
+      "address": "300 District Ave, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:47:40.243710Z",
+      "human_approved": 0,
+      "latitude": 42.4845458,
+      "longitude": -71.2113099
+    },
+    {
+      "name": "Tuscan Kitchen Burlington",
+      "place_id": "ChIJn-ng0Dae44kRnXbFYLo_xFw",
+      "address": "2400 District Ave, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:47:51.191066Z",
+      "human_approved": 0,
+      "latitude": 42.485394,
+      "longitude": -71.210903
+    },
+    {
+      "name": "Residence Inn Boston Burlington",
+      "place_id": "ChIJp9MzQTee44kRWJqiR424uoI",
+      "address": "400 District Ave, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:47:59.351061Z",
+      "human_approved": 0,
+      "latitude": 42.4837231,
+      "longitude": -71.21075379999999
+    },
+    {
+      "name": "Bamboo",
+      "place_id": "ChIJufO4X6mf44kRhVTvCQv5Gls",
+      "address": "213 Burlington Rd, Bedford, MA 01730, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:48:34.548307Z",
+      "human_approved": 0,
+      "latitude": 42.501552800000006,
+      "longitude": -71.2350694
+    },
+    {
+      "name": "Tashan",
+      "place_id": "ChIJo4aAzK-f44kR0BdM2HdSofk",
+      "address": "213 Burlington Rd, Bedford, MA 01730, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:48:50.055283Z",
+      "human_approved": 0,
+      "latitude": 42.5015678,
+      "longitude": -71.23552699999999
+    },
+    {
+      "name": "Hilton Garden Inn Boston-Burlington",
+      "place_id": "ChIJqbtP8z6e44kRHzDJtLw5Jng",
+      "address": "5 Wheeler Rd, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:48:59.948770Z",
+      "human_approved": 0,
+      "latitude": 42.476837,
+      "longitude": -71.21100779999999
+    },
+    {
+      "name": "Staybridge Suites Boston - Burlington, an IHG Hotel",
+      "place_id": "ChIJfeXVhj6e44kRfszy7bGnRDc",
+      "address": "11 Old Concord Rd, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:49:08.765019Z",
+      "human_approved": 0,
+      "latitude": 42.475088199999995,
+      "longitude": -71.2112708
+    },
+    {
+      "name": "Sonesta Boston",
+      "place_id": "ChIJt59BdQCf44kRp76eGtrkyYg",
+      "address": "11 Old Concord Rd, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:49:10.470505Z",
+      "human_approved": 0,
+      "latitude": 42.4753325,
+      "longitude": -71.2111606
+    },
+    {
+      "name": "Sichuan Gourmet Billerica",
+      "place_id": "ChIJnWjTG-qh44kR9HlU1IlN3jM",
+      "address": "498 Boston Rd, Billerica, MA 01821, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:49:41.053358Z",
+      "human_approved": 0,
+      "latitude": 42.5543756,
+      "longitude": -71.2643322
+    },
+    {
+      "name": "Liberty Bell",
+      "place_id": "ChIJqTDMsZSh44kRH2BIdZjlnDI",
+      "address": "420 Boston Rd, Billerica, MA 01821, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:49:56.679492Z",
+      "human_approved": 0,
+      "latitude": 42.5594434,
+      "longitude": -71.26885829999999
+    },
+    {
+      "name": "Mangia Mangia Italian Kitchen",
+      "place_id": "ChIJFchjrZSh44kRDic7OOUG7TA",
+      "address": "430 Boston Rd, Billerica, MA 01821, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:50:10.916056Z",
+      "human_approved": 0,
+      "latitude": 42.5591337,
+      "longitude": -71.2687089
+    },
+    {
+      "name": "Subway",
+      "place_id": "ChIJFTVhLMCh44kROP2rS-sSGMc",
+      "address": "480 Boston Rd Unit #110, Billerica, MA 01821, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:50:21.495703Z",
+      "human_approved": 0,
+      "latitude": 42.5557844,
+      "longitude": -71.2641842
+    },
+    {
+      "name": "DiVito Brothers Italian Pizzeria",
+      "place_id": "ChIJqzlyRuuh44kRtHH4ZZviKQE",
+      "address": "446 Boston Rd, Billerica, MA 01821, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:50:37.039293Z",
+      "human_approved": 0,
+      "latitude": 42.558763500000005,
+      "longitude": -71.2674595
+    },
+    {
+      "name": "Circle K",
+      "place_id": "ChIJX6z1S-qh44kRmi6OU84OF-s",
+      "address": "441 Boston Rd, Billerica, MA 01821, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:50:45.414898Z",
+      "human_approved": 0,
+      "latitude": 42.555166799999995,
+      "longitude": -71.26640050000002
+    },
+    {
+      "name": "KFC",
+      "place_id": "ChIJZ3sZK-ih44kRGi9a_Fs6PGs",
+      "address": "485 Boston Rd, Billerica, MA 01821, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:56:21.777711Z",
+      "human_approved": 0,
+      "latitude": 42.550919500000006,
+      "longitude": -71.2638168
+    },
+    {
+      "name": "Dunkin'",
+      "place_id": "ChIJ08lX9emh44kRAJkpJqJenfE",
+      "address": "459 Boston Rd, Billerica, MA 01821, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:56:32.510015Z",
+      "human_approved": 0,
+      "latitude": 42.5535663,
+      "longitude": -71.2651561
+    },
+    {
+      "name": "Stromboli's Express",
+      "place_id": "ChIJMZXk0-mh44kRqpEeH_2fUDE",
+      "address": "481 Boston Rd, Billerica, MA 01821, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:56:52.465247Z",
+      "human_approved": 0,
+      "latitude": 42.5512522,
+      "longitude": -71.2640732
+    },
+    {
+      "name": "Garrison's",
+      "place_id": "ChIJX6WPD4Wh44kRRnwYCWHJP4A",
+      "address": "303 Boston Rd, Billerica, MA 01821, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:01:03.946784Z",
+      "human_approved": 0,
+      "latitude": 42.5715809,
+      "longitude": -71.27781329999999
+    },
+    {
+      "name": "Wendy's",
+      "place_id": "ChIJu5i6F4Wh44kRW_TL6r2M61s",
+      "address": "312 Boston Rd, North Billerica, MA 01862, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:01:11.162760Z",
+      "human_approved": 0,
+      "latitude": 42.571982299999995,
+      "longitude": -71.2769967
+    },
+    {
+      "name": "Belly Buster Diner",
+      "place_id": "ChIJWU0084Sh44kRyWzXY5GT0uE",
+      "address": "306 Boston Rd #10, North Billerica, MA 01862, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:01:30.752458Z",
+      "human_approved": 0,
+      "latitude": 42.5735766,
+      "longitude": -71.2781874
+    },
+    {
+      "name": "Sal's Pizza | Billerica, MA",
+      "place_id": "ChIJXSKPAJCh44kRCmNF18u9Cv8",
+      "address": "328 Boston Rd, North Billerica, MA 01862, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:01:45.114757Z",
+      "human_approved": 0,
+      "latitude": 42.5694387,
+      "longitude": -71.27543399999999
+    },
+    {
+      "name": "Polish Prince Pierogi",
+      "place_id": "ChIJlY_25MWh44kRbaOjnjpi9zg",
+      "address": "306 Boston Rd, North Billerica, MA 01862, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:01:54.630791Z",
+      "human_approved": 0,
+      "latitude": 42.5731548,
+      "longitude": -71.2778206
+    },
+    {
+      "name": "Gio’s roast beef and pizza",
+      "place_id": "ChIJyyMcPACh44kRul1VwCXQFso",
+      "address": "331 Boston Rd, North Billerica, MA 01862, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:02:10.640284Z",
+      "human_approved": 0,
+      "latitude": 42.567325499999995,
+      "longitude": -71.2747354
+    },
+    {
+      "name": "TURNPIKE MARKET",
+      "place_id": "ChIJmZqoZl6f44kRax4pHWuhHZE",
+      "address": "509 Middlesex Turnpike, Billerica, MA 01821, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:04:24.117525Z",
+      "human_approved": 0,
+      "latitude": 42.5378099,
+      "longitude": -71.2692276
+    },
+    {
+      "name": "99 Restaurants",
+      "place_id": "ChIJzQYcNdGh44kRz30KheGu0dU",
+      "address": "672 Boston Road, MA-3A, Billerica, MA 01821, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:04:36.647687Z",
+      "human_approved": 0,
+      "latitude": 42.541100199999995,
+      "longitude": -71.2474678
+    },
+    {
+      "name": "Purple Bamboo Restaurant",
+      "place_id": "ChIJL0rlMYGh44kRV3G9qXAvCpM",
+      "address": "265 Boston Rd, North Billerica, MA 01862, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:04:53.925047Z",
+      "human_approved": 0,
+      "latitude": 42.5762429,
+      "longitude": -71.28371969999999
+    },
+    {
+      "name": "Augusta Subs & Salads",
+      "place_id": "ChIJq396Gdqh44kRx1IxlkF8vbQ",
+      "address": "599 Boston Rd, Billerica, MA 01821, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:05:15.705803Z",
+      "human_approved": 0,
+      "latitude": 42.5425985,
+      "longitude": -71.25299919999999
+    },
+    {
+      "name": "McDonald's",
+      "place_id": "ChIJnY9EqYah44kRRHx-SjQD5ws",
+      "address": "273 Boston Rd, Billerica, MA 01821, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:05:24.724106Z",
+      "human_approved": 0,
+      "latitude": 42.5747052,
+      "longitude": -71.28210299999999
+    },
+    {
+      "name": "McDonald's",
+      "place_id": "ChIJM1xoq9Wh44kRokwSSJAFyNk",
+      "address": "718 Boston Rd, Billerica, MA 01821, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:05:36.154090Z",
+      "human_approved": 0,
+      "latitude": 42.5379059,
+      "longitude": -71.24318629999999
+    },
+    {
+      "name": "Caipirinha's Steak House",
+      "place_id": "ChIJZ-7CHFSf44kRjsp79ABFZXg",
+      "address": "512 Middlesex Turnpike, Billerica, MA 01821, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:05:45.564707Z",
+      "human_approved": 0,
+      "latitude": 42.5379649,
+      "longitude": -71.2687238
+    },
+    {
+      "name": "Northeast Smokehouse",
+      "place_id": "ChIJ7XO5PpU13IkRMU4lDhwa8CA",
+      "address": "306 Boston Rd, Billerica, MA 01862, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:05:55.980570Z",
+      "human_approved": 0,
+      "latitude": 42.5739284,
+      "longitude": -71.27837269999999
+    },
+    {
+      "name": "Stelio's Family Restaurant",
+      "place_id": "ChIJu3LRRoSh44kRORSwDuFcFZY",
+      "address": "293 Boston Rd, North Billerica, MA 01862, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:06:08.993860Z",
+      "human_approved": 0,
+      "latitude": 42.5736074,
+      "longitude": -71.2796173
+    },
+    {
+      "name": "Dunkin'",
+      "place_id": "ChIJt-pJUmaf44kRllLkjU9QNGA",
+      "address": "In Mobil Gas Station, 612 Middlesex Turnpike, Billerica, MA 01821, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:06:20.855674Z",
+      "human_approved": 0,
+      "latitude": 42.5334805,
+      "longitude": -71.2629104
+    },
+    {
+      "name": "Dunkin'",
+      "place_id": "ChIJwUjLdhqi44kReTk2cmhhLRs",
+      "address": "1 Republic Rd, North Billerica, MA 01862, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:06:32.087414Z",
+      "human_approved": 0,
+      "latitude": 42.557818999999995,
+      "longitude": -71.2988512
+    },
+    {
+      "name": "Courtyard Boston Billerica/Bedford",
+      "place_id": "ChIJPWL78FOf44kRjHILl_dbd3o",
+      "address": "270 Concord Rd, Billerica, MA 01821, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:06:41.877352Z",
+      "human_approved": 0,
+      "latitude": 42.5367491,
+      "longitude": -71.2814574
+    },
+    {
+      "name": "99 Restaurants",
+      "place_id": "ChIJOcQ4Z2-f44kRt9XUvGfhTzg",
+      "address": "160 Lexington Rd, Billerica, MA 01821, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:07:11.379224Z",
+      "human_approved": 0,
+      "latitude": 42.5280422,
+      "longitude": -71.25609279999999
+    },
+    {
+      "name": "Pizza Mia Bar & Grill",
+      "place_id": "ChIJIYJsmSqg44kRMxgtmuisFz0",
+      "address": "758 Boston Rd, Billerica, MA 01821, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:07:25.432612Z",
+      "human_approved": 0,
+      "latitude": 42.5352778,
+      "longitude": -71.23783519999999
+    },
+    {
+      "name": "Pinehurst Tavern",
+      "place_id": "ChIJBY0rdwih44kR6QfwneGPZ1w",
+      "address": "786 Boston Rd, Billerica, MA 01821, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:07:37.519998Z",
+      "human_approved": 0,
+      "latitude": 42.534087,
+      "longitude": -71.2323643
+    },
+    {
+      "name": "Wu Loon Ming Restaurant",
+      "place_id": "ChIJi3w7fdOj44kRCk8_zNfyR3w",
+      "address": "8 Chelmsford Rd, North Billerica, MA 01862, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:09:16.678600Z",
+      "human_approved": 0,
+      "latitude": 42.5840562,
+      "longitude": -71.2935166
+    },
+    {
+      "name": "Panera Bread",
+      "place_id": "ChIJMVMjfVGj44kRjrU6dmNPe38",
+      "address": "188 Boston Rd, Billerica, MA 01862, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:08:04.113913Z",
+      "human_approved": 0,
+      "latitude": 42.5828537,
+      "longitude": -71.2894852
+    },
+    {
+      "name": "Chipotle Mexican Grill",
+      "place_id": "ChIJk6hlxiqi44kR-85GUTs-awI",
+      "address": "199 Boston Rd, Billerica, MA 01862, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:08:19.328167Z",
+      "human_approved": 0,
+      "latitude": 42.580632099999995,
+      "longitude": -71.2882042
+    },
+    {
+      "name": "Starbucks",
+      "place_id": "ChIJs2FDMdWj44kR3GruASRmNik",
+      "address": "199 Boston Rd #15, North Billerica, MA 01862, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:08:33.260796Z",
+      "human_approved": 0,
+      "latitude": 42.581609799999995,
+      "longitude": -71.2894328
+    },
+    {
+      "name": "Milano House of Pizza",
+      "place_id": "ChIJoxRw49Sj44kRA60N1Di_8gc",
+      "address": "175 Boston Rd, North Billerica, MA 01862, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:08:45.482358Z",
+      "human_approved": 0,
+      "latitude": 42.583037999999995,
+      "longitude": -71.29049479999999
+    },
+    {
+      "name": "7 Nana Japanese Steakhouse",
+      "place_id": "ChIJk6hlxiqi44kRSQOSb8H6H8s",
+      "address": "199 Boston Rd, North Billerica, MA 01862, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:09:00.814587Z",
+      "human_approved": 0,
+      "latitude": 42.5804537,
+      "longitude": -71.2893473
+    },
+    {
+      "name": "Casa Blanca Mexican Restaurant & Cantina",
+      "place_id": "ChIJvxEewsuj44kRXexQAZWpOyc",
+      "address": "99 Chelmsford Rd #1, Billerica, MA 01862, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:09:37.642779Z",
+      "human_approved": 0,
+      "latitude": 42.588100399999995,
+      "longitude": -71.3066024
+    },
+    {
+      "name": "Emerald Rose",
+      "place_id": "ChIJSXRLN4af44kRzGZxhxO7XTw",
+      "address": "785 Boston Rd, Billerica, MA 01821, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:09:50.151799Z",
+      "human_approved": 0,
+      "latitude": 42.5304168,
+      "longitude": -71.2289109
+    },
+    {
+      "name": "Jon Ryan's Pub Billerica",
+      "place_id": "ChIJZ8MxP82j44kRMgCWthTTUyk",
+      "address": "56 Chelmsford Rd, North Billerica, MA 01862, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:10:04.434582Z",
+      "human_approved": 0,
+      "latitude": 42.5844961,
+      "longitude": -71.3015174
+    },
+    {
+      "name": "Newtowne Grille",
+      "place_id": "ChIJs1LyKYaf44kRILBuSCsUE4Q",
+      "address": "838 Boston Rd, Billerica, MA 01821, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:10:17.238826Z",
+      "human_approved": 0,
+      "latitude": 42.5303209,
+      "longitude": -71.228201
+    },
+    {
+      "name": "Shrewsbury",
+      "place_id": "ChIJPbyQTACj44kRX2ojkG7sJz4",
+      "address": "85 Nashua Rd, North Billerica, MA 01862, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:10:18.855811Z",
+      "human_approved": 0,
+      "latitude": 42.5593234,
+      "longitude": -71.3198426
+    },
+    {
+      "name": "TJ Callahan's Pub",
+      "place_id": "ChIJo9D6yMig44kRxHQmrQKtAIA",
+      "address": "1475 Main St, Tewksbury, MA 01876, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:10:47.453037Z",
+      "human_approved": 0,
+      "latitude": 42.599635,
+      "longitude": -71.222257
+    },
+    {
+      "name": "Satang Thai restaurant and Bar",
+      "place_id": "ChIJY8_cdt-f44kRhHbLj3c-Jnk",
+      "address": "15 Middlesex Turnpike, Billerica, MA 01821, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:11:02.483964Z",
+      "human_approved": 0,
+      "latitude": 42.5102613,
+      "longitude": -71.2348784
+    },
+    {
+      "name": "Pressed Cafe",
+      "place_id": "ChIJF27-9gyj44kRO99-0UOw0G8",
+      "address": "330 Billerica Rd, Chelmsford, MA 01824, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:11:17.209896Z",
+      "human_approved": 0,
+      "latitude": 42.5907132,
+      "longitude": -71.3162969
+    },
+    {
+      "name": "Kyoto Japanese Steak House",
+      "place_id": "ChIJ--BVuMig44kRPcEp5NWKTmk",
+      "address": "1487 Main St, Tewksbury, MA 01876, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:11:33.893065Z",
+      "human_approved": 0,
+      "latitude": 42.598806,
+      "longitude": -71.221273
+    },
+    {
+      "name": "Hampton Inn Boston Bedford Burlington",
+      "place_id": "ChIJNSCmzqaf44kRzOpxuAs6Y1U",
+      "address": "25 Middlesex Turnpike, Billerica, MA 01821, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:11:49.344905Z",
+      "human_approved": 0,
+      "latitude": 42.5116586,
+      "longitude": -71.23590410000001
+    },
+    {
+      "name": "Homewood Suites by Hilton Boston-Billerica/Bedford/Burlington",
+      "place_id": "ChIJn7fj1KOf44kRXRXN9irs8nI",
+      "address": "35 Middlesex Turnpike, Billerica, MA 01821, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:11:58.041579Z",
+      "human_approved": 0,
+      "latitude": 42.5127228,
+      "longitude": -71.2336251
+    },
+    {
+      "name": "Seasons 52",
+      "place_id": "ChIJPZi5n4B144kR6zWTMGPUnVA",
+      "address": "6 Wayside Rd U, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:12:51.459367Z",
+      "human_approved": 0,
+      "latitude": 42.485729,
+      "longitude": -71.192437
+    },
+    {
+      "name": "The Capital Grille",
+      "place_id": "ChIJWR0rooB144kRpuoEqLdjegg",
+      "address": "10 Wayside Rd, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:13:04.576170Z",
+      "human_approved": 0,
+      "latitude": 42.485775,
+      "longitude": -71.190995
+    },
+    {
+      "name": "Cafe Escadrille",
+      "place_id": "ChIJASRLo4Z144kRBl_5q1HJvxw",
+      "address": "26 Cambridge St, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:13:17.493204Z",
+      "human_approved": 0,
+      "latitude": 42.4823356,
+      "longitude": -71.18709129999999
+    },
+    {
+      "name": "Burtons Grill & Bar",
+      "place_id": "ChIJi1-tWRae44kR_74QrossTvU",
+      "address": "43 Middlesex Turnpike, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:13:29.223235Z",
+      "human_approved": 0,
+      "latitude": 42.4712389,
+      "longitude": -71.20978459999999
+    },
+    {
+      "name": "The Baldwin Bar",
+      "place_id": "ChIJH75dWD1144kRwMB2_7fCPk0",
+      "address": "2 Alfred St, Woburn, MA 01801, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:13:49.235718Z",
+      "human_approved": 0,
+      "latitude": 42.502224899999995,
+      "longitude": -71.1575031
+    },
+    {
+      "name": "Red Heat Tavern",
+      "place_id": "ChIJVd_Om8We44kRH-QQ2MrLCnk",
+      "address": "152 Great Rd, Bedford, MA 01730, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:14:01.133360Z",
+      "human_approved": 0,
+      "latitude": 42.4915594,
+      "longitude": -71.2745413
+    },
+    {
+      "name": "Scoreboard Sports Bar and Grill",
+      "place_id": "ChIJNc3wzBB144kRnP4ocDH6I4o",
+      "address": "15 Middlesex Canal Park Dr, Woburn, MA 01801, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:14:16.052121Z",
+      "human_approved": 0,
+      "latitude": 42.496889499999995,
+      "longitude": -71.15908449999999
+    },
+    {
+      "name": "Royal India Bistro",
+      "place_id": "ChIJl6U3F9Cd44kR99c_TFSzYBE",
+      "address": "7 Meriam St, Lexington, MA 02420, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:14:31.079377Z",
+      "human_approved": 0,
+      "latitude": 42.4487781,
+      "longitude": -71.2288149
+    },
+    {
+      "name": "99 Restaurants",
+      "place_id": "ChIJ_wI10ux144kRmomEj1PaKoM",
+      "address": "194 Cambridge Rd, Woburn, MA 01801, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:14:43.049723Z",
+      "human_approved": 0,
+      "latitude": 42.4671341,
+      "longitude": -71.1770793
+    },
+    {
+      "name": "QDOBA Mexican Eats",
+      "place_id": "ChIJJZIpRtGd44kR63WlKhiLOzY",
+      "address": "46 Bedford St, Lexington, MA 02420, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:14:56.265294Z",
+      "human_approved": 0,
+      "latitude": 42.4525455,
+      "longitude": -71.2326873
+    },
+    {
+      "name": "The Brickyard",
+      "place_id": "ChIJrbvWdal144kRNTvkcn4UIBQ",
+      "address": "371 Main St, Woburn, MA 01801, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:15:29.369448Z",
+      "human_approved": 0,
+      "latitude": 42.4797111,
+      "longitude": -71.1516444
+    },
+    {
+      "name": "Craft Food Halls - Revolution Hall",
+      "place_id": "ChIJfbksWMaf44kRd6AtNgqO5-M",
+      "address": "3 Maguire Rd, Lexington, MA 02421, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:15:45.119045Z",
+      "human_approved": 0,
+      "latitude": 42.4727249,
+      "longitude": -71.2606964
+    },
+    {
+      "name": "Launch Family Entertainment Park Woburn",
+      "place_id": "ChIJZeXi2mp144kRtKvUyjGv_OY",
+      "address": "366 Cambridge Rd, Woburn, MA 01801, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:29:03.223252Z",
+      "human_approved": 0,
+      "latitude": 42.4615635,
+      "longitude": -71.1625828
+    },
+    {
+      "name": "Boston Marriott Burlington",
+      "place_id": "ChIJgQivKtWf44kRud7CX3NSgXU",
+      "address": "One Burlington Mall Road, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:16:08.025813Z",
+      "human_approved": 0,
+      "latitude": 42.489612,
+      "longitude": -71.195037
+    },
+    {
+      "name": "Crowne Plaza Boston - Woburn, an IHG Hotel",
+      "place_id": "ChIJBS9BphB144kRjlClMXEf1b8",
+      "address": "15 Middlesex Canal Park Dr, Woburn, MA 01801, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:16:16.771289Z",
+      "human_approved": 0,
+      "latitude": 42.4969902,
+      "longitude": -71.1589546
+    },
+    {
+      "name": "Aloft Lexington",
+      "place_id": "ChIJyUOwxz-c44kRnmb6RIw1_J4",
+      "address": "727 Marrett Rd A, Lexington, MA 02421, USA",
+      "pool_table_probability": 0.7650269,
+      "processed_date": "2025-02-15T03:16:35.326223Z",
+      "human_approved": 1,
+      "latitude": 42.4454269,
+      "longitude": -71.2606811
+    },
+    {
+      "name": "Element Lexington",
+      "place_id": "ChIJyUOwxz-c44kR-debVypscKw",
+      "address": "727 Marrett Rd B, Lexington, MA 02421, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:16:42.779292Z",
+      "human_approved": 0,
+      "latitude": 42.4453245,
+      "longitude": -71.2593709
+    },
+    {
+      "name": "The Inn at Hastings Park",
+      "place_id": "ChIJ7yOWfNKd44kRL8fjuNGxV6I",
+      "address": "2027 Massachusetts Ave, Lexington, MA 02421, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:16:56.433553Z",
+      "human_approved": 0,
+      "latitude": 42.4495315,
+      "longitude": -71.2364845
+    },
+    {
+      "name": "Bedford Plaza Hotel - Boston",
+      "place_id": "ChIJ0wGyM-qe44kRm6IG_SuIX9Y",
+      "address": "340 Great Rd, Bedford, MA 01730, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:17:10.458235Z",
+      "human_approved": 0,
+      "latitude": 42.4856869,
+      "longitude": -71.26056009999999
+    },
+    {
+      "name": "Bedford Motel",
+      "place_id": "ChIJ-8BMZM2e44kRroYjcWYe8tE",
+      "address": "30 North Rd, Bedford, MA 01730, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:17:23.666305Z",
+      "human_approved": 0,
+      "latitude": 42.4945385,
+      "longitude": -71.286209
+    },
+    {
+      "name": "Extended Stay America - Boston - Woburn",
+      "place_id": "ChIJd3brSGJ044kRL-LbWQLC3NE",
+      "address": "831 Main St, Woburn, MA 01801, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:28:56.212464Z",
+      "human_approved": 0,
+      "latitude": 42.503039,
+      "longitude": -71.158783
+    },
+    {
+      "name": "Jamsan Management",
+      "place_id": "ChIJ65opiI6e44kRTfUoevLehwI",
+      "address": "110 Hartwell Ave Suite 300, Lexington, MA 02421, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:17:41.108196Z",
+      "human_approved": 0,
+      "latitude": 42.463384999999995,
+      "longitude": -71.2617132
+    },
+    {
+      "name": "Compass Corporate Housing",
+      "place_id": "ChIJrVYHPH9144kR-ZnHF9CHp6c",
+      "address": "3 Littles Brook Ct, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:17:43.609356Z",
+      "human_approved": 0,
+      "latitude": 42.4900909,
+      "longitude": -71.18723
+    },
+    {
+      "name": "Hyatt House Boston/Burlington",
+      "place_id": "ChIJH0LaDyme44kR7L2XOasxEkg",
+      "address": "2 Van de Graaff Drive, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.94483596,
+      "processed_date": "2025-02-15T03:20:21.305991Z",
+      "human_approved": 0,
+      "latitude": 42.4829058,
+      "longitude": -71.19549649999999
+    },
+    {
+      "name": "Jake n JOES Sports Grille - Woburn",
+      "place_id": "ChIJswq6uN5044kRHGdOYTU0uhI",
+      "address": "230 Mishawum Rd, Woburn, MA 01801, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:30:16.364885Z",
+      "human_approved": 0,
+      "latitude": 42.5030961,
+      "longitude": -71.1403423
+    },
+    {
+      "name": "Dave & Buster's Woburn",
+      "place_id": "ChIJc_p_Ztt044kRhaXYtz2485w",
+      "address": "271 Mishawum Rd, Woburn, MA 01801, USA",
+      "pool_table_probability": 0.98269665,
+      "processed_date": "2025-02-15T03:35:13.271969Z",
+      "human_approved": 1,
+      "latitude": 42.5025124,
+      "longitude": -71.138762
+    },
+    {
+      "name": "Sally's Apizza",
+      "place_id": "ChIJA2rFxcR144kRriEwtkEuAGY",
+      "address": "298-300 Mishawum Rd Ste. 600, Woburn, MA 01801, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:35:25.294074Z",
+      "human_approved": 0,
+      "latitude": 42.504073,
+      "longitude": -71.1335852
+    },
+    {
+      "name": "Lord Hobo Brewing Company",
+      "place_id": "ChIJk7Wq5lh044kRpwT8FSGR6Yc",
+      "address": "5 Draper St, Woburn, MA 01801, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:35:36.487055Z",
+      "human_approved": 0,
+      "latitude": 42.4760752,
+      "longitude": -71.1283354
+    },
+    {
+      "name": "CAVA",
+      "place_id": "ChIJbSSrt5l144kRVfSTbiL_z4I",
+      "address": "300 Mishawum Rd #730, Woburn, MA 01801, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:35:46.582790Z",
+      "human_approved": 0,
+      "latitude": 42.5042524,
+      "longitude": -71.1326811
+    },
+    {
+      "name": "Dave's Hot Chicken",
+      "place_id": "ChIJGcZNrf5144kRGK4ali1WHsk",
+      "address": "300 Mishawum Rd, Woburn, MA 01801, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:36:39.217337Z",
+      "human_approved": 0,
+      "latitude": 42.5045688,
+      "longitude": -71.13279730000001
+    },
+    {
+      "name": "Red Roof PLUS+ Boston - Woburn/ Burlington",
+      "place_id": "ChIJ5YQobcV044kRYj6MmJQYFfY",
+      "address": "19 Commerce Way, Woburn, MA 01801, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:36:05.459599Z",
+      "human_approved": 0,
+      "latitude": 42.506785099999995,
+      "longitude": -71.1303226
+    },
+    {
+      "name": "Residence Inn Boston Woburn",
+      "place_id": "ChIJmZV2RiwL44kRuBGR99vgBFo",
+      "address": "300 Presidential Way, Woburn, MA 01801, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:36:12.146770Z",
+      "human_approved": 0,
+      "latitude": 42.520489999999995,
+      "longitude": -71.1374563
+    },
+    {
+      "name": "Fairfield Inn Boston Woburn/Burlington",
+      "place_id": "ChIJMcjTQtt044kRkmiapaVV9Bc",
+      "address": "285 Mishawum Rd, Woburn, MA 01801, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:36:19.446449Z",
+      "human_approved": 0,
+      "latitude": 42.5028398,
+      "longitude": -71.13610179999999
+    },
+    {
+      "name": "Holiday Inn Express Boston North-Woburn, an IHG Hotel",
+      "place_id": "ChIJc_CqlMR044kR7C9imq8Q7lI",
+      "address": "315 Mishawum Rd, Woburn, MA 01801, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:36:41.955856Z",
+      "human_approved": 0,
+      "latitude": 42.5035562,
+      "longitude": -71.1311035
+    },
+    {
+      "name": "Sam Walker's American Tavern",
+      "place_id": "ChIJq6rqcYt044kRl7RZ7CJ609o",
+      "address": "1 Rainin Rd, Woburn, MA 01801, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:38:56.300385Z",
+      "human_approved": 0,
+      "latitude": 42.4804044,
+      "longitude": -71.1187479
+    },
+    {
+      "name": "Red Heat Tavern",
+      "place_id": "ChIJLxMtGB8L44kR-A1fL55bt_c",
+      "address": "300 Lowell St, Wilmington, MA 01887, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:39:07.466434Z",
+      "human_approved": 0,
+      "latitude": 42.5395038,
+      "longitude": -71.141088
+    },
+    {
+      "name": "Chick-fil-A",
+      "place_id": "ChIJF5RoWDt144kR08YEMOvBZS0",
+      "address": "375 Washington St, Woburn, MA 01801, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:39:17.760039Z",
+      "human_approved": 0,
+      "latitude": 42.500523099999995,
+      "longitude": -71.12588500000001
+    },
+    {
+      "name": "Godavari",
+      "place_id": "ChIJi26HOo5144kRcD68Kp0xngM",
+      "address": "9 Cummings Park Dr, Woburn, MA 01801, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:39:31.866300Z",
+      "human_approved": 0,
+      "latitude": 42.4981646,
+      "longitude": -71.1247641
+    },
+    {
+      "name": "McDonald's",
+      "place_id": "ChIJLQsXu4t044kRhJg-tqYVkVU",
+      "address": "333 Montvale Ave, Woburn, MA 01801, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:39:40.414595Z",
+      "human_approved": 0,
+      "latitude": 42.4792091,
+      "longitude": -71.1173165
+    },
+    {
+      "name": "Hilton Boston/Woburn",
+      "place_id": "ChIJUVYrAcB044kR_xIy7RN_0dw",
+      "address": "2 Forbes Rd, Woburn, MA 01801, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:39:49.591778Z",
+      "human_approved": 0,
+      "latitude": 42.4961357,
+      "longitude": -71.1215133
+    },
+    {
+      "name": "Courtyard Boston Woburn/Boston North",
+      "place_id": "ChIJ9-Q4N5J044kR_k-Q6YoL2-A",
+      "address": "700 Unicorn Park Dr, Woburn, MA 01801, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:39:58.136037Z",
+      "human_approved": 0,
+      "latitude": 42.488075599999995,
+      "longitude": -71.1165654
+    },
+    {
+      "name": "Hampton Inn Boston Woburn",
+      "place_id": "ChIJl0iq4iR144kRBk2XJ5FB14w",
+      "address": "371 Washington St, Woburn, MA 01801, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:40:23.556611Z",
+      "human_approved": 0,
+      "latitude": 42.5000915,
+      "longitude": -71.1232376
+    },
+    {
+      "name": "Best Western Plus New Englander",
+      "place_id": "ChIJJdiHxox044kRHD5ft4PEaGQ",
+      "address": "1 Rainin Rd, Woburn, MA 01801, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:40:15.023537Z",
+      "human_approved": 0,
+      "latitude": 42.480823699999995,
+      "longitude": -71.1188319
+    },
+    {
+      "name": "Tatte Bakery & Cafe | Arlington",
+      "place_id": "ChIJ-86MCXZ344kRtSGabagfZRY",
+      "address": "645 Massachusetts Ave, Arlington, MA 02476, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:40:48.190804Z",
+      "human_approved": 0,
+      "latitude": 42.4159918,
+      "longitude": -71.1538101
+    },
+    {
+      "name": "Homewood Suites by Hilton Boston Woburn",
+      "place_id": "ChIJuVN5HqR144kRtDfciUDuKjU",
+      "address": "371 Washington St, Woburn, MA 01801, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:41:04.056154Z",
+      "human_approved": 0,
+      "latitude": 42.4998313,
+      "longitude": -71.1235622
+    },
+    {
+      "name": "Copper House Tavern",
+      "place_id": "ChIJiyQGQsac44kRdzrrOIGJ6V4",
+      "address": "380 Winter St, Waltham, MA 02451, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:41:26.737547Z",
+      "human_approved": 0,
+      "latitude": 42.3974294,
+      "longitude": -71.2579155
+    },
+    {
+      "name": "Main Streets Market & Cafe",
+      "place_id": "ChIJ19C8jDia44kRHQ1nsRhwU7E",
+      "address": "42 Main St, Concord, MA 01742, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:41:46.390622Z",
+      "human_approved": 0,
+      "latitude": 42.460078,
+      "longitude": -71.3502511
+    },
+    {
+      "name": "K1 Speed - Indoor Go Karts, Corporate Event Venue, Team Building Activities",
+      "place_id": "ChIJJdc05q4L44kReXqoMC5DFGk",
+      "address": "40 Fordham Rd, Wilmington, MA 01887, USA",
+      "pool_table_probability": 0.97126645,
+      "processed_date": "2025-02-15T03:42:01.856206Z",
+      "human_approved": 2,
+      "latitude": 42.5614144,
+      "longitude": -71.1364387
+    },
+    {
+      "name": "Concord's Colonial Inn",
+      "place_id": "ChIJ625sqTma44kRzlBradoLrgI",
+      "address": "48 Monument Square, Concord, MA 01742, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:42:17.081380Z",
+      "human_approved": 0,
+      "latitude": 42.461624,
+      "longitude": -71.34958
+    },
+    {
+      "name": "The LOCAL Kitchen & Drinks Waltham",
+      "place_id": "ChIJOb0thZid44kRF4dQXDgskUE",
+      "address": "99 3rd Ave #3, Waltham, MA 02451, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:42:37.367738Z",
+      "human_approved": 0,
+      "latitude": 42.3942629,
+      "longitude": -71.261237
+    },
+    {
+      "name": "The Westin Waltham Boston",
+      "place_id": "ChIJKVpslMic44kRG9hwitGBHks",
+      "address": "Westin Hotel, 70 3rd Ave, Waltham, MA 02451, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:42:46.129461Z",
+      "human_approved": 0,
+      "latitude": 42.3953067,
+      "longitude": -71.2597626
+    },
+    {
+      "name": "Embassy Suites by Hilton Boston Waltham",
+      "place_id": "ChIJF7XchLec44kRaM6aHfQviM0",
+      "address": "550 Winter St, Waltham, MA 02451, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:42:58.080069Z",
+      "human_approved": 0,
+      "latitude": 42.3961213,
+      "longitude": -71.266374
+    },
+    {
+      "name": "Hyatt House Boston/Waltham",
+      "place_id": "ChIJSaw5_sic44kRFZlZzct9T0k",
+      "address": "54 4th Ave, Waltham, MA 02451, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:43:11.555539Z",
+      "human_approved": 0,
+      "latitude": 42.3944265,
+      "longitude": -71.25753739999999
+    },
+    {
+      "name": "Hilton Garden Inn Boston/Waltham",
+      "place_id": "ChIJXz8NusWc44kR5GtMYCaztGU",
+      "address": "450 Totten Pond Rd, Waltham, MA 02451, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:43:23.007276Z",
+      "human_approved": 0,
+      "latitude": 42.3963828,
+      "longitude": -71.2558758
+    },
+    {
+      "name": "Courtyard Boston Waltham",
+      "place_id": "ChIJg3k7Z8ac44kRD04F9sm2Vt4",
+      "address": "387 Winter St, Waltham, MA 02451, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:43:31.557401Z",
+      "human_approved": 0,
+      "latitude": 42.3980484,
+      "longitude": -71.25903319999999
+    },
+    {
+      "name": "Holiday Inn Express Boston-Waltham, an IHG Hotel",
+      "place_id": "ChIJ4TUCacac44kRnYS8C39lFfI",
+      "address": "385 Winter St, Waltham, MA 02451, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T03:43:39.877696Z",
+      "human_approved": 0,
+      "latitude": 42.398606,
+      "longitude": -71.25822
     }
   ],
-  "last_updated": "2025-02-15T02:18:32.935406Z"
+  "last_updated": "2025-02-15T03:43:39.877697Z"
 }

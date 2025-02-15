@@ -278,52 +278,38 @@
 
         async function submitFeedback(venueName, photo, placeId, isPositive) {
             try {
+                // Extract just the filename from the full photo path and decode URL-encoded characters
+                const photoPath = decodeURIComponent(photo.split('/').slice(-2).join('/'));
+                
                 console.log('Submitting feedback:', {
                     venue_name: venueName,
-                    photo_path: photo,
+                    photo_path: photoPath,
                     is_positive: isPositive,
                     place_id: placeId
                 });
 
                 let response;
-                try {
-                    const response = await fetch('/api/feedback', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                        },
-                        signal: AbortSignal.timeout(30000),  // 30 second timeout
-                        body: JSON.stringify({
-                            venue_name: venueName,
-                            photo_path: photo,
-                            is_positive: isPositive,
-                            place_id: placeId
-                        })
-                    });
-                } catch (fetchError) {
-                    console.error('Network error details:', {
-                        error: fetchError,
-                        url: '/api/feedback',
-                        requestData: {
-                            venue_name: venueName,
-                            photo_path: photo,
-                            is_positive: isPositive,
-                            place_id: placeId
-                        }
-                    });
-                    throw new Error(`Network error: ${fetchError.message}`);
-                }
+                response = await fetch('/api/feedback', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    signal: AbortSignal.timeout(30000),  // 30 second timeout
+                    body: JSON.stringify({
+                        venue_name: venueName,
+                        photo_path: photoPath,
+                        is_positive: isPositive,
+                        place_id: placeId
+                    })
+                });
 
-                if (!response) {
-                    throw new Error('No response received from server');
+                if (!response.ok) {
+                    const errorText = await response.text();
+                    throw new Error(`HTTP error! status: ${response.status}, message: ${errorText}`);
                 }
 
                 const result = await response.json();
                 console.log('Feedback response:', result);
-
-                if (!response.ok) {
-                    throw new Error(result.error || `HTTP error! status: ${response.status}`);
-                }
 
                 if (result.success) {
                     // Disable the buttons for this photo
