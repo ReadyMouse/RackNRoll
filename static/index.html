@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pool Table Finder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="number"] {
+            width: 200px;
+            padding: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .venue {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .photos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .photos img {
+            max-width: 300px;
+            height: auto;
+        }
+        .loading {
+            display: none;
+            margin: 20px 0;
+        }
+        #status-updates {
+            max-height: 200px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-top: 10px;
+            font-family: monospace;
+            background-color: #f8f9fa;
+        }
+        
+        #status-updates div {
+            margin: 2px 0;
+            border-bottom: 1px solid #eee;
+            padding: 2px 0;
+        }
+        
+        .photo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10px;
+        }
+
+        .feedback-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .feedback-btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .yes-btn {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .yes-btn:hover {
+            background-color: #218838;
+        }
+
+        .no-btn {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .no-btn:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pool Table Finder</h1>
+    
+    <div class="form-group">
+        <label for="latitude">Latitude:</label>
+        <input type="number" id="latitude" step="any" value="42.4883417">
+    </div>
+    
+    <div class="form-group">
+        <label for="longitude">Longitude:</label>
+        <input type="number" id="longitude" step="any" value="-71.2235583">
+    </div>
+    
+    <div class="form-group">
+        <label for="radius">Radius (meters):</label>
+        <input type="number" id="radius" step="any" value="15000">
+    </div>
+    
+    <div class="form-group">
+        <label>
+            <input type="checkbox" id="saveNegative">
+            Save Negative Photo Results
+        </label>
+    </div>
+    
+    <div class="form-group">
+        <label>
+            <input type="checkbox" id="reprocessAll">
+            Reprocess All
+        </label>
+    </div>
+    
+    <button onclick="searchVenues()">Search</button>
+    
+    <div id="loading" class="loading">
+        Searching for venues... This may take a few minutes...
+    </div>
+    
+    <div id="results"></div>
+
+    <script>
+        // Define the function before it's used
+        function searchVenues() {
+            const loading = document.getElementById('loading');
+            const results = document.getElementById('results');
+            
+            loading.style.display = 'block';
+            loading.innerHTML = 'Starting search...<br><div id="status-updates"></div>';
+            results.innerHTML = '';
+            
+            // Create status updates element
+            const statusUpdates = document.getElementById('status-updates');
+            
+            // Connect to SSE endpoint
+            const eventSource = new EventSource('/api/status');
+            
+            eventSource.onmessage = function(event) {
+                const newStatus = document.createElement('div');
+                newStatus.textContent = event.data;
+                // Add timestamp
+                const timestamp = new Date().toLocaleTimeString();
+                newStatus.textContent = `[${timestamp}] ${event.data}`;
+                // Add color based on message type
+                if (event.data.includes("inference")) {
+                    newStatus.style.color = "blue";
+                } else if (event.data.includes("Downloaded")) {
+                    newStatus.style.color = "green";
+                }
+                statusUpdates.appendChild(newStatus);
+                statusUpdates.scrollTop = statusUpdates.scrollHeight;
+            };
+            
+            const params = {
+                latitude: parseFloat(document.getElementById('latitude').value),
+                longitude: parseFloat(document.getElementById('longitude').value),
+                radius: parseFloat(document.getElementById('radius').value),
+                months_threshold: 6, // Fixed value of 6 months
+                save_negative: document.getElementById('saveNegative').checked,
+                reprocess_all: document.getElementById('reprocessAll').checked
+            };
+            
+            console.log('Sending request with params:', params);
+            
+            fetch('/api/search', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(params),
+                signal: AbortSignal.timeout(300000)
+            })
+            .then(response => {
+                eventSource.close(); // Close the event source when search is complete
+                loading.innerHTML = 'Processing response...';
+                console.log('Response:', {
+                    status: response.status,
+                    statusText: response.statusText,
+                    headers: Object.fromEntries(response.headers.entries())
+                });
+                
+                if (!response.ok) {
+                    return response.text().then(text => {
+                        console.error('Error response body:', text);
+                        throw new Error(`Server error (${response.status}): ${text || response.statusText}`);
+                    });
+                }
+                return response.json();
+            })
+            .then(venues => {
+                loading.innerHTML = 'Rendering results...';
+                console.log('Received venues:', venues);
+                if (venues.length === 0) {
+                    results.innerHTML = '<p>No venues with pool tables found.</p>';
+                    return;
+                }
+                
+                results.innerHTML = venues.map(venue => `
+                    <div class="venue">
+                        <h2>${venue.name}</h2>
+                        <p><strong>Address:</strong> ${venue.address}</p>
+                        <p><strong>Pool Table Probability:</strong> ${(venue.probability * 100).toFixed(2)}%</p>
+                        <div class="photos">
+                            ${venue.photos.map(photo => `
+                                <div class="photo-container">
+                                    <img src="${photo}" alt="Pool table evidence">
+                                    <div class="feedback-buttons">
+                                        <button class="feedback-btn yes-btn" onclick="submitFeedback('${venue.name}', '${photo}', true)">
+                                            Yes, Billiards Venue
+                                        </button>
+                                        <button class="feedback-btn no-btn" onclick="submitFeedback('${venue.name}', '${photo}', false)">
+                                            No
+                                        </button>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `).join('');
+            })
+            .catch(error => {
+                eventSource.close(); // Close the event source on error
+                console.error('Error in searchVenues:', error);
+                if (error.name === 'TimeoutError') {
+                    results.innerHTML = `<p style="color: red;">The request timed out. This can happen when processing many venues. Try reducing the search radius or try again.</p>`;
+                } else {
+                    results.innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
+                }
+            })
+            .finally(() => {
+                loading.style.display = 'none';
+            });
+        }
+
+        async function submitFeedback(venueName, photoPath, isPositive) {
+            try {
+                console.log('Submitting feedback:', {
+                    venue_name: venueName,
+                    photo_path: photoPath,
+                    is_positive: isPositive
+                });
+
+                const response = await fetch('/api/feedback', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        venue_name: venueName,
+                        photo_path: photoPath,
+                        is_positive: isPositive
+                    })
+                });
+
+                const result = await response.json();
+                console.log('Feedback response:', result);
+
+                if (!response.ok) {
+                    throw new Error(result.error || `HTTP error! status: ${response.status}`);
+                }
+
+                if (result.success) {
+                    // Disable the buttons for this photo
+                    const photoContainer = document.querySelector(`img[src="${photoPath}"]`).parentElement;
+                    const buttons = photoContainer.querySelectorAll('button');
+                    buttons.forEach(btn => {
+                        btn.disabled = true;
+                        btn.style.opacity = '0.5';
+                    });
+                } else {
+                    throw new Error(result.error || 'Unknown error occurred');
+                }
+            } catch (error) {
+                console.error('Error submitting feedback:', error);
+                alert(`Error submitting feedback: ${error.message}`);
+            }
+        }
+    </script>
+</body>
+</html>

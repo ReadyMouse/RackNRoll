@@ -49,7 +49,7 @@ pub struct PlacesResponse {
 }
 
 // Get the Places in the Local Geographic Region
-pub async fn search_places(api_key: &String, lat: f64, lon: f64, radius: f64, place_type: &str) -> Result<PlacesResponse, Box<dyn std::error::Error>> {
+pub async fn search_places(api_key: &str, lat: f64, lon: f64, radius: f64, place_type: &str) -> Result<PlacesResponse, Box<dyn std::error::Error>> {
     dotenv().ok();
     //let api_key = env::var("GOOGLE_PLACES_API_KEY")?;
     

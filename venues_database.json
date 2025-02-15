@@ -697,8 +697,8 @@
       "name": "Four Points by Sheraton Boston Newton",
       "place_id": "ChIJv7Lec1B544kRv7-M7ZpwK90",
       "address": "320 Washington St, Newton, MA 02458, USA",
-      "pool_table_probability": 0.9979911,
-      "processed_date": "2025-02-11T06:18:20.242784Z"
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T00:12:51.491321Z"
     },
     {
       "name": "The Westin Waltham Boston",
@@ -846,7 +846,42 @@
       "address": "1933 Massachusetts Ave, Cambridge, MA 02140, USA",
       "pool_table_probability": 0.0,
       "processed_date": "2025-02-11T06:22:21.483704Z"
+    },
+    {
+      "name": "sweetgreen",
+      "place_id": "ChIJR4SWF1yf44kRuuk7j60Bpw8",
+      "address": "85 Middlesex Turnpike, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-14T22:55:56.368019Z"
+    },
+    {
+      "name": "Wendy's",
+      "place_id": "ChIJhdQyaEie44kRhjPKuW9ph14",
+      "address": "112 Burlington Mall Road, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-14T22:56:04.670794Z"
+    },
+    {
+      "name": "Chipotle Mexican Grill",
+      "place_id": "ChIJ05J2TTae44kRIIa2QVZd2Kw",
+      "address": "110 Burlington Mall Road, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-14T22:56:17.887536Z"
+    },
+    {
+      "name": "Shake Shack Burlington Mall",
+      "place_id": "ChIJZR7J-Raf44kRVTAs8-_pp4c",
+      "address": "75 Middlesex Turnpike Suite 1550, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-14T22:56:28.963071Z"
+    },
+    {
+      "name": "Frank Pepe Pizzeria Napoletana",
+      "place_id": "ChIJu-RChwSf44kRV3XSlnpu3e0",
+      "address": "75 Middlesex Turnpike, Burlington, MA 01803, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-14T23:00:05.194226Z"
     }
   ],
-  "last_updated": "2025-02-11T06:22:21.483707Z"
+  "last_updated": "2025-02-14T23:00:05.194230Z"
 }
