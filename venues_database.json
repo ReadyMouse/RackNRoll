@@ -349,7 +349,397 @@
       "human_approved": 0,
       "latitude": 40.6991453,
       "longitude": -73.9142989
+    },
+    {
+      "name": "Rolo’s",
+      "place_id": "ChIJWUhoPQhdwokRYsDwo5qMnMU",
+      "address": "853 Onderdonk Ave, Ridgewood, NY 11385, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:00:33.235681Z",
+      "human_approved": 0,
+      "latitude": 40.7019431,
+      "longitude": -73.903537
+    },
+    {
+      "name": "Nowadays",
+      "place_id": "ChIJ--DeozpcwokRG3VRE30PURk",
+      "address": "56-06 Cooper Ave, Glendale, NY 11385, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:00:52.550093Z",
+      "human_approved": 0,
+      "latitude": 40.6924619,
+      "longitude": -73.90153579999999
+    },
+    {
+      "name": "Ops",
+      "place_id": "ChIJl3Fhlh5cwokRQEja9nTWRv4",
+      "address": "346 Himrod St, Brooklyn, NY 11237, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:01:11.782790Z",
+      "human_approved": 0,
+      "latitude": 40.7026149,
+      "longitude": -73.9171894
+    },
+    {
+      "name": "Evil Twin Brewing NYC",
+      "place_id": "ChIJv4wxbJ5dwokR_StiDfSvWQc",
+      "address": "1616 George St, Ridgewood, NY 11385, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:01:31.128801Z",
+      "human_approved": 0,
+      "latitude": 40.6963024,
+      "longitude": -73.90408649999998
+    },
+    {
+      "name": "Cassette",
+      "place_id": "ChIJdcj03CdcwokRbKx-Q1ldpNE",
+      "address": "68-38 Forest Ave storefront B, Flushing, NY 11385, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:06:19.801395Z",
+      "human_approved": 0,
+      "latitude": 40.702596,
+      "longitude": -73.901227
+    },
+    {
+      "name": "Abe's Pagoda Bar",
+      "place_id": "ChIJiQHGLBxcwokRSGPEB7RkbLA",
+      "address": "108 Wyckoff Ave, Brooklyn, NY 11237, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:02:06.924895Z",
+      "human_approved": 0,
+      "latitude": 40.7039262,
+      "longitude": -73.9188272
+    },
+    {
+      "name": "Aunt Ginny's",
+      "place_id": "ChIJGcruDp5ewokRJvxMEhBZw-k",
+      "address": "652 Woodward Ave, Ridgewood, NY 11385, USA",
+      "pool_table_probability": 1.0,
+      "processed_date": "2025-02-15T02:02:25.112197Z",
+      "human_approved": 2,
+      "latitude": 40.7054984,
+      "longitude": -73.907142
+    },
+    {
+      "name": "Talon Bar",
+      "place_id": "ChIJofiaMx9cwokRj1ATioLrre0",
+      "address": "220 Wyckoff Ave, Brooklyn, NY 11237, USA",
+      "pool_table_probability": 1.0,
+      "processed_date": "2025-02-15T02:02:43.539082Z",
+      "human_approved": 2,
+      "latitude": 40.701118099999995,
+      "longitude": -73.91436329999999
+    },
+    {
+      "name": "QDOBA Mexican Eats",
+      "place_id": "ChIJKbfX7HBdwokRziVROHnJtLk",
+      "address": "1422 Myrtle Ave, Brooklyn, NY 11237, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:03:01.283398Z",
+      "human_approved": 0,
+      "latitude": 40.6986989,
+      "longitude": -73.91840750000001
+    },
+    {
+      "name": "Gottscheer Hall",
+      "place_id": "ChIJQbogzJ1ewokRUJAowaUOLnM",
+      "address": "657 Fairview Ave, Ridgewood, NY 11385, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:03:19.434914Z",
+      "human_approved": 0,
+      "latitude": 40.706827,
+      "longitude": -73.9054957
+    },
+    {
+      "name": "The Seneca",
+      "place_id": "ChIJESqltthdwokRpRsWDfkJMGU",
+      "address": "582 Seneca Ave, Ridgewood, NY 11385, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:03:38.770818Z",
+      "human_approved": 0,
+      "latitude": 40.704276199999995,
+      "longitude": -73.9103842
+    },
+    {
+      "name": "The Deep End",
+      "place_id": "ChIJmeeZNSVcwokRBD1K3aJ8wIw",
+      "address": "1080 Wyckoff Ave, Ridgewood, NY 11385, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:03:58.436222Z",
+      "human_approved": 0,
+      "latitude": 40.6943777,
+      "longitude": -73.90225319999999
+    },
+    {
+      "name": "Hellbender",
+      "place_id": "ChIJG4RMPa1dwokRBET-URZXZJU",
+      "address": "68-22 Forest Ave, Queens, NY 11385, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:04:19.427128Z",
+      "human_approved": 0,
+      "latitude": 40.703007199999995,
+      "longitude": -73.901347
+    },
+    {
+      "name": "Cozy Corner",
+      "place_id": "ChIJY2G7iYpYwokRRQiY4xFcdwQ",
+      "address": "60-01 70th Ave, Queens, NY 11385, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:04:42.118156Z",
+      "human_approved": 0,
+      "latitude": 40.7017226,
+      "longitude": -73.8988121
+    },
+    {
+      "name": "Merv’s Bar",
+      "place_id": "ChIJ561dGRlcwokRtRw8jZpJh5M",
+      "address": "266 Irving Ave, Brooklyn, NY 11237, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:05:00.281721Z",
+      "human_approved": 0,
+      "latitude": 40.6996401,
+      "longitude": -73.9158253
+    },
+    {
+      "name": "Julia's",
+      "place_id": "ChIJdeS2mydcwokRRhTrtCgbGYs",
+      "address": "818 Woodward Ave, Ridgewood, NY 11385, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:05:09.859337Z",
+      "human_approved": 0,
+      "latitude": 40.7031553,
+      "longitude": -73.9029533
+    },
+    {
+      "name": "Taqueria Al Pastor",
+      "place_id": "ChIJVxxLjhhdwokRljQPK_XWGzw",
+      "address": "128 Wyckoff Ave, Brooklyn, NY 11237, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:05:21.938701Z",
+      "human_approved": 0,
+      "latitude": 40.7033981,
+      "longitude": -73.9179683
+    },
+    {
+      "name": "Caffeine Underground",
+      "place_id": "ChIJV1NkQhZcwokR5LQjm_wqNwQ",
+      "address": "447 Central Ave Suite A, Brooklyn, NY 11221, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:05:30.905620Z",
+      "human_approved": 0,
+      "latitude": 40.6922073,
+      "longitude": -73.9145113
+    },
+    {
+      "name": "Burger King",
+      "place_id": "ChIJD2jSKxpcwokRnXfsAxKBK2E",
+      "address": "1412 Myrtle Ave, Brooklyn, NY 11237, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:05:39.869773Z",
+      "human_approved": 0,
+      "latitude": 40.6986619,
+      "longitude": -73.9186131
+    },
+    {
+      "name": "Salty Lunch Lady's Little Luncheonette",
+      "place_id": "ChIJd1wnL-dfwokRlYBRhDQwS80",
+      "address": "565 Woodward Ave, Queens, NY 11385, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:05:49.268299Z",
+      "human_approved": 0,
+      "latitude": 40.706753299999995,
+      "longitude": -73.9085845
+    },
+    {
+      "name": "Red Carpet Inn Brooklyn, NY",
+      "place_id": "ChIJpxPWwSRcwokRrGgXmdvKboI",
+      "address": "980 Wyckoff Ave, Brooklyn, NY 11237, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:06:39.070498Z",
+      "human_approved": 0,
+      "latitude": 40.69583,
+      "longitude": -73.9048622
+    },
+    {
+      "name": "Moblat Apartments",
+      "place_id": "ChIJBxxw3DxfwokRAC5s72dvR8g",
+      "address": "1164 Madison St, Brooklyn, NY 11221, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:05:57.533714Z",
+      "human_approved": 0,
+      "latitude": 40.692963,
+      "longitude": -73.914772
+    },
+    {
+      "name": "Hotel",
+      "place_id": "ChIJcQo6SwBdwokRYlG7jEd9auo",
+      "address": "291 Cornelia St, Brooklyn, NY 11221, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:05:59.256965Z",
+      "human_approved": 0,
+      "latitude": 40.694651,
+      "longitude": -73.9114415
+    },
+    {
+      "name": "Carousel",
+      "place_id": "ChIJS3GApRNdwokRQ5wdnB5qpDA",
+      "address": "36 Wyckoff Ave, Brooklyn, NY 11237, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:14:04.559977Z",
+      "human_approved": 0,
+      "latitude": 40.7058463,
+      "longitude": -73.9221354
+    },
+    {
+      "name": "Nook",
+      "place_id": "ChIJ9X57zTpdwokRPdjuSuDrv1Y",
+      "address": "45 Irving Ave Unit 1, Brooklyn, NY 11237, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:14:20.513844Z",
+      "human_approved": 0,
+      "latitude": 40.7050172,
+      "longitude": -73.9246024
+    },
+    {
+      "name": "The Bush",
+      "place_id": "ChIJk7YDatldwokRKdyKONKuwwE",
+      "address": "333 Troutman St Store 4, Brooklyn, NY 11237, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:14:34.234816Z",
+      "human_approved": 0,
+      "latitude": 40.7051051,
+      "longitude": -73.9245369
+    },
+    {
+      "name": "Purgatory",
+      "place_id": "ChIJlezlm01dwokRsfRkzu_Cwys",
+      "address": "675 Central Ave, Brooklyn, NY 11207, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:14:57.326245Z",
+      "human_approved": 0,
+      "latitude": 40.6872402,
+      "longitude": -73.9057284
+    },
+    {
+      "name": "Father Knows Best",
+      "place_id": "ChIJwZHjAzxcwokROh4zFWUlWlE",
+      "address": "611 A, 611A Wilson Ave, Brooklyn, NY 11207, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:15:14.613105Z",
+      "human_approved": 0,
+      "latitude": 40.6902494,
+      "longitude": -73.9069308
+    },
+    {
+      "name": "Nowon Bushwick",
+      "place_id": "ChIJCzyNLENbwokR-lXh5FtzU70",
+      "address": "436 Jefferson St, Brooklyn, NY 11237, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:15:58.985106Z",
+      "human_approved": 0,
+      "latitude": 40.7074089,
+      "longitude": -73.9228973
+    },
+    {
+      "name": "La Cantine",
+      "place_id": "ChIJY3SV72ddwokRP1FK0G3VnG4",
+      "address": "60 St Nicholas Ave, Brooklyn, NY 11237, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:16:14.268932Z",
+      "human_approved": 0,
+      "latitude": 40.7066805,
+      "longitude": -73.9205728
+    },
+    {
+      "name": "Starr Bar",
+      "place_id": "ChIJKx5RIh1cwokRi2jyqtjqG68",
+      "address": "214 Starr St, Brooklyn, NY 11237, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:17:07.694206Z",
+      "human_approved": 0,
+      "latitude": 40.704985,
+      "longitude": -73.9229048
+    },
+    {
+      "name": "ALPHAVILLE",
+      "place_id": "ChIJHVUH5wRcwokRvAPz3aJdcI0",
+      "address": "140 Wilson Ave, Brooklyn, NY 11237, USA",
+      "pool_table_probability": 0.843333,
+      "processed_date": "2025-02-15T02:17:17.689509Z",
+      "human_approved": 0,
+      "latitude": 40.7005461,
+      "longitude": -73.925784
+    },
+    {
+      "name": "Santa Salsa",
+      "place_id": "ChIJNTHomFtZwokRVY16XKq8y5Q",
+      "address": "234 Starr St, Brooklyn, NY 11237, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:17:36.670346Z",
+      "human_approved": 0,
+      "latitude": 40.705545,
+      "longitude": -73.92231799999999
+    },
+    {
+      "name": "The Ten Bells Brooklyn",
+      "place_id": "ChIJv5QvLQddwokR8sH0Q-NHt5Q",
+      "address": "65 Irving Ave, Brooklyn, NY 11237, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:17:50.825123Z",
+      "human_approved": 0,
+      "latitude": 40.7046981,
+      "longitude": -73.9238347
+    },
+    {
+      "name": "Tong",
+      "place_id": "ChIJC_7NeRJfwokRsy59UhNZLao",
+      "address": "321 Starr St, Brooklyn, NY 11237, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:18:05.634356Z",
+      "human_approved": 0,
+      "latitude": 40.707976,
+      "longitude": -73.9204821
+    },
+    {
+      "name": "Artichoke Basille's Pizza",
+      "place_id": "ChIJgTDgQh1cwokRAigCV_DOCQ8",
+      "address": "18 Wyckoff Ave, Brooklyn, NY 11237, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:18:22.288240Z",
+      "human_approved": 0,
+      "latitude": 40.7064425,
+      "longitude": -73.9228425
+    },
+    {
+      "name": "Kings Hotel",
+      "place_id": "ChIJGe8qvhNcwokRV2H0sLs2UD4",
+      "address": "1078 Bushwick Ave, Brooklyn, NY 11221, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:18:28.195794Z",
+      "human_approved": 0,
+      "latitude": 40.6902741,
+      "longitude": -73.9198535
+    },
+    {
+      "name": "Adelaida",
+      "place_id": "ChIJqy8bvxJfwokRqavps5kysmk",
+      "address": "S Conduit Blvd, Brooklyn, NY 11208, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:18:29.965850Z",
+      "human_approved": 0,
+      "latitude": 40.7089202,
+      "longitude": -73.90725979999998
+    },
+    {
+      "name": "Homey Room + Private Bathroom in Ridgewood, Queens",
+      "place_id": "ChIJqdjRy3JfwokROAAkvgTDwrM",
+      "address": "Central Ave, Glendale, NY 11385, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-15T02:18:32.935404Z",
+      "human_approved": 0,
+      "latitude": 40.7014538,
+      "longitude": -73.892989
     }
   ],
-  "last_updated": "2025-02-15T01:57:57.951464Z"
+  "last_updated": "2025-02-15T02:18:32.935406Z"
 }

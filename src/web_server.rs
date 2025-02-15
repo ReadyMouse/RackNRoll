@@ -43,6 +43,7 @@ pub struct VenueResponse {
     address: String,
     probability: f32,
     photos: Vec<String>,
+    place_id: String,
 }
 
 #[derive(Clone)]
@@ -187,6 +188,7 @@ pub async fn search_venues(
                         address: v.address,
                         probability: v.pool_table_probability,
                         photos,
+                        place_id: v.place_id,
                     }
                 })
                 .collect();
@@ -255,6 +257,7 @@ pub struct FeedbackRequest {
     venue_name: String,
     photo_path: String,
     is_positive: bool,
+    place_id: String,
 }
 
 // Add this handler function
@@ -262,40 +265,13 @@ pub async fn handle_feedback(
     feedback: web::Json<FeedbackRequest>,
     data: web::Data<AppState>,
 ) -> Result<HttpResponse> {
-    println!("Received feedback for venue: {}, photo: {}, is_positive: {}", 
-        feedback.venue_name, feedback.photo_path, feedback.is_positive);
-
-    // Decode the URL-encoded photo path and venue name
-    let decoded_path = match urlencoding::decode(&feedback.photo_path) {
-        Ok(path) => path,
-        Err(e) => {
-            eprintln!("Error decoding path: {}", e);
-            return Ok(HttpResponse::InternalServerError().json(json!({
-                "success": false,
-                "error": "Invalid photo path encoding"
-            })));
-        }
-    };
-    
-    let decoded_venue = match urlencoding::decode(&feedback.venue_name) {
-        Ok(venue) => venue,
-        Err(e) => {
-            eprintln!("Error decoding venue name: {}", e);
-            return Ok(HttpResponse::InternalServerError().json(json!({
-                "success": false,
-                "error": "Invalid venue name encoding"
-            })));
-        }
-    };
-
-    // Extract the filename from the photo path
-    let photo_path = decoded_path.trim_start_matches("/photos/");
-    let source_path = Path::new(&data.output_dir).join(photo_path);
-    
-    println!("Source path: {}", source_path.display());
+    println!("Starting feedback handler");
+    println!("Received feedback for venue: {} (place_id: {})", feedback.venue_name, feedback.place_id);
+    println!("Photo path: {}", feedback.photo_path);
+    println!("Is positive: {}", feedback.is_positive);
 
     let db_path = Path::new("venues_database.json");
-    println!("Attempting to load venue database from: {}", db_path.display());
+    println!("Loading venue database from: {}", db_path.display());
     
     let mut collection = match VenueCollection::load_from_json(db_path) {
         Ok(collection) => {
@@ -304,14 +280,25 @@ pub async fn handle_feedback(
         },
         Err(e) => {
             eprintln!("Error loading database from {}: {}", db_path.display(), e);
-            println!("Creating new database");
-            VenueCollection::new()
+            eprintln!("Database error details: {:?}", e);
+            return Ok(HttpResponse::InternalServerError().json(json!({
+                "success": false,
+                "error": format!("Failed to load venue database: {}", e)
+            })));
         }
     };
 
-    if let Some(venue) = collection.venues.iter_mut()
-        .find(|v| v.name == decoded_venue) {
-        
+    // Update the matching logic to use place_id instead of name
+    let venue_index = collection.venues.iter().position(|v| {
+        let matches = v.place_id == feedback.place_id;
+        if matches {
+            println!("Found matching venue: {} (place_id: {}, current approvals: {})", 
+                v.name, v.place_id, v.human_approved);
+        }
+        matches
+    });
+
+    if let Some(index) = venue_index {
         if feedback.is_positive {
             // Create confirmed_pool_tables directory if it doesn't exist
             let confirmed_dir = Path::new(&data.output_dir).join("confirmed_pool_tables");
@@ -324,8 +311,9 @@ pub async fn handle_feedback(
                     "error": format!("Failed to create confirmed directory: {}", e)
                 })));
             }
-            
-            // Verify source file exists
+
+            // Copy the photo to confirmed directory
+            let source_path = Path::new(&data.output_dir).join(feedback.photo_path.trim_start_matches("/photos/"));
             if !source_path.exists() {
                 eprintln!("Source file does not exist: {}", source_path.display());
                 return Ok(HttpResponse::NotFound().json(json!({
@@ -334,7 +322,6 @@ pub async fn handle_feedback(
                 })));
             }
             
-            // Copy the photo to the confirmed directory
             if let Some(filename) = source_path.file_name() {
                 let dest_path = confirmed_dir.join(filename);
                 println!("Copying file from {} to {}", source_path.display(), dest_path.display());
@@ -349,8 +336,9 @@ pub async fn handle_feedback(
             }
 
             // Update venue in database
-            venue.human_approved += 1;
-            let approval_count = venue.human_approved;
+            collection.venues[index].human_approved += 1;
+            let approval_count = collection.venues[index].human_approved;
+            println!("Updated approval count for {} to {}", feedback.venue_name, approval_count);
             
             // Save updated database
             if let Err(e) = collection.save_to_json(db_path) {
@@ -361,6 +349,7 @@ pub async fn handle_feedback(
                 })));
             }
             
+            println!("Successfully saved database with updated approval count");
             return Ok(HttpResponse::Ok().json(json!({
                 "success": true,
                 "message": format!("Thank you! This venue has been approved {} times.", approval_count)
@@ -379,6 +368,7 @@ pub async fn handle_feedback(
             }
             
             // Verify source file exists
+            let source_path = Path::new(&data.output_dir).join(feedback.photo_path.trim_start_matches("/photos/"));
             if !source_path.exists() {
                 eprintln!("Source file does not exist: {}", source_path.display());
                 return Ok(HttpResponse::NotFound().json(json!({
@@ -408,8 +398,8 @@ pub async fn handle_feedback(
             }
 
             // Update venue probability in database
-            venue.pool_table_probability = 0.0;
-            venue.processed_date = Utc::now();
+            collection.venues[index].pool_table_probability = 0.0;
+            collection.venues[index].processed_date = Utc::now();
             
             // Save updated database
             if let Err(e) = collection.save_to_json(db_path) {
@@ -428,7 +418,11 @@ pub async fn handle_feedback(
             })));
         }
     } else {
-        eprintln!("Venue not found in database: {}", decoded_venue);
+        eprintln!("Venue not found in database: '{}'", feedback.venue_name);
+        println!("Available venues in database:");
+        for venue in &collection.venues {
+            println!("  - '{}'", venue.name);
+        }
         return Ok(HttpResponse::NotFound().json(json!({
             "success": false,
             "error": "Venue not found in database"
@@ -440,6 +434,18 @@ pub async fn start_server(state: AppState) -> std::io::Result<()> {
     HttpServer::new(move || {
         App::new()
             .app_data(web::Data::new(state.clone()))
+            .app_data(web::JsonConfig::default()
+                .limit(4194304)  // Increase JSON payload limit to 4MB
+                .error_handler(|err, _| {
+                    eprintln!("JSON error: {:?}", err);
+                    actix_web::error::InternalError::from_response(
+                        err,
+                        HttpResponse::BadRequest().json(json!({
+                            "success": false,
+                            "error": format!("JSON error: {}", err)
+                        }))
+                    ).into()
+                }))
             .wrap(
                 actix_cors::Cors::default()
                     .allow_any_origin()

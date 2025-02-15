@@ -234,10 +234,18 @@
                                 <div class="photo-container">
                                     <img src="${photo}" alt="Pool table evidence">
                                     <div class="feedback-buttons">
-                                        <button class="feedback-btn yes-btn" onclick="submitFeedback('${venue.name}', '${photo}', true)">
+                                        <button class="feedback-btn yes-btn" 
+                                            data-venue-name="${venue.name.replace(/"/g, '&quot;')}"
+                                            data-photo="${photo.replace(/"/g, '&quot;')}"
+                                            data-place-id="${venue.place_id.replace(/"/g, '&quot;')}"
+                                            onclick="submitFeedbackFromButton(this, true)">
                                             Yes, Billiards Venue
                                         </button>
-                                        <button class="feedback-btn no-btn" onclick="submitFeedback('${venue.name}', '${photo}', false)">
+                                        <button class="feedback-btn no-btn"
+                                            data-venue-name="${venue.name.replace(/"/g, '&quot;')}"
+                                            data-photo="${photo.replace(/"/g, '&quot;')}"
+                                            data-place-id="${venue.place_id.replace(/"/g, '&quot;')}"
+                                            onclick="submitFeedbackFromButton(this, false)">
                                             No
                                         </button>
                                     </div>
@@ -261,25 +269,54 @@
             });
         }
 
-        async function submitFeedback(venueName, photoPath, isPositive) {
+        async function submitFeedbackFromButton(button, isPositive) {
+            const venueName = button.getAttribute('data-venue-name');
+            const photo = button.getAttribute('data-photo');
+            const placeId = button.getAttribute('data-place-id');
+            await submitFeedback(venueName, photo, placeId, isPositive);
+        }
+
+        async function submitFeedback(venueName, photo, placeId, isPositive) {
             try {
                 console.log('Submitting feedback:', {
                     venue_name: venueName,
-                    photo_path: photoPath,
-                    is_positive: isPositive
+                    photo_path: photo,
+                    is_positive: isPositive,
+                    place_id: placeId
                 });
 
-                const response = await fetch('/api/feedback', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        venue_name: venueName,
-                        photo_path: photoPath,
-                        is_positive: isPositive
-                    })
-                });
+                let response;
+                try {
+                    const response = await fetch('/api/feedback', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        signal: AbortSignal.timeout(30000),  // 30 second timeout
+                        body: JSON.stringify({
+                            venue_name: venueName,
+                            photo_path: photo,
+                            is_positive: isPositive,
+                            place_id: placeId
+                        })
+                    });
+                } catch (fetchError) {
+                    console.error('Network error details:', {
+                        error: fetchError,
+                        url: '/api/feedback',
+                        requestData: {
+                            venue_name: venueName,
+                            photo_path: photo,
+                            is_positive: isPositive,
+                            place_id: placeId
+                        }
+                    });
+                    throw new Error(`Network error: ${fetchError.message}`);
+                }
+
+                if (!response) {
+                    throw new Error('No response received from server');
+                }
 
                 const result = await response.json();
                 console.log('Feedback response:', result);
@@ -290,7 +327,7 @@
 
                 if (result.success) {
                     // Disable the buttons for this photo
-                    const photoContainer = document.querySelector(`img[src="${photoPath}"]`).parentElement;
+                    const photoContainer = document.querySelector(`img[src="${photo}"]`).parentElement;
                     const buttons = photoContainer.querySelectorAll('button');
                     buttons.forEach(btn => {
                         btn.disabled = true;
