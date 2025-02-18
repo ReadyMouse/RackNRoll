@@ -78,7 +78,11 @@ place_types:
 ```bash
 cargo run --config your_config.yaml
 ```
+or  for web interface
 
+```bash
+cargo run -- --web    
+```
 ## Output
 The program generates two main outputs:
 1. `venues_database.json` - Contains all processed venues

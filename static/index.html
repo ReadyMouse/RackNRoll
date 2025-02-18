@@ -105,6 +105,25 @@
         .no-btn:hover {
             background-color: #c82333;
         }
+
+        .venue-feedback-btn {
+            margin-left: 10px;
+            padding: 5px 10px;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 0.8em;
+        }
+
+        .venue-feedback-btn.yes-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .venue-feedback-btn.no-btn {
+            background-color: #f44336;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -226,9 +245,24 @@
                 
                 results.innerHTML = venues.map(venue => `
                     <div class="venue">
-                        <h2>${venue.name}</h2>
+                        <h2>${venue.name}
+                            <button class="venue-feedback-btn yes-btn"
+                                data-venue-name="${venue.name.replace(/"/g, '&quot;')}"
+                                data-place-id="${venue.place_id.replace(/"/g, '&quot;')}"
+                                onclick="submitVenueFeedback(this, true)">
+                                Yes, Billiards Venue
+                            </button>
+                            <button class="venue-feedback-btn no-btn"
+                                data-venue-name="${venue.name.replace(/"/g, '&quot;')}"
+                                data-place-id="${venue.place_id.replace(/"/g, '&quot;')}"
+                                onclick="submitVenueFeedback(this, false)">
+                                Not a Billiards Venue
+                            </button>
+                        </h2>
                         <p><strong>Address:</strong> ${venue.address}</p>
                         <p><strong>Pool Table Probability:</strong> ${(venue.probability * 100).toFixed(2)}%</p>
+                        <p><strong>Human Approval Count:</strong> ${venue.human_approved}</p>
+                        <p><strong>Evidence:</strong></p>
                         <div class="photos">
                             ${venue.photos.map(photo => `
                                 <div class="photo-container">
@@ -239,14 +273,14 @@
                                             data-photo="${photo.replace(/"/g, '&quot;')}"
                                             data-place-id="${venue.place_id.replace(/"/g, '&quot;')}"
                                             onclick="submitFeedbackFromButton(this, true)">
-                                            Yes, Billiards Venue
+                                            Yes pool table
                                         </button>
                                         <button class="feedback-btn no-btn"
                                             data-venue-name="${venue.name.replace(/"/g, '&quot;')}"
                                             data-photo="${photo.replace(/"/g, '&quot;')}"
                                             data-place-id="${venue.place_id.replace(/"/g, '&quot;')}"
                                             onclick="submitFeedbackFromButton(this, false)">
-                                            No
+                                            No pool table
                                         </button>
                                     </div>
                                 </div>
@@ -335,6 +369,48 @@
             } catch (error) {
                 console.error('Error submitting feedback:', error);
                 alert(`Error submitting feedback: ${error.message}`);
+            }
+        }
+
+        async function submitVenueFeedback(button, isPositive) {
+            const venueName = button.getAttribute('data-venue-name');
+            const placeId = button.getAttribute('data-place-id');
+            
+            try {
+                const response = await fetch('/api/venue-feedback', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        venue_name: venueName,
+                        place_id: placeId,
+                        is_positive: isPositive
+                    })
+                });
+                
+                const result = await response.json();
+                if (result.success) {
+                    // Find and disable both feedback buttons for this venue
+                    const venueContainer = button.closest('.venue');
+                    const feedbackButtons = venueContainer.querySelectorAll('.venue-feedback-btn');
+                    feedbackButtons.forEach(btn => {
+                        btn.disabled = true;
+                        btn.style.opacity = '0.5';
+                    });
+
+                    // Add thank you message
+                    const messageDiv = document.createElement('div');
+                    messageDiv.textContent = result.message;
+                    messageDiv.style.color = '#28a745';  // Green color
+                    messageDiv.style.marginTop = '10px';
+                    messageDiv.style.fontWeight = 'bold';
+                    button.parentElement.appendChild(messageDiv);
+                } else {
+                    console.error('Error:', result.error);
+                }
+            } catch (error) {
+                console.error('Error submitting feedback:', error);
             }
         }
     </script>

@@ -42,6 +42,7 @@ pub struct VenueResponse {
     name: String,
     address: String,
     probability: f32,
+    human_approved: i64,
     photos: Vec<String>,
     place_id: String,
 }
@@ -187,6 +188,7 @@ pub async fn search_venues(
                         name: v.name,
                         address: v.address,
                         probability: v.pool_table_probability,
+                        human_approved: v.human_approved as i64,
                         photos,
                         place_id: v.place_id,
                     }
@@ -305,7 +307,95 @@ pub async fn handle_feedback(
     });
 
     if let Some(index) = venue_index {
-        if feedback.is_positive {
+        if !feedback.is_positive {
+            // Create no_pool_table_training directory if it doesn't exist
+            let negative_dir = Path::new(&data.output_dir).join("no_pool_table_training");
+            println!("Creating negative directory at: {}", negative_dir.display());
+            
+            if let Err(e) = fs::create_dir_all(&negative_dir) {
+                eprintln!("Error creating negative directory: {}", e);
+                return Ok(HttpResponse::InternalServerError().json(json!({
+                    "success": false,
+                    "error": format!("Failed to create negative directory: {}", e)
+                })));
+            }
+            
+            // Get the source photo path
+            let photo_path = feedback.photo_path.trim_start_matches("/photos/");
+            let source_path = Path::new(&data.output_dir)
+                .join(photo_path);
+
+            if !source_path.exists() {
+                eprintln!("Source file does not exist: {}", source_path.display());
+                return Ok(HttpResponse::NotFound().json(json!({
+                    "success": false,
+                    "error": format!("Source file not found: {}", source_path.display())
+                })));
+            }
+            
+            // Move the photo to negative directory
+            if let Some(filename) = source_path.file_name() {
+                let dest_path = negative_dir.join(filename);
+                println!("Moving file from {} to {}", source_path.display(), dest_path.display());
+                
+                if let Err(e) = fs::copy(&source_path, &dest_path) {
+                    eprintln!("Error copying file to negative directory: {}", e);
+                    return Ok(HttpResponse::InternalServerError().json(json!({
+                        "success": false,
+                        "error": format!("Failed to copy file: {}", e)
+                    })));
+                }
+                
+                // Remove the original file
+                if let Err(e) = fs::remove_file(&source_path) {
+                    eprintln!("Error removing original file: {}", e);
+                    // Continue execution - not critical if original remains
+                }
+            }
+
+            // Check if this was the last photo
+            let venue_dir = Path::new(&data.output_dir)
+                .join(sanitize_filename(&feedback.venue_name));
+            
+            let remaining_photos = match fs::read_dir(&venue_dir) {
+                Ok(entries) => entries
+                    .filter_map(|e| e.ok())
+                    .filter(|e| {
+                        e.path().extension()
+                            .and_then(|ext| ext.to_str())
+                            .map(|ext| ext == "jpg")
+                            .unwrap_or(false)
+                    })
+                    .count(),
+                Err(_) => 0
+            };
+
+            println!("Remaining photos for venue: {}", remaining_photos);
+
+            // If no photos remain, update venue probability to 0
+            if remaining_photos == 0 {
+                collection.venues[index].pool_table_probability = 0.0;
+                collection.venues[index].processed_date = Utc::now();
+                
+                if let Err(e) = collection.save_to_json(db_path) {
+                    eprintln!("Error saving venue database: {}", e);
+                    return Ok(HttpResponse::InternalServerError().json(json!({
+                        "success": false,
+                        "error": format!("Failed to update venue database: {}", e)
+                    })));
+                }
+                println!("Updated venue probability to 0 as all photos were removed");
+            }
+
+            return Ok(HttpResponse::Ok().json(json!({
+                "success": true,
+                "message": if remaining_photos == 0 {
+                    "Thanks for your feedback. All photos have been removed and venue has been marked as not having pool tables."
+                } else {
+                    "Thanks for your feedback to help our training."
+                }
+            })));
+        } else {
             // Create confirmed_pool_tables directory if it doesn't exist
             let confirmed_dir = Path::new(&data.output_dir).join("confirmed_pool_tables");
             println!("Creating confirmed directory at: {}", confirmed_dir.display());
@@ -362,70 +452,6 @@ pub async fn handle_feedback(
                 "success": true,
                 "message": format!("Thank you! This venue has been approved {} times.", approval_count)
             })));
-        } else {
-            // Create no_pool_table_training directory if it doesn't exist
-            let negative_dir = Path::new(&data.output_dir).join("no_pool_table_training");
-            println!("Creating negative directory at: {}", negative_dir.display());
-            
-            if let Err(e) = fs::create_dir_all(&negative_dir) {
-                eprintln!("Error creating negative directory: {}", e);
-                return Ok(HttpResponse::InternalServerError().json(json!({
-                    "success": false,
-                    "error": format!("Failed to create negative directory: {}", e)
-                })));
-            }
-            
-            // Verify source file exists
-            let photo_path = feedback.photo_path.trim_start_matches("/photos/");
-            let source_path = Path::new(&data.output_dir)
-                .join(photo_path);
-            if !source_path.exists() {
-                eprintln!("Source file does not exist: {}", source_path.display());
-                return Ok(HttpResponse::NotFound().json(json!({
-                    "success": false,
-                    "error": format!("Source file not found: {}", source_path.display())
-                })));
-            }
-            
-            // Move the photo to the negative directory
-            if let Some(filename) = source_path.file_name() {
-                let dest_path = negative_dir.join(filename);
-                println!("Copying file from {} to {}", source_path.display(), dest_path.display());
-                
-                if let Err(e) = fs::copy(&source_path, &dest_path) {
-                    eprintln!("Error copying file to negative directory: {}", e);
-                    return Ok(HttpResponse::InternalServerError().json(json!({
-                        "success": false,
-                        "error": format!("Failed to copy file: {}", e)
-                    })));
-                }
-            } else {
-                eprintln!("Could not extract filename from source path");
-                return Ok(HttpResponse::InternalServerError().json(json!({
-                    "success": false,
-                    "error": "Invalid source path"
-                })));
-            }
-
-            // Update venue probability in database
-            collection.venues[index].pool_table_probability = 0.0;
-            collection.venues[index].processed_date = Utc::now();
-            
-            // Save updated database
-            if let Err(e) = collection.save_to_json(db_path) {
-                eprintln!("Error saving venue database: {}", e);
-                return Ok(HttpResponse::InternalServerError().json(json!({
-                    "success": false,
-                    "error": format!("Failed to update venue database: {}", e)
-                })));
-            }
-            println!("Successfully updated venue probability in database");
-
-            // After processing the negative feedback, return a success message
-            return Ok(HttpResponse::Ok().json(json!({
-                "success": true,
-                "message": "Thanks for your feedback to help our training."
-            })));
         }
     } else {
         eprintln!("Venue not found in database: '{}'", feedback.venue_name);
@@ -452,6 +478,78 @@ fn sanitize_filename(name: &str) -> String {
         .replace('<', "_")
         .replace('>', "_")
         .replace('|', "_")
+}
+
+// Add this new struct for venue-level feedback
+#[derive(Deserialize)]
+pub struct VenueFeedbackRequest {
+    venue_name: String,
+    place_id: String,
+    is_positive: bool,
+}
+
+// Add this new handler function
+pub async fn handle_venue_feedback(
+    feedback: web::Json<VenueFeedbackRequest>,
+) -> Result<HttpResponse> {
+    println!("Starting venue feedback handler");
+    println!("Received feedback for venue: {} (place_id: {})", feedback.venue_name, feedback.place_id);
+    println!("Is positive: {}", feedback.is_positive);
+
+    let db_path = Path::new("venues_database.json");
+    println!("Loading venue database from: {}", db_path.display());
+    
+    let mut collection = match VenueCollection::load_from_json(db_path) {
+        Ok(collection) => {
+            println!("Successfully loaded database with {} venues", collection.venues.len());
+            collection
+        },
+        Err(e) => {
+            eprintln!("Error loading database: {}", e);
+            return Ok(HttpResponse::InternalServerError().json(json!({
+                "success": false,
+                "error": format!("Failed to load venue database: {}", e)
+            })));
+        }
+    };
+
+    // Find venue by place_id
+    let venue_index = collection.venues.iter().position(|v| v.place_id == feedback.place_id);
+
+    if let Some(index) = venue_index {
+        if feedback.is_positive {
+            // Increment the approval count
+            collection.venues[index].human_approved += 1;
+            let approval_count = collection.venues[index].human_approved;
+            println!("Updated approval count for {} to {}", feedback.venue_name, approval_count);
+        } else {
+            // Set probability to 0 for negative feedback
+            collection.venues[index].pool_table_probability = 0.0;
+            collection.venues[index].processed_date = Utc::now();
+            println!("Set pool table probability to 0 for {}", feedback.venue_name);
+        }
+        
+        // Save updated database
+        if let Err(e) = collection.save_to_json(db_path) {
+            eprintln!("Error saving venue database: {}", e);
+            return Ok(HttpResponse::InternalServerError().json(json!({
+                "success": false,
+                "error": format!("Failed to update venue database: {}", e)
+            })));
+        }
+        
+        println!("Successfully saved database with updates");
+        return Ok(HttpResponse::Ok().json(json!({
+            "success": true,
+            "message": "Thank you for your feedback!"
+        })));
+    } else {
+        eprintln!("Venue not found in database: '{}'", feedback.venue_name);
+        return Ok(HttpResponse::NotFound().json(json!({
+            "success": false,
+            "error": "Venue not found in database"
+        })));
+    }
 }
 
 pub async fn start_server(state: AppState) -> std::io::Result<()> {
@@ -489,6 +587,10 @@ pub async fn start_server(state: AppState) -> std::io::Result<()> {
             .service(
                 web::resource("/api/feedback")
                     .route(web::post().to(handle_feedback))
+            )
+            .service(
+                web::resource("/api/venue-feedback")
+                    .route(web::post().to(handle_venue_feedback))
             )
             // Serve static files first
             .service(

@@ -2429,7 +2429,1117 @@
       "human_approved": 0,
       "latitude": 42.398606,
       "longitude": -71.25822
+    },
+    {
+      "name": "Denver Stockyard Saloon - The Yard Bar",
+      "place_id": "ChIJS4hPEqh5bIcRzy4QIeDF1cU",
+      "address": "4710 National Western Dr, Denver, CO 80216, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T20:44:35.725258Z",
+      "human_approved": 0,
+      "latitude": 39.7828148,
+      "longitude": -104.9726222
+    },
+    {
+      "name": "NWC - Restaurants",
+      "place_id": "ChIJV_lYLxp5bIcRbSxkhM1tC-U",
+      "address": "4624 Central Park Boulevard, Denver, CO 80216, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T20:44:37.492854Z",
+      "human_approved": 0,
+      "latitude": 39.7815637,
+      "longitude": -104.97012730000002
+    },
+    {
+      "name": "Western Daughters Kitchen",
+      "place_id": "ChIJnydwFph5bIcResfM360XGV4",
+      "address": "4777 National Western Dr, Denver, CO 80216, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T20:44:46.831903Z",
+      "human_approved": 0,
+      "latitude": 39.7835723,
+      "longitude": -104.9738793
+    },
+    {
+      "name": "The Denver Central Market",
+      "place_id": "ChIJJScW7h95bIcRje8-s9qYG4M",
+      "address": "2669 Larimer St, Denver, CO 80205, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T20:47:16.599127Z",
+      "human_approved": 0,
+      "latitude": 39.7593608,
+      "longitude": -104.9846129
+    },
+    {
+      "name": "Avanti Food & Beverage",
+      "place_id": "ChIJ7Thv9ex4bIcRCDoTtC3kIy0",
+      "address": "3200 N Pecos St, Denver, CO 80211, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T20:47:36.598119Z",
+      "human_approved": 0,
+      "latitude": 39.7622264,
+      "longitude": -105.0062466
+    },
+    {
+      "name": "Improper City",
+      "place_id": "ChIJeeWSFKp5bIcRkU3OlL__JBU",
+      "address": "3201 Walnut St, Denver, CO 80205, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T20:48:03.381711Z",
+      "human_approved": 0,
+      "latitude": 39.7652775,
+      "longitude": -104.9791467
+    },
+    {
+      "name": "Yard House",
+      "place_id": "ChIJrXKvMdR4bIcR5EK3EkEjxwo",
+      "address": "1555 Court Pl, Denver, CO 80202, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T20:48:20.760451Z",
+      "human_approved": 0,
+      "latitude": 39.7428271,
+      "longitude": -104.9895881
+    },
+    {
+      "name": "Barcelona Wine Bar",
+      "place_id": "ChIJR6_KGB95bIcRfS8YdFizAzw",
+      "address": "2900 Larimer St, Denver, CO 80205, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T20:48:38.920658Z",
+      "human_approved": 0,
+      "latitude": 39.7613343,
+      "longitude": -104.9813606
+    },
+    {
+      "name": "Corinne Denver",
+      "place_id": "ChIJW-JPBdF4bIcRsVLMVFuXFRo",
+      "address": "1455 California St, Denver, CO 80202, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T20:48:55.415075Z",
+      "human_approved": 0,
+      "latitude": 39.7440679,
+      "longitude": -104.9938237
+    },
+    {
+      "name": "Cervantes' Masterpiece Ballroom & Cervantes' Other Side",
+      "place_id": "ChIJaXL29SN5bIcR3rVUVP5pFyw",
+      "address": "2637 Welton St, Denver, CO 80205, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T20:49:09.077344Z",
+      "human_approved": 0,
+      "latitude": 39.7545132,
+      "longitude": -104.9787432
+    },
+    {
+      "name": "The Grizzly Rose",
+      "place_id": "ChIJC4zmF0t4bIcRmOS6cc-hWko",
+      "address": "5450 Lincoln St, Denver, CO 80216, USA",
+      "pool_table_probability": 1.0,
+      "processed_date": "2025-02-18T20:49:26.159355Z",
+      "human_approved": 7,
+      "latitude": 39.7951299,
+      "longitude": -104.9867384
+    },
+    {
+      "name": "Stout Street Social",
+      "place_id": "ChIJE2oNutF4bIcRNZEeHwOJCxo",
+      "address": "1400 Stout St, Denver, CO 80202, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T20:49:41.206994Z",
+      "human_approved": 0,
+      "latitude": 39.7440941,
+      "longitude": -104.9949255
+    },
+    {
+      "name": "Guard and Grace",
+      "place_id": "ChIJC4cKadd4bIcRgbLBZ79ZiP8",
+      "address": "1801 California St, Denver, CO 80202, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T20:49:57.268835Z",
+      "human_approved": 0,
+      "latitude": 39.7475338,
+      "longitude": -104.9895298
+    },
+    {
+      "name": "Holey Moley Golf Club Denver",
+      "place_id": "ChIJeQA4GX15bIcRHo4I7GHM5zY",
+      "address": "1201 18th St, Denver, CO 80202, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T21:08:24.611240Z",
+      "human_approved": 0,
+      "latitude": 39.7507597,
+      "longitude": -104.9942552
+    },
+    {
+      "name": "Viewhouse Ballpark",
+      "place_id": "ChIJ8xSPRtx4bIcRjRU0wgaF2gE",
+      "address": "2015 Market St, Denver, CO 80205, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T20:50:39.039292Z",
+      "human_approved": 0,
+      "latitude": 39.7540756,
+      "longitude": -104.9933098
+    },
+    {
+      "name": "Wynkoop Brewing Company",
+      "place_id": "ChIJBadAhB95bIcR1h_loSGkaR0",
+      "address": "1634 18th St, Denver, CO 80202, USA",
+      "pool_table_probability": 0.9766384,
+      "processed_date": "2025-02-18T20:50:53.454394Z",
+      "human_approved": 1,
+      "latitude": 39.7534439,
+      "longitude": -104.9984977
+    },
+    {
+      "name": "Bierstadt Lagerhaus",
+      "place_id": "ChIJAchlax55bIcRwYpXUARI_Rk",
+      "address": "2875 Blake St, Denver, CO 80205, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T20:51:09.252594Z",
+      "human_approved": 0,
+      "latitude": 39.762816099999995,
+      "longitude": -104.9840373
+    },
+    {
+      "name": "54thirty Rooftop",
+      "place_id": "ChIJW-JPBdF4bIcRPRTSYvAOiEo",
+      "address": "1475 California St, Denver, CO 80202, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T20:51:25.578111Z",
+      "human_approved": 0,
+      "latitude": 39.7442539,
+      "longitude": -104.993871
+    },
+    {
+      "name": "Postino LoHi",
+      "place_id": "ChIJ_8-mapN4bIcR2fHBVwJdlZ4",
+      "address": "2715 17th St, Denver, CO 80211, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T21:07:56.129965Z",
+      "human_approved": 0,
+      "latitude": 39.7614634,
+      "longitude": -105.0107061
+    },
+    {
+      "name": "ChoLon - Downtown",
+      "place_id": "ChIJ8zdB7cR4bIcRgH-jfDXdo6M",
+      "address": "1555 Blake St #101, Denver, CO 80202, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T20:52:05.249381Z",
+      "human_approved": 0,
+      "latitude": 39.7505227,
+      "longitude": -104.999445
+    },
+    {
+      "name": "Maggiano's Little Italy",
+      "place_id": "ChIJY5watdZ4bIcRIDAE-njFBdA",
+      "address": "Pavilions Mall, 500 16th St Suite 150, Denver, CO 80202, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T20:52:20.327543Z",
+      "human_approved": 0,
+      "latitude": 39.742869,
+      "longitude": -104.9904559
+    },
+    {
+      "name": "Thirsty Lion",
+      "place_id": "ChIJC1GYhcN4bIcRVccmHDESBIE",
+      "address": "1605 Wynkoop St, Denver, CO 80202, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T20:52:36.281473Z",
+      "human_approved": 0,
+      "latitude": 39.7522289,
+      "longitude": -105.0009956
+    },
+    {
+      "name": "Number Thirty Eight",
+      "place_id": "ChIJq6pqfAR5bIcRTeUWs5sBtt4",
+      "address": "3560 Chestnut Pl, Denver, CO 80216, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T20:52:51.304431Z",
+      "human_approved": 0,
+      "latitude": 39.7724082,
+      "longitude": -104.9794011
+    },
+    {
+      "name": "Denver Union Station",
+      "place_id": "ChIJZctOCsN4bIcRGb8_5o80Zxc",
+      "address": "1701 Wynkoop St, Denver, CO 80202, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T20:53:12.341324Z",
+      "human_approved": 0,
+      "latitude": 39.7531499,
+      "longitude": -105.0001518
+    },
+    {
+      "name": "The Cheesecake Factory",
+      "place_id": "ChIJtxdi1Np4bIcRyErYtLZyj6s",
+      "address": "1201 16th St, Denver, CO 80202, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T20:53:26.115610Z",
+      "human_approved": 0,
+      "latitude": 39.7492164,
+      "longitude": -104.9971218
+    },
+    {
+      "name": "Sam's No. 3",
+      "place_id": "ChIJhw7HbNB4bIcR1RYprjjGutM",
+      "address": "1500 Curtis Street, Denver, CO 80202, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T21:07:19.970271Z",
+      "human_approved": 0,
+      "latitude": 39.7462085,
+      "longitude": -104.9956144
+    },
+    {
+      "name": "Happy Camper Pizza",
+      "place_id": "ChIJg87rJbN5bIcRS2HgCCwJ108",
+      "address": "3211 N Pecos St, Denver, CO 80211, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T20:54:02.287542Z",
+      "human_approved": 0,
+      "latitude": 39.762286,
+      "longitude": -105.0068766
+    },
+    {
+      "name": "Linger",
+      "place_id": "ChIJF4sShZR4bIcRZCQ8ZRvoh_c",
+      "address": "2030 W 30th Ave, Denver, CO 80211, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T20:54:18.519946Z",
+      "human_approved": 0,
+      "latitude": 39.7595235,
+      "longitude": -105.011411
+    },
+    {
+      "name": "McDonald's",
+      "place_id": "ChIJQY2EQSt5bIcRKGHeCTVpsds",
+      "address": "505 E Colfax Ave, Denver, CO 80203, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T20:54:29.644592Z",
+      "human_approved": 0,
+      "latitude": 39.7402088,
+      "longitude": -104.9808227
+    },
+    {
+      "name": "JINYA Ramen Bar - Union Station",
+      "place_id": "ChIJ1R3VM7F5bIcRB2uLK4_J_w8",
+      "address": "1710 Wynkoop St, Denver, CO 80202, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T20:54:46.469773Z",
+      "human_approved": 0,
+      "latitude": 39.7529421,
+      "longitude": -104.9990772
+    },
+    {
+      "name": "Tavernetta",
+      "place_id": "ChIJ5fIM0MN4bIcRb-fymS7_krs",
+      "address": "1889 16th St, Denver, CO 80202, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T20:55:10.608261Z",
+      "human_approved": 0,
+      "latitude": 39.7530169,
+      "longitude": -105.0019674
+    },
+    {
+      "name": "La Loma",
+      "place_id": "ChIJ5eZBz5d4bIcRV1PXUy8TAx4",
+      "address": "1801 Broadway, Denver, CO 80202, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T20:55:25.153488Z",
+      "human_approved": 0,
+      "latitude": 39.744758,
+      "longitude": -104.987828
+    },
+    {
+      "name": "Hyatt Regency Denver at Colorado Convention Center",
+      "place_id": "ChIJYVuRFdF4bIcRhnRSkCCjaIE",
+      "address": "650 15th St, Denver, CO 80202, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T21:07:15.888711Z",
+      "human_approved": 0,
+      "latitude": 39.7434091,
+      "longitude": -104.9935641
+    },
+    {
+      "name": "Sheraton Denver Downtown Hotel",
+      "place_id": "ChIJ8Y6vMNR4bIcRHgkd29qFnA4",
+      "address": "1550 Court Pl, Denver, CO 80202, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T20:55:47.698338Z",
+      "human_approved": 0,
+      "latitude": 39.7421248,
+      "longitude": -104.989906
+    },
+    {
+      "name": "Grand Hyatt Denver",
+      "place_id": "ChIJD9OhG9d4bIcRY9HlDFVhKK0",
+      "address": "1750 Welton St, Denver, CO 80202, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T20:55:59.586668Z",
+      "human_approved": 0,
+      "latitude": 39.7458215,
+      "longitude": -104.9891997
+    },
+    {
+      "name": "Hilton Denver City Center",
+      "place_id": "ChIJATE_W9d4bIcRxIfju_KrLik",
+      "address": "1701 California St, Denver, CO 80202, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T20:56:10.571856Z",
+      "human_approved": 0,
+      "latitude": 39.7469942,
+      "longitude": -104.9901771
+    },
+    {
+      "name": "The Brown Palace Hotel and Spa, Autograph Collection",
+      "place_id": "ChIJ9dBRb9Z4bIcRD9UXGYyDqvY",
+      "address": "321 17th St, Denver, CO 80202, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T20:56:17.964901Z",
+      "human_approved": 0,
+      "latitude": 39.7439251,
+      "longitude": -104.9878805
+    },
+    {
+      "name": "the Curtis Denver - a DoubleTree by Hilton Hotel",
+      "place_id": "ChIJHf4qHNB4bIcRWSoBcn5Yq3M",
+      "address": "1405 Curtis Street, Denver, CO 80202, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T21:07:13.320924Z",
+      "human_approved": 0,
+      "latitude": 39.745728,
+      "longitude": -104.997065
+    },
+    {
+      "name": "The Westin Denver Downtown",
+      "place_id": "ChIJAbf45tp4bIcR3zO8nMVfC58",
+      "address": "1672 Lawrence St, Denver, CO 80202, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T20:56:37.229908Z",
+      "human_approved": 0,
+      "latitude": 39.7488753,
+      "longitude": -104.9955161
+    },
+    {
+      "name": "Four Seasons Hotel Denver",
+      "place_id": "ChIJV2xNjs94bIcRTPwjoKCIlYs",
+      "address": "1111 14th St, Denver, CO 80202, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T20:56:54.160276Z",
+      "human_approved": 0,
+      "latitude": 39.7464844,
+      "longitude": -104.9981872
+    },
+    {
+      "name": "Embassy Suites by Hilton Denver Downtown Convention Center",
+      "place_id": "ChIJjTsJpdF4bIcR2_djIN_EhVc",
+      "address": "1420 Stout St, Denver, CO 80202, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T20:57:06.122723Z",
+      "human_approved": 0,
+      "latitude": 39.744153999999995,
+      "longitude": -104.9950276
+    },
+    {
+      "name": "Magnolia Hotel Denver, a Tribute Portfolio Hotel",
+      "place_id": "ChIJmZlXutB4bIcRFEo8LD4pmcQ",
+      "address": "818 17th St, Denver, CO 80202, USA",
+      "pool_table_probability": 0.9999969,
+      "processed_date": "2025-02-18T20:57:13.701435Z",
+      "human_approved": 1,
+      "latitude": 39.7466955,
+      "longitude": -104.9922037
+    },
+    {
+      "name": "Le Méridien Denver Downtown",
+      "place_id": "ChIJW9hdENF4bIcRi5Q77XyiWGc",
+      "address": "1475 California St, Denver, CO 80202, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T20:57:23.686808Z",
+      "human_approved": 0,
+      "latitude": 39.7442615,
+      "longitude": -104.9938381
+    },
+    {
+      "name": "Sonesta Denver Downtown",
+      "place_id": "ChIJDY-k_tN4bIcR3ge2r3tcsmc",
+      "address": "1450 Glenarm Pl, Denver, CO 80202, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T20:57:33.996165Z",
+      "human_approved": 0,
+      "latitude": 39.742273,
+      "longitude": -104.991928
+    },
+    {
+      "name": "Hilton Garden Inn Denver Union Station",
+      "place_id": "ChIJl8Nu3Qd5bIcRZC7M29Fs888",
+      "address": "1999 Chestnut Pl, Denver, CO 80202, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T20:57:48.074810Z",
+      "human_approved": 0,
+      "latitude": 39.7575127,
+      "longitude": -104.99911
+    },
+    {
+      "name": "Warwick Denver",
+      "place_id": "ChIJ6Z13hSl5bIcRuVo0v9esU9o",
+      "address": "1776 Grant St, Denver, CO 80203, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T20:58:02.830021Z",
+      "human_approved": 0,
+      "latitude": 39.7444011,
+      "longitude": -104.9832629
+    },
+    {
+      "name": "Thompson Denver, by Hyatt",
+      "place_id": "ChIJoU-ZfT55bIcROfYF3pTjKgQ",
+      "address": "1616 Market St, Denver, CO 80202, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T20:58:21.800791Z",
+      "human_approved": 0,
+      "latitude": 39.74988,
+      "longitude": -104.9977969
+    },
+    {
+      "name": "Hyatt Centric Downtown Denver",
+      "place_id": "ChIJ_6YWnLJ5bIcRdx9VJGF_eGs",
+      "address": "1776 Champa St, Denver, CO 80202, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T20:58:43.863347Z",
+      "human_approved": 0,
+      "latitude": 39.7481721,
+      "longitude": -104.9916796
+    },
+    {
+      "name": "Renaissance Denver Downtown City Center Hotel",
+      "place_id": "ChIJpeMJntB4bIcRr2ZROIHg1TM",
+      "address": "918 17th St, Denver, CO 80202, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T20:58:51.629871Z",
+      "human_approved": 0,
+      "latitude": 39.7473776,
+      "longitude": -104.9932963
+    },
+    {
+      "name": "Limelight Denver",
+      "place_id": "ChIJ0Xk_zMN4bIcR70lcs6SIRf4",
+      "address": "1600 Wewatta St, Denver, CO 80202, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T20:59:01.979725Z",
+      "human_approved": 0,
+      "latitude": 39.7532668,
+      "longitude": -105.002025
+    },
+    {
+      "name": "Holiday Inn Express Denver Downtown, an IHG Hotel",
+      "place_id": "ChIJUYEnWdZ4bIcRXQSg0Nxw30g",
+      "address": "1715 Tremont Pl, Denver, CO 80202, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T20:59:10.634354Z",
+      "human_approved": 0,
+      "latitude": 39.7443876,
+      "longitude": -104.9883169
+    },
+    {
+      "name": "Alamo Drafthouse Cinema Sloans Lake",
+      "place_id": "ChIJxwf2bVCHa4cRUvH-WNCnvkc",
+      "address": "4255 W Colfax Ave, Denver, CO 80204, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T21:09:52.094161Z",
+      "human_approved": 0,
+      "latitude": 39.7408103,
+      "longitude": -105.0425249
+    },
+    {
+      "name": "City O' City",
+      "place_id": "ChIJHwJJbNV-bIcRPRt9CACJxTs",
+      "address": "206 E 13th Ave, Denver, CO 80203, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T21:10:13.644821Z",
+      "human_approved": 0,
+      "latitude": 39.7366908,
+      "longitude": -104.9846353
+    },
+    {
+      "name": "Leven Deli Co.",
+      "place_id": "ChIJXyObo89_bIcRwHM-mqlUj9U",
+      "address": "123 W 12th Ave, Denver, CO 80204, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T21:10:32.682237Z",
+      "human_approved": 0,
+      "latitude": 39.7353876,
+      "longitude": -104.9897118
+    },
+    {
+      "name": "The Cherry Cricket",
+      "place_id": "ChIJIzsCgJZ-bIcRJ8wt6D2vSoQ",
+      "address": "2641 E 2nd Ave, Denver, CO 80206, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T21:10:49.852111Z",
+      "human_approved": 0,
+      "latitude": 39.7195863,
+      "longitude": -104.9563501
+    },
+    {
+      "name": "BurnDown",
+      "place_id": "ChIJRfSU5YJ_bIcRJaVOxRFUQSY",
+      "address": "476 S Broadway, Denver, CO 80209, USA",
+      "pool_table_probability": 0.9999989,
+      "processed_date": "2025-02-18T21:11:07.981634Z",
+      "human_approved": 1,
+      "latitude": 39.7080432,
+      "longitude": -104.9872152
+    },
+    {
+      "name": "Denver Christkindlmarket",
+      "place_id": "ChIJF9V2D215bIcRN-79riTHgss",
+      "address": "101 W 14th Ave, Denver, CO 80204, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T21:11:29.930250Z",
+      "human_approved": 0,
+      "latitude": 39.739180999999995,
+      "longitude": -104.9888632
+    },
+    {
+      "name": "Casa Bonita",
+      "place_id": "ChIJE7tYRySHa4cRSauU_fDROfk",
+      "address": "6715 W Colfax Ave, Lakewood, CO 80214, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T21:11:46.025337Z",
+      "human_approved": 0,
+      "latitude": 39.7417583,
+      "longitude": -105.0706972
+    },
+    {
+      "name": "Downtown Aquarium",
+      "place_id": "ChIJ1YNrYr54bIcRZkKIcfIJiU8",
+      "address": "700 Water St, Denver, CO 80211, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T21:12:10.281494Z",
+      "human_approved": 0,
+      "latitude": 39.751848599999995,
+      "longitude": -105.0140113
+    },
+    {
+      "name": "In-N-Out Burger",
+      "place_id": "ChIJH4Z4rnp7bIcRyHKYba-Aoac",
+      "address": "4597 Central Park Blvd, Denver, CO 80238, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T21:12:23.323206Z",
+      "human_approved": 0,
+      "latitude": 39.779693,
+      "longitude": -104.883581
+    },
+    {
+      "name": "DoubleTree by Hilton Hotel Denver",
+      "place_id": "ChIJdxjLfpp7bIcRhO1d-Lmnl3o",
+      "address": "3203 Quebec St, Denver, CO 80207, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T21:12:36.202048Z",
+      "human_approved": 0,
+      "latitude": 39.7629192,
+      "longitude": -104.9043918
+    },
+    {
+      "name": "Sushi Den",
+      "place_id": "ChIJL2TJFlJ-bIcRENgfRp3uELQ",
+      "address": "1487 S Pearl St, Denver, CO 80210, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T21:44:23.084407Z",
+      "human_approved": 0,
+      "latitude": 39.689578,
+      "longitude": -104.9808419
+    },
+    {
+      "name": "Dave & Buster's Denver",
+      "place_id": "ChIJsy3kluF9bIcRwERZQZi1ReA",
+      "address": "2000 S Colorado Blvd, Denver, CO 80222, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T21:44:42.107509Z",
+      "human_approved": 0,
+      "latitude": 39.680988,
+      "longitude": -104.939385
+    },
+    {
+      "name": "Alamo Drafthouse Cinema Westminster",
+      "place_id": "ChIJB8tN6buJa4cRFVfBsY9uhME",
+      "address": "8905 Westminster Blvd, Westminster, CO 80031, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T21:44:59.304748Z",
+      "human_approved": 0,
+      "latitude": 39.858557399999995,
+      "longitude": -105.0616457
+    },
+    {
+      "name": "In-N-Out Burger",
+      "place_id": "ChIJfZ6dx66Ba4cRbN7p6cyIlI4",
+      "address": "150 S Wadsworth Blvd, Lakewood, CO 80226, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T21:45:14.384334Z",
+      "human_approved": 0,
+      "latitude": 39.7129598,
+      "longitude": -105.0810585
+    },
+    {
+      "name": "Mile High Flea Market",
+      "place_id": "ChIJ0-_i5e9wbIcRBJE85R7dLt4",
+      "address": "7007 E 88th Ave, Henderson, CO 80640, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T21:45:29.010448Z",
+      "human_approved": 0,
+      "latitude": 39.8589173,
+      "longitude": -104.9069054
+    },
+    {
+      "name": "In-N-Out Burger",
+      "place_id": "ChIJXeOanAdjbIcRQCTYcVu4ys0",
+      "address": "14150 E Alameda Ave, Aurora, CO 80012, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T21:45:45.708558Z",
+      "human_approved": 0,
+      "latitude": 39.7107311,
+      "longitude": -104.8236298
+    },
+    {
+      "name": "The Westin Westminster",
+      "place_id": "ChIJAfCHpyeKa4cRK8aPnAxXDSM",
+      "address": "10600 Westminster Blvd, Westminster, CO 80020, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T21:45:55.838840Z",
+      "human_approved": 0,
+      "latitude": 39.8905932,
+      "longitude": -105.0655094
+    },
+    {
+      "name": "New Terrain Brewing Company",
+      "place_id": "ChIJIw05Sm6Fa4cRSpLLIiPx7oY",
+      "address": "16401 Table Mountain Pkwy, Golden, CO 80403, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T21:47:25.216771Z",
+      "human_approved": 0,
+      "latitude": 39.7796092,
+      "longitude": -105.1860821
+    },
+    {
+      "name": "In-N-Out Burger",
+      "place_id": "ChIJE02a9EZ1bIcRfx2WL3-fazs",
+      "address": "111 E 136th Ave, Thornton, CO 80023, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T21:47:41.281471Z",
+      "human_approved": 0,
+      "latitude": 39.943432099999995,
+      "longitude": -104.9841979
+    },
+    {
+      "name": "Gaylord Rockies Resort & Convention Center",
+      "place_id": "ChIJ3f7seHpmbIcRRW1Y3y_GeV8",
+      "address": "6700 N Gaylord Rockies Blvd, Aurora, CO 80019, USA",
+      "pool_table_probability": 0.6652181,
+      "processed_date": "2025-02-18T21:47:50.626776Z",
+      "human_approved": 0,
+      "latitude": 39.8175203,
+      "longitude": -104.7509235
+    },
+    {
+      "name": "Denver Marriott Tech Center",
+      "place_id": "ChIJBRiUov2GbIcRYL_KeX9GAIA",
+      "address": "4900 S Syracuse St, Denver, CO 80237, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T21:48:00.568109Z",
+      "human_approved": 0,
+      "latitude": 39.6272885,
+      "longitude": -104.9014983
+    },
+    {
+      "name": "BrewDog Denver",
+      "place_id": "ChIJLwuabad5bIcRjz-ty7xiN2M",
+      "address": "3950 Wynkoop St, Denver, CO 80216, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T22:31:08.152995Z",
+      "human_approved": 0,
+      "latitude": 39.7735612,
+      "longitude": -104.9723486
+    },
+    {
+      "name": "McDonald's",
+      "place_id": "ChIJa5J4Owd5bIcR89V-c3Y-6Ro",
+      "address": "4490 Washington St, Denver, CO 80216, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T22:15:50.605496Z",
+      "human_approved": 0,
+      "latitude": 39.777773,
+      "longitude": -104.9787328
+    },
+    {
+      "name": "Left Hand RiNo Drinks & Eats",
+      "place_id": "ChIJw9ruO795bIcRIk-SVZUvqfk",
+      "address": "4180 Wynkoop St #140, Denver, CO 80216, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T22:16:12.704953Z",
+      "human_approved": 0,
+      "latitude": 39.775855400000005,
+      "longitude": -104.9698104
+    },
+    {
+      "name": "Butcher Block Cafe",
+      "place_id": "ChIJV2uVXa55bIcRIN0HuYKByvk",
+      "address": "5002 Washington St, Denver, CO 80216, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T22:16:32.830144Z",
+      "human_approved": 0,
+      "latitude": 39.7876059,
+      "longitude": -104.9779192
+    },
+    {
+      "name": "Tacos El Huequito",
+      "place_id": "ChIJ14Rsf1R5bIcRBIslmgG9xq4",
+      "address": "2111 E 48th Ave, Denver, CO 80216, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T22:16:46.562656Z",
+      "human_approved": 0,
+      "latitude": 39.784258099999995,
+      "longitude": -104.9621243
+    },
+    {
+      "name": "Pizza Hut",
+      "place_id": "ChIJo3Zmlql5bIcRRe2ubjnWUlQ",
+      "address": "4676 Washington St, Denver, CO 80216, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T22:17:00.857198Z",
+      "human_approved": 0,
+      "latitude": 39.7814199,
+      "longitude": -104.9783058
+    },
+    {
+      "name": "Mía Cocinita",
+      "place_id": "ChIJiSLGSTF5bIcRM_qFAxkp-kk",
+      "address": "5040 Washington St, Denver, CO 80216, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T22:31:05.042553Z",
+      "human_approved": 0,
+      "latitude": 39.7879921,
+      "longitude": -104.9778698
+    },
+    {
+      "name": "tacos jalpa",
+      "place_id": "ChIJx5JiWgB5bIcRjNMqkdNi14A",
+      "address": "4935 Washington St, Denver, CO 80216, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T22:17:17.676803Z",
+      "human_approved": 0,
+      "latitude": 39.7863404,
+      "longitude": -104.9785521
+    },
+    {
+      "name": "Tacos Los Rorros",
+      "place_id": "ChIJm_9-vHB5bIcRyLFAnHwCorE",
+      "address": "4500 Washington St, Denver, CO 80216, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T22:17:24.225912Z",
+      "human_approved": 0,
+      "latitude": 39.7784644,
+      "longitude": -104.9787256
+    },
+    {
+      "name": "Zeppelin Station",
+      "place_id": "ChIJsa5b_s94bIcRS8f1KMq93S0",
+      "address": "3501 Wazee St #100, Denver, CO 80216, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T22:20:53.756443Z",
+      "human_approved": 0,
+      "latitude": 39.769417,
+      "longitude": -104.977068
+    },
+    {
+      "name": "Tracks",
+      "place_id": "ChIJU0l3jxp5bIcRcOzzQKHMBcM",
+      "address": "3500 Walnut St, Denver, CO 80205, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T22:21:08.904246Z",
+      "human_approved": 0,
+      "latitude": 39.767713,
+      "longitude": -104.974808
+    },
+    {
+      "name": "Hop Alley",
+      "place_id": "ChIJiz68dxp5bIcRnDG_uUVRVJw",
+      "address": "3500 Larimer St, Denver, CO 80205, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T22:21:24.712052Z",
+      "human_approved": 0,
+      "latitude": 39.766990199999995,
+      "longitude": -104.9742174
+    },
+    {
+      "name": "RiNo Beer Garden",
+      "place_id": "ChIJqR4RLBB5bIcRPt2a0tE5Bo4",
+      "address": "3800 Walnut St, Denver, CO 80205, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T22:21:39.532826Z",
+      "human_approved": 0,
+      "latitude": 39.770147,
+      "longitude": -104.971323
+    },
+    {
+      "name": "Smok Barbecue - RiNo, Denver",
+      "place_id": "ChIJ2QIyx3l5bIcRfJz7PSZVfsc",
+      "address": "3330 Brighton Blvd #202, Denver, CO 80216, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T22:21:56.246635Z",
+      "human_approved": 0,
+      "latitude": 39.768367,
+      "longitude": -104.980071
+    },
+    {
+      "name": "Globe Hall Live Music and BBQ",
+      "place_id": "ChIJzXNvLfJ5bIcRRHdeipfsl5I",
+      "address": "4483 Logan St, Denver, CO 80216, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T22:22:16.306224Z",
+      "human_approved": 0,
+      "latitude": 39.7780776,
+      "longitude": -104.9825524
+    },
+    {
+      "name": "Bigsby's Folly Craft Winery & Restaurant",
+      "place_id": "ChIJOU3cLAV5bIcR7w0IR5LyNwE",
+      "address": "3563 Wazee St, Denver, CO 80216, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T22:22:37.162097Z",
+      "human_approved": 0,
+      "latitude": 39.7699108,
+      "longitude": -104.9763336
+    },
+    {
+      "name": "Yacht Club",
+      "place_id": "ChIJ-ScCWBt5bIcRnVLoXL9U7pc",
+      "address": "3701 N Williams St, Denver, CO 80205, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T22:22:54.318345Z",
+      "human_approved": 0,
+      "latitude": 39.7683418,
+      "longitude": -104.9661101
+    },
+    {
+      "name": "Black Shirt Brewing Co and Craft Pizza Kitchen",
+      "place_id": "ChIJYWO6GxB5bIcR0C3amGQv8ZI",
+      "address": "3719 Walnut St, Denver, CO 80205, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T22:23:12.623844Z",
+      "human_approved": 0,
+      "latitude": 39.7698031,
+      "longitude": -104.9728906
+    },
+    {
+      "name": "Slater's 50/50",
+      "place_id": "ChIJL0MFKuN5bIcRUa5sa4VbQAY",
+      "address": "3600 Blake St, Denver, CO 80205, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T22:23:27.367867Z",
+      "human_approved": 0,
+      "latitude": 39.769286699999995,
+      "longitude": -104.974699
+    },
+    {
+      "name": "Fish N Beer",
+      "place_id": "ChIJf4b8dxp5bIcRSiXR0HEQ7xU",
+      "address": "3510 Larimer St, Denver, CO 80205, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T22:24:07.602076Z",
+      "human_approved": 0,
+      "latitude": 39.7670669,
+      "longitude": -104.9741191
+    },
+    {
+      "name": "Fort Greene",
+      "place_id": "ChIJA6pqewB5bIcRC4MkqsQ2HMQ",
+      "address": "321 E 45th Ave, Denver, CO 80216, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T22:24:18.694789Z",
+      "human_approved": 0,
+      "latitude": 39.7784427,
+      "longitude": -104.9831186
+    },
+    {
+      "name": "Ironton Distillery - Reopening in Louisville CO 2026",
+      "place_id": "ChIJkyxVaAR5bIcRs_Go4H2lFO0",
+      "address": "3636 Chestnut Pl, Denver, CO 80216, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T22:24:36.633329Z",
+      "human_approved": 0,
+      "latitude": 39.7729261,
+      "longitude": -104.9786656
+    },
+    {
+      "name": "Brasserie Brixton",
+      "place_id": "ChIJR49ghit5bIcRM4UGxMi_VgU",
+      "address": "3701 N Williams St, Denver, CO 80205, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T22:25:09.576813Z",
+      "human_approved": 0,
+      "latitude": 39.7683046,
+      "longitude": -104.966309
+    },
+    {
+      "name": "Rino Country Club",
+      "place_id": "ChIJz4JkFgJ5bIcRjULy-Q9JmZ4",
+      "address": "3763 Wynkoop St, Denver, CO 80216, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T22:30:56.687738Z",
+      "human_approved": 0,
+      "latitude": 39.7723054,
+      "longitude": -104.9748792
+    },
+    {
+      "name": "RIVER",
+      "place_id": "ChIJkR49mut5bIcRYkPzM1V3LAI",
+      "address": "3759 Chestnut Pl, Denver, CO 80216, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T22:25:38.656816Z",
+      "human_approved": 0,
+      "latitude": 39.774268,
+      "longitude": -104.9776131
+    },
+    {
+      "name": "Embassy Tavern",
+      "place_id": "ChIJNXZffC55bIcR0hSJI8JwWWM",
+      "address": "3463 Larimer St, Denver, CO 80205, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T22:25:59.911188Z",
+      "human_approved": 0,
+      "latitude": 39.7669938,
+      "longitude": -104.9748394
+    },
+    {
+      "name": "Safta",
+      "place_id": "ChIJx-4HPHh5bIcRC3bPV5euPOA",
+      "address": "3330 Brighton Blvd #201, Denver, CO 80216, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T22:26:16.789670Z",
+      "human_approved": 0,
+      "latitude": 39.7688031,
+      "longitude": -104.9802695
+    },
+    {
+      "name": "Blue Moon Brewing Company RiNo",
+      "place_id": "ChIJ_TFaNQR5bIcR2gm8aERUra0",
+      "address": "3750 Chestnut Pl, Denver, CO 80216, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T22:26:39.186738Z",
+      "human_approved": 0,
+      "latitude": 39.7736165,
+      "longitude": -104.9769077
+    },
+    {
+      "name": "Temaki Den",
+      "place_id": "ChIJ9dfq8J95bIcRdQTVQFQXE_4",
+      "address": "3350 Brighton Blvd, Denver, CO 80216, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T22:26:55.557029Z",
+      "human_approved": 0,
+      "latitude": 39.7685843,
+      "longitude": -104.9794484
+    },
+    {
+      "name": "Reunion Bakery / Sourdough Bread / Coffee",
+      "place_id": "ChIJLVlXnux5bIcR8rKGtslUMmw",
+      "address": "3350 Brighton Blvd #140, Denver, CO 80216, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T22:27:11.986657Z",
+      "human_approved": 0,
+      "latitude": 39.7686411,
+      "longitude": -104.979557
+    },
+    {
+      "name": "Butcher Block Cafe",
+      "place_id": "ChIJG2JcnQV5bIcRpeY-rrZ_Y8c",
+      "address": "1701 38th St, Denver, CO 80216, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T22:27:27.011640Z",
+      "human_approved": 0,
+      "latitude": 39.7725982,
+      "longitude": -104.9746407
+    },
+    {
+      "name": "The Woods",
+      "place_id": "ChIJg34qts55bIcR1KmMkipXeq4",
+      "address": "3330 Brighton Blvd 8th Floor, Denver, CO 80216, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T22:27:44.678997Z",
+      "human_approved": 0,
+      "latitude": 39.7687181,
+      "longitude": -104.9804416
+    },
+    {
+      "name": "Dio Mio",
+      "place_id": "ChIJI4KvKhp5bIcRWzWjv3llyWY",
+      "address": "3264 Larimer St, Denver, CO 80205, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T22:27:59.804594Z",
+      "human_approved": 0,
+      "latitude": 39.7648862,
+      "longitude": -104.9769543
+    },
+    {
+      "name": "The Source Hotel",
+      "place_id": "ChIJjzxMspd5bIcRpikyAUQDwYU",
+      "address": "3330 Brighton Blvd, Denver, CO 80216, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T22:28:21.463636Z",
+      "human_approved": 0,
+      "latitude": 39.7684449,
+      "longitude": -104.9800155
+    },
+    {
+      "name": "Catbird Hotel",
+      "place_id": "ChIJ44EQpRN5bIcR1nMkfhBXD4s",
+      "address": "3770 Walnut St, Denver, CO 80205, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T22:30:02.796030Z",
+      "human_approved": 0,
+      "latitude": 39.7695257,
+      "longitude": -104.9722702
+    },
+    {
+      "name": "Vīb Hotel by Best Western Denver RiNo",
+      "place_id": "ChIJq6oa6AR5bIcRSc05v_rjnS8",
+      "address": "3560 Brighton Blvd, Denver, CO 80216, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T22:30:13.011209Z",
+      "human_approved": 0,
+      "latitude": 39.7708663,
+      "longitude": -104.9779098
+    },
+    {
+      "name": "Cambria Hotel Denver Downtown RiNo",
+      "place_id": "ChIJGWy0zjV5bIcRz-15HigmEbM",
+      "address": "3601 Brighton Blvd, Denver, CO 80216, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T22:30:22.291446Z",
+      "human_approved": 0,
+      "latitude": 39.7715625,
+      "longitude": -104.9774921
+    },
+    {
+      "name": "Western Motor Inn",
+      "place_id": "ChIJ-xIxC3h5bIcR0coOGgc7u4k",
+      "address": "4757 Vasquez Blvd E, Denver, CO 80216, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T22:30:36.588531Z",
+      "human_approved": 0,
+      "latitude": 39.7835662,
+      "longitude": -104.9490891
+    },
+    {
+      "name": "Better Help",
+      "place_id": "ChIJszjdQQB5bIcRWhv51BU_4NE",
+      "address": "3500 Lafayette St, Denver, CO 80205, USA",
+      "pool_table_probability": 0.0,
+      "processed_date": "2025-02-18T22:30:38.278811Z",
+      "human_approved": 0,
+      "latitude": 39.765930999999995,
+      "longitude": -104.9706244
     }
   ],
-  "last_updated": "2025-02-15T03:43:39.877697Z"
+  "last_updated": "2025-02-18T22:30:38.278812Z"
 }
